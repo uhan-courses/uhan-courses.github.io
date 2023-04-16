@@ -1,0 +1,6 @@
+# We want PDFs to be included for this website!
+!*.pdf
+
+# Ignore update script
+update_website.sh
+

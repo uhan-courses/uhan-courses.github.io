@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SA367 - Mathematical Models for Decision Making</title>
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Metadata -->
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <section id="course">
+      <h1 id="course-name">Mathematical Models for Decision Making</h1>
+      <p id="course-info">
+        SA367 &#9632; Spring 2018
+        <br> Assoc. Prof. Nelson Uhan
+      </p>
+    </section>
+    <section>
+      <h2>Announcements</h2>
+      <table id="ann">
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td>26 Apr</td>
+          <td>
+            <ul>
+              <li>The final exam will take place on <strong>Monday 7 May at 13:30</strong> in CH103. See below for details.</li>
+              <li>You may resubmit <strong>two</strong> quizzes/exams next week (the week of 30 April).</li>
+              <li><strong>The last day to resubmit a quiz/exam is Wednesday 2 May</strong>.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>2 Apr</td>
+          <td>
+            The deadline to resubmit a quiz/exam for the 12-week marking period is <strong>8:00 on Monday 9 April</strong>.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>20 Mar</td>
+          <td>
+            <p><strong>Plan for next week</strong></p>
+            <table class="white">
+              <tr class="white">
+                <td>T</td>
+                <td>27 Mar</td>
+                <td>Review</td>
+              </tr>
+              <tr class="white">
+                <td>W</td>
+                <td>28 Mar</td>
+                <td>Exam EI, 19:00 - 20:00 in CH348</td>
+              </tr>
+              <tr class="white">
+                <td>R</td>
+                <td>29 Mar</td>
+                <td>Exam 2</td>
+              </tr>
+            </table>
+            <p class="ann"><strong>Exam 2</strong></p>
+            <ul>
+              <li>Covers lessons 6-14.</li>
+              <li>You will not be asked to write code, but you may be asked to read and interpret code.</li>
+              <li>No outside materials allowed.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>13 Feb</td>
+          <td>The deadline to resubmit a quiz/exam for the 6-week marking period is <strong>at the beginning of class on Tuesday 20 February</strong>.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>1 Feb</td>
+          <td>
+            <p><strong>Plan for next week</strong></p>
+            <table class="white">
+              <tr class="white">
+                <td>T</td>
+                <td>6 Feb</td>
+                <td>
+                  <ul class="vlist">
+                    <li>Finish Lesson 6</li>
+                    <li>Review</li>
+                  </ul>
+              </tr>
+              <tr class="white">
+                <td>W</td>
+                <td>7 Feb</td>
+                <td>Exam EI, 19:00 - 20:00 in CH348</td>
+              </tr>
+              <tr class="white">
+                <td>R</td>
+                <td>8 Feb</td>
+                <td>Exam 1</td>
+              </tr>
+            </table>
+            <p class="ann"><strong>Exam 1</strong></p>
+            <ul>
+              <li>Covers Lessons 1-5.</li>
+              <li>You will not be asked to write code, but you may be asked to read and interpret code.</li>
+              <li>No outside materials allowed.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>22 Jan</td>
+          <td>
+            <p class="ann"><strong>Instructions for resubmissions</strong></p>
+            <ul>
+              <li>Print a <strong>blank quiz/exam</strong> (see below). Redo the problems you want to submit.</li>
+              <li>Print and fill out a <a href="resubmission-cover.pdf">resubmission cover sheet</a>. Here is the honor statement:
+                <blockquote>
+                  I pledge on my honor that I have not used any unauthorized materials, and that I have not given or received any unauthorized assistance for this resubmission.
+                </blockquote>
+              <li>Follow the guidelines in the <a href="policy.pdf">course policy statement</a>. In particular:
+                <ul>
+                  <li><strong>No collaboration allowed.</strong> All work must be your own.</li>
+                  <li>You may use your own course materials (e.g., notes, homework), as well as any materials directly linked from the course website. <strong>You may not use any other materials.</strong></li>
+                </ul>
+              </li>
+              <li>Submit the cover sheet, your redone problems, and your original quiz/exam.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>11 Jan</td>
+          <td>Welcome!</td>
+        </tr>
+      </table>
+      <p style="text-align:right;"><a href="javascript:;" onmousedown="toggleOlderAnnouncements();"><span id="toggle_ann">Show older announcements</span></a></p>
+    </section>
+    <section>
+      <h2>General information</h2>
+      <div class="row" id="info">
+        <div class="twelve columns">
+          <ul>
+            <li><a href="policy.pdf">Course policy statement</a></li>
+            <li><a href="syllabus.pdf">Syllabus</a></li>
+            <li><a href="resubmission-cover.pdf">Resubmission cover sheet</a></li>
+            <li><a href="https://script.google.com/a/usna.edu/macros/s/AKfycbztmCZWUZwdekL5yk-VJvfrpJrC_cOgP9onlTFp7bJSJDQgkh98/exec">SA367 Assignment Submission Form</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Python Resources</h2>
+      <div class="row">
+        <div class="twelve columns">
+          <ul>
+            <li><a href="install-python/index.html">Installing Python and Jupyter</a></li>
+            <li><a href="download-notebooks/index.html">Downloading Jupyter notebooks</a></li>
+            <!--
+            <li><a href="https://networkx.github.io/documentation.html">NetworkX documentation</a></li>
+            -->
+            <li><a href="https://docs.python.org/3.5/">Python documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Homework</h2>
+      <ul>
+        <li>Solutions are available <a href="https://drive.google.com/drive/folders/1vA3Z3tdYc_udSZE4vvWUJghAqoxqj2Rq?usp=sharing">here</a> on Google Drive.</li>
+      </ul>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Problems</strong></td>
+        </tr>
+        <tr>
+           <td>17 Apr</td>
+           <td>Finish formulating the model in Lesson 20.<br>
+           Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>12 Apr</td>
+          <td><a href="https://github.com/uhan-sa367/baytheon-farkas/zipball/student">Baytheon and Farkas Investments, revisited (zip)</a></td>
+        </tr>
+        <tr>
+          <td>10 Apr</td>
+          <td>Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>5 Apr</td>
+          <td><a href="homework/17 Farkas Investments.pdf">Farkas Investments</a></td>
+        </tr>
+        <tr>
+          <td>3 Apr</td>
+          <td><a href="homework/16 Baytheon.pdf">Baytheon</a></td>
+        </tr>
+        <tr>
+          <td>8 Mar</td>
+          <td><a href="homework/13 Dynamic Distillery - recursion.pdf">Dynamic Distillery - recursion</a></td>
+        </tr>
+        <tr>
+          <td>6 Mar</td>
+          <td><a href="homework/13 Pear Computers - recursion.pdf">Pear Computers - recursion</a></td>
+        </tr>
+        <tr>
+          <td>1 Mar</td>
+          <td><a href="homework/12 Shortest path recursions.pdf">Shortest path recursions</a></td>
+        </tr>
+         <tr>
+          <td>27 Feb</td>
+          <td><a href="https://github.com/uhan-sa367/markov-micro/zipball/student">Markov Micromanufacturing (zip)</a>
+            <br>Finish the example at the end of Lesson 10.</td>
+        </tr>
+        <tr>
+          <td>22 Feb</td>
+          <td><a href="https://github.com/uhan-sa367/airlift-planning/zipball/student">Airlift planning (zip)</a></td>
+        </tr>
+        <tr>
+          <td>20 Feb</td>
+          <td>Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>15 Feb</td>
+          <td><a href="https://github.com/uhan-sa367/dynamic-pear/zipball/student">Dynamic Distillery and Pear Computers, revisited (zip)</a>
+            <br> Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>13 Feb</td>
+          <td><a href="homework/07 Pear Computers.pdf">Pear Computers</a>
+            <br> Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>1 Feb</td>
+          <td><a href="homework/06 Dynamic Distillery.pdf">Dynamic Distillery</a></td>
+        </tr>
+        <tr>
+          <td>30 Jan</td>
+          <td><a href="homework/05 Reverse engineering.pdf">Reverse engineering</a></td>
+        </tr>
+        <tr>
+          <td>25 Jan</td>
+          <td><a href="https://github.com/uhan-sa367/shapley-simplexville/zipball/student">Shapley Sneakers and Primal Praline Company, revisited (zip)</a>
+            <br> Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>18 Jan</td>
+          <td><a href="https://github.com/uhan-sa367/practice-with-python/zipball/student">Practice with Python (zip)</a>
+            <br> Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>16 Jan</td>
+          <td><a href="homework/02 Primal Praline Company.pdf">Primal Praline Company</a>
+            <br> Follow <a href="install-python/index.html">these instructions</a> to install Python and Jupyter on your computer. Bring your computers to the next class.</td>
+        </tr>
+        <tr>
+          <td>11 Jan</td>
+          <td>
+            Familiarize yourself with the course policy statement.
+            <br>
+            <a href="homework/01 Shapley Sneakers.pdf">Shapley Sneakers</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Lessons</h2>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col width="30">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Dates</strong></td>
+          <td colspan="2"><strong>Lesson</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19 Apr</td>
+          <td>21</td>
+          <td>Solving the points-after-touchdown problem</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/points-after-touchdown/zipball/class">zip</a></li>
+              <li><a href="lessons/21 Solving the points-after-touchdown problem.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>17 Apr</td>
+          <td>20</td>
+          <td>The points-after-touchdown problem</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="lessons/20 The points-after-touchdown problem.pdf">Notes</a></li>
+              <li><a href="lessons/20 The points-after-touchdown problem - completed.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>12 Apr</td>
+          <td>19</td>
+          <td>Solving stochastic dynamic programs with Python</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/stochastic-dp-python/zipball/class">zip</a></li>
+              <li><a href="lessons/19 Solving stochastic dynamic programs with Python.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>10 Apr</td>
+          <td>18</td>
+          <td>Stochastic dynamic programming, cont.</td>
+          <td><a href="lessons/18 Stochastic dynamic programming cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>5 Apr</td>
+          <td>17</td>
+          <td>Stochastic dynamic programming, cont.</td>
+          <td><a href="lessons/17 Stochastic dynamic programming cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>3 Apr</td>
+          <td>16</td>
+          <td>Stochastic dynamic programming, cont.</td>
+          <td><a href="lessons/16 Stochastic dynamic programming cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>23 Mar</td>
+          <td>15</td>
+          <td>Introduction to stochastic dynamic programming</td>
+          <td><a href="lessons/15 Introduction to stochastic dynamic programming.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>20 Mar</td>
+          <td>14 </td>
+          <td>Review &ndash; dynamic programming</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="lessons/14 Review - Dynamic Programming.pdf">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>8 Mar</li>
+              <li>6 Mar</li>
+            </ul>
+          </td>
+          <td>13</td>
+          <td>Formulating dynamic programming recursions</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="lessons/13 Formulating DP recursions.pdf">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>1 Mar</li>
+            </ul>
+          </td>
+          <td>12</td>
+          <td>The principle of optimality and formulating recursions</td>
+          <td><a href="lessons/12 The principle of optimality and formulating recursions.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>27 Feb</td>
+          <td>11</td>
+          <td>Machine scheduling</td>
+          <td><a href="lessons/11 Machine scheduling.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>22 Feb</li>
+            </ul>
+          </td>
+          <td>10</td>
+          <td>Drafting a fantasy basketball team</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/fantasy-basketball/zipball/class">zip</a></li>
+              <li><a href="lessons/10 Drafting a fantasy basketball team.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>20 Feb</td>
+          <td>9</td>
+          <td>Big DPs and the curse of dimensionality</td>
+          <td><a href="lessons/09 Big DPs and the curse of dimensionality.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>15 Feb</td>
+          <td>8</td>
+          <td>Solving dynamic programs with networkx</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/dp-networkx/zipball/class">zip</a></li>
+              <li><a href="lessons/08 Solving dynamic programs with networkx.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>13 Feb</td>
+          <td>7</td>
+          <td>Dynamic programming, cont.</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="lessons/07 Dynamic programming cont.pdf">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>6 Feb</li>
+              <li>1 Feb</li>
+            </ul>
+          </td>
+          <td>6</td>
+          <td>Introduction to dynamic programming</td>
+          <td><a href="lessons/06 Introduction to dynamic programming.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>30 Jan</li>
+            </ul>
+          </td>
+          <td>5</td>
+          <td>The mileage running problem</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/mileage-running/zipball/class">zip</a></li>
+              <li><a href="lessons/05 Mileage running.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>25 Jan</td>
+          <td>4</td>
+          <td>Solving shortest path problems with networkx</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/shortest-path-networkx/zipball/class">zip</a></li>
+              <li><a href="lessons/04 Solving shortest path problems with networkx.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>23 Jan</li>
+              <li>18 Jan</li>
+            </ul>
+          </td>
+          <td>3</td>
+          <td>Introduction to Jupyter and Python</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="https://github.com/uhan-sa367/intro-jupyter-python/zipball/class">zip</a></li>
+              <li><a href="lessons/03 Introduction to Jupyter and Python.pdf">Completed notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>16 Jan</td>
+          <td>2</td>
+          <td>The shortest path problem, cont.</td>
+          <td><a href="lessons/02 The shortest path problem cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>11 Jan</td>
+          <td>1</td>
+          <td>Introduction and the shortest path problem</td>
+          <td><a href="lessons/01 Introduction and the shortest path problem.pdf">Notes</a></td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Quizzes</h2>
+      <ul>
+        <li>Now that the semester is over, I have removed the quizzes and their solutions.</li>
+      </ul>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Quiz</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24 Apr</td>
+          <td>Quiz 8</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Jupyter notebook (zip)</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>12 Apr</td>
+          <td>Quiz 7</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>22 Mar</td>
+          <td>Quiz 6</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>1 Mar</td>
+          <td>Quiz 5</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Jupyter notebook (zip)</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>22 Feb</td>
+          <td>Quiz 4</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>1 Feb</td>
+          <td>Quiz 3</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>25 Jan</td>
+          <td>Quiz 2</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Jupyter notebook (zip)</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>18 Jan</td>
+          <td>Quiz 1</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Quiz</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Exams</h2>
+      <ul>
+        <li>Now that the semester is over, I have removed the exams and their solutions.</li>
+      </ul>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Exam</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7 May</td>
+          <td>Final Exam</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Information</a></li>
+              <li><a href="">Summary of Models</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>29 Mar</td>
+          <td>Exam 2</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Exam</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>8 Feb</td>
+          <td>Exam 1</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="">Exam</a></li>
+              <li><a href="">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  <script type="text/javascript">
+  function toggleOlderAnnouncements() {
+    $(".old_ann").fadeToggle();
+    txt = $("#toggle_ann").text();
+    if (txt == "Show older announcements") {
+      $("#toggle_ann").text("Hide older announcements");
+    } else {
+      $("#toggle_ann").text("Show older announcements");
+    }
+
+  }
+  </script>
+</body>
+
+</html>

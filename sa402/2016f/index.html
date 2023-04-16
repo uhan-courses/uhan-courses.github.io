@@ -1,0 +1,685 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+<head>
+  <title>SA402 - Dynamic and Stochastic Models</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&subset=all" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Metadata -->
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <section id="course">
+      <h1 id="course-name">Dynamic and Stochastic Models</h1>
+      <p id="course-info">
+        SA402 &#9632; Fall 2016 &#9632; Sections 3002 and 4001<br> 
+        Assoc. Prof. Nelson Uhan
+      </p>
+    </section>
+
+    <section>
+      <h2>Announcements</h2>
+      <table id="ann" summary="Announcements">
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td>6 Dec</td>
+          <td>
+            <p style="margin-top:0;margin-bottom:1rem;"><strong>Final Exam on Friday 16 December, 7:55 - 10:55.</strong></p>
+            <ul>
+              <li>Section 3002: CH157 &nbsp;&nbsp;&nbsp;&nbsp; Section 4001: CH160</li>
+              <li>Calculators allowed.</li>
+              <li>No other outside materials allowed.</li>
+              <li>You will be given the same formulas that you have been given in past assessments.</li>
+              <li>The following course standards will <strong>not</strong> appear on the final exam:
+                <blockquote>A1, B1, B2, B3, B4, B5, C1, E1, F1, G1, G2, G3</blockquote></li>
+              <li>For each letter grade, you need to meet certain benchmarks on your final exam scores. Please see the course policy statement for details.</li>
+            </ul>
+            <p style="margin-top:0;margin-bottom:1rem;"><strong>Re-assessments.</strong></p>
+            <ul>
+              <li>Your scores on the final exam will count as re-assessments.</li>
+              <li>You may re-assess 1 course standard that will <strong>not</strong> appear on the final exam anytime between now and the final exam. Submit your requests as usual.</li> 
+            </ul>
+            <p style="margin-top:0;margin-bottom:1rem;"><strong>EI.</strong> I'm around &mdash; if you need extra instruction, just e-mail me and we can set up a time to meet.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>5 Dec</td>
+          <td>Please include a copy of your previous drafts and score sheets when you submit a revision of your project.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>1 Dec</td>
+          <td>
+            <p>A few adjustments to the re-assessment schedule:</p>
+
+            <p><strong>No re-assessments for F3 - F7 on Fri 2 Dec.</strong> I plan to go over some parts of Wednesday's quiz on Friday. Some of you will want to re-assess these standards; I want to make sure you have time to properly review the material. To compensate...</p>
+
+            <p style="margin-bottom:1rem;"><strong>2 re-assessments per class next week.</strong> You may re-assess 2 standards per class (instead of 1) next week (Mon 5 Dec, Wed 7 Dec).</p>
+          </td>
+        <tr class="old_ann">
+          <td>23 Nov</td>
+          <td>
+            Plan for the end of the semester:
+            <table class="white">
+              <tr class="white"><td>M</td><td>28 Nov</td><td>Review &mdash; birth-death processes, standard queueing models<br></td></tr>
+              <tr class="white"><td>W</td><td>30 Nov</td><td>Long quiz (30 minutes) on standards F3-F7<br>Office hours, re-assessments</td></tr>
+              <tr class="white"><td>F</td><td>2 Dec</td><td>Office hours, re-assessments</td></tr>
+              <tr class="white"><td>M</td><td>5 Dec</td><td>Office hours, re-assessments</td></tr>
+              <tr class="white"><td>W</td><td>7 Dec</td><td>Re-assessments, wrap-up</tr>
+            </table>
+            <ul style="margin-top:1.5rem;margin-bottom:0;">
+              <li>Re-assessments:</li>
+              <ul style="margin-top:0;">
+              <li>For the rest of the semester, re-assessments will take place <strong>in class</strong> on 30 Nov, 2 Dec, 5 Dec and 7 Dec</li>
+              <li>You may request <strong>1 re-assessment per class</strong> &mdash; please make sure to submit your request by COB the day before</li>
+              </ul>
+              <li>Projects: you may revise and resubmit your project twice, any time before 16 Dec</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>17 Nov</td>
+          <td>
+            Because of my absence this week and the short week next week:
+            <ul style="margin-top:1rem; margin-bottom:1rem;">
+              <li>You may schedule 1 re-assessment for this week and 1 re-assessment for next week<br/>
+               <strong>OR</strong> you may schedule 2 re-assessments (taken at the same time) for next week.</li>
+            </ul>
+            There will also be opportunities for extra re-assessments after Thanksgiving break &mdash; details TBA.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>7 Nov</td>
+          <td>
+            There will be no quiz this week. Instead, there will be a quiz on <span style="color:#d00">Monday 14 Nov</span>.
+
+            <p style="margin-top:1rem;margin-bottom:0">First drafts of projects are due on <span style="color:#d00">Wednesday 23 November</span>. If you are finding your own article, you must get my approval by this <span style="color:#d00">Thursday 10 November</span>.</p>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>2 Nov</td>
+          <td>
+            I will be in my office this evening (19:00 - 20:00) for re-assessments.
+
+            <p style="margin-top:1rem;margin-bottom:0">For this week only: you may use this evening re-assessment session to schedule a second re-assessment for this week.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>31 Oct</td>
+          <td>I updated course standard F1 and the relevant homework for standard F2. Please make sure you take a look.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>26 Oct</td>
+          <td>
+            Upcoming schedule:
+            <table class="white">
+              <tr class="white"><td>F</td><td>28 Oct</td><td>Please bring your laptops to class</td></tr>
+              <tr class="white"><td>M</td><td>31 Oct</td><td>Lesson 15 (not covered on Exam 2, but somewhat related)</td></tr>
+              <tr class="white"><td>W</td><td>2 Nov</td><td>Review in class<br>I will be available for re-assessments in the evening, 19:00 - 20:00.</td></tr>
+              <tr class="white"><td>Th</td><td>3 Nov</td><td>EI 19:00 - 20:00 in my office or nearby</td></tr>
+              <tr class="white"><td>F</td><td>4 Nov</td><td><strong>Exam 2</strong> in class</td></tr>
+            </table>
+            <p style="margin-top:1.5rem;margin-bottom:1rem;"><strong>Exam 2.</strong></p>
+            <ul style="margin-bottom:0;">
+              <li>Covers lessons 8-14, standards D1-D6 and E1-E6</li>
+              <li>Calculators allowed</li>
+              <li>No other outside materials allowed</li>
+            </ul>
+            <p style="margin-top:2rem;margin-bottom:1rem;"><strong>12-week grades.</strong>
+              Your 12-week grade will be based on standards A1, B1-B5, C1-C2, D1-D6 and E1-E4 (<strong>not</strong> E5-E6).</p>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>21 Oct </td>
+          <td>Next week's quiz on Wednesday 26 Oct will assess standard E2 again, among other things TBD.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>7 Oct</td>
+          <td>Next week's quiz will take place on Friday 14 Oct, instead of Wednesday.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>29 Sep</td>
+          <td><p>Next week's quiz (Wed) will cover D1, D2 and D3.</p>
+          <p style="margin-bottom: 0.5rem;">I will be available on Monday (3 Oct) evening, 19:00 - 20:00, for re-assessments.</p></td>
+        </tr>
+        <tr class="old_ann">
+          <td>23 Sep</td>
+          <td>
+            There is interest! I will hold a review session and re-assessment for standards B1 and B2 on Wednesday 28 Sep, 19:30 - 20:30.
+            If you are interested but have not taken <a href="https://docs.google.com/a/usna.edu/forms/d/e/1FAIpQLSejwyXxHFLFZnEJLaongPLAOdRj6lGG3DmZw6naZarzugwM1w/viewform">this poll</a>, please do so that I can get an idea of how many midshipmen to expect.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>22 Sep</td>
+          <td>
+            <p style="margin-bottom:0.5rem;"><strong>Re-assessments for this week and next week.</strong></p>
+            <ul>
+              <li>Next week&#8217;s quiz (Wed) will include a re-assessment for standard C2.</li>
+              <li>You may schedule 1 re-assessment for this week and 1 re-assessment for next week<br/>
+               <strong>OR</strong> you may schedule 2 re-assessments (taken at the same time) for next week.</li>
+              <li>If there is interest, I will hold a review session and re-assessment for standards B1 and B2 next Wednesday evening (19:30 - 20:30). Please take the poll <a href="https://docs.google.com/a/usna.edu/forms/d/e/1FAIpQLSejwyXxHFLFZnEJLaongPLAOdRj6lGG3DmZw6naZarzugwM1w/viewform">here</a>.
+            </ul>
+
+            <p style="margin-bottom: 0.5rem;"><strong>6-week grades.</strong> Your 6-week grade will be based on standards A1, B1-B5, and C1-C2.</p>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>12 Sep</td>
+          <td>
+            Upcoming schedule:
+            <table class="white">
+              <tr class="white"><td>W</td><td>14 Sep</td><td>Lesson 7</td></tr>
+              <tr class="white"><td>F</td><td>16 Sep</td><td><strong>Quiz</strong> (standards B1, B2, C1, C2), worksheet with review problems</td></tr>
+              <tr class="white"><td>M</td><td>19 Sep</td><td>Review in class</td></tr>
+              <tr class="white"><td>T</td><td>20 Sep</td><td>EI 19:30 - 20:30 in my office</td></tr>
+              <tr class="white"><td>W</td><td>21 Sep</td><td><strong>Exam 1</strong></td></tr>
+            </table>
+
+            <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Exam 1</strong></p>
+            <ul style="margin-bottom: 0;">
+              <li>Covers lessons 1-7, standards A1, B1-B5, C1-C2</li>
+              <li>Calculators allowed</li>
+              <li>No other outside materials allowed</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>22 Aug</td>
+          <td>Welcome!</td>
+        </tr>
+      </table>
+      <p style="text-align:right;"><a href="javascript:;" onmousedown="toggleOlderAnnouncements();">Older announcements</a></p>
+    </section>
+
+    <section> 
+      <h2>General information</h2>
+      <div class="row" id="info">
+        <div class="six columns">
+          <ul>
+            <li><a href="policy.pdf">Course policy statement</a></li>
+            <li><a href="syllabus.pdf">Syllabus (course-wide)</a></li>
+          </ul>
+        </div>
+        <div class="six columns">
+          <ul>
+            <li><a href="standards.pdf">List of course standards</a></li>
+            <li><a href="rubric_examples.pdf">Rubric examples</a></li>
+            <li><a href="https://docs.google.com/a/usna.edu/forms/d/e/1FAIpQLSeVTakeWO205QQVw9b8EIS-YAotmqRcJ6_lUJ--uBRntYImDw/viewform">Re-assessment request form</a></li> 
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Homework</h2>
+      <ul>
+        <li>Numbered problems are from the textbook by Nelson.</li>
+        <li>Solutions are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHdlZLM1E4ZDREMjA?usp=sharing">here</a> on Google Drive.</li>
+      </ul>
+
+      <table summary="Homework">
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Problems</strong></td>
+        </tr>
+        <tr>
+          <td>21 Nov</td>
+          <td>8.5ab, 8.8abc, 8.10bcd</td>
+        </tr>
+        <tr>
+          <td>18 Nov</td>
+          <td>Finish 8.4abc, 8.6bcd, 8.10f, 8.11bcd.</td>
+        </tr>
+        <tr>
+          <td>16 Nov</td>
+          <td>Compute the steady-state probabilities for the processes in 8.4abc, 8.6bcd, 8.10f, 8.11bcd.</td>
+        </tr>
+        <tr>
+          <td>9 Nov</td>
+          <td>8.10e. Write the model for 8.4, 8.8d.</td>
+        </tr>
+        <tr>
+          <td>7 Nov</td>
+          <td>8.6a, 8.11a. Finish the homework for 31 Oct.</td>
+        </tr>
+        <tr>
+          <td>31 Oct</td>
+          <td>7.10</td>
+        </tr>
+        <tr>
+          <td>26 Oct</td>
+          <td>Finish the homework for 24 Oct.</td>
+        </tr>
+        <tr>
+          <td>24 Oct</td>
+          <td>6.17a, 6.20a, 6.21a. Justify why the properties of a Markov chain might be satisfied for these problems.</td>
+        </tr>
+        <tr>
+          <td>21 Oct</td>
+          <td>6.8, 6.11, 6.20b, 6.21bc</td>
+        </tr>
+        <tr>
+          <td>19 Oct</td>
+          <td>6.5, 6.6, 6.17c</td>
+        </tr>
+        <tr>
+          <td>17 Oct</td>
+          <td>6.4b, 6.17ab, 6.18 (start by finding the probabilities of preferred beer brands in 1979 and 2016)</td>
+        </tr>
+        <tr>
+          <td>14 Oct</td>
+          <td>Finish the homework for 12 Oct.</td>
+        </tr>
+        <tr>
+          <td>12 Oct</td>
+          <td>6.2, 6.4ac, 6.5 (transition diagram only)</td>
+        </tr>
+        <tr>
+          <td>3 Oct</td>
+          <td>5.20. Finish Example 2 in Lesson 10.</td>
+        </tr>
+        <tr>
+          <td>30 Sep</td>
+          <td>Finish the homework for 28 Sep.</td>
+        </tr>
+        <tr>
+          <td>28 Sep</td>
+          <td>5.3ef, 5.10, 5.12, 5.13, 5.15, 5.17</td>
+        </tr>
+        <tr>
+          <td>26 Sep</td>
+          <td>5.1bcd, 5.3abcd, 5.6, 5.8, 5.14</td>
+        </tr>
+        <tr>
+          <td>23 Sep</td>
+          <td>5.1a, 5.5</td>
+        </tr>
+        <tr>
+          <td>14 Sep</td>
+          <td>4.4. Finish the homework for 12 Sep.</td>
+        </tr>
+        <tr>
+          <td>12 Sep</td>
+          <td>
+            4.6, 4.8<br>
+            <em>Hint.</em> For 4.6, you'll need to keep track of the number of jobs waiting to be processed by CPU A and CPU B. Let B be a random variable that takes value 0 with probability 1/2 and 1 with probability 1/2. Map B = 0 to CPU A and B = 1 to CPU B.
+          </td>
+        </tr>
+        <tr>
+          <td>9 Sep</td>
+          <td>
+            3.17ab, 3.18ab, 3.19ab, 3.20ab
+          </td>
+        </tr>
+        <tr>
+          <td>7 Sep</td>
+          <td>
+            3.17c, 3.18c, 3.19c, 3.20c
+          </td>
+        </tr>
+        <tr>
+          <td>6 Sep</td>
+          <td>
+            Finish the homework for 31 Aug and 2 Sep.
+          </td>
+        </tr>
+        <tr>
+          <td>2 Sep</td>
+          <td>
+            3.9, 3.31
+          </td>
+        </tr>
+        <tr>
+          <td>31 Aug</td>
+          <td>
+            3.6, 3.8
+          </td>
+        </tr>
+        <tr>
+          <td>29 Aug</td>
+          <td>
+            Finish the homework for 26 Aug.
+          </td>
+        </tr>
+        <tr>
+          <td>26 Aug</td>
+          <td>
+            3.1, 3.2, 3.3, 3.5
+          </td>
+        </tr>
+        <tr>
+          <td>24 Aug</td>
+          <td>
+            2.1. &nbsp;Also: finish the simulation of the self-service system we started in class.<br>
+            <a href="homework/selfservice.pdf">Template for self-service system</a> &nbsp; <a href="homework/fullservice.pdf">Template for full-service system</a>
+          </td>
+        </tr>
+        <tr>
+          <td>22 Aug</td>
+          <td>
+            Familiarize yourself with the course policy statement.
+            Read the section on grading carefully!
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Lessons</h2>
+      <table summary="Lessons">
+        <colgroup>
+          <col width="100">
+          <col width="30">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Dates</strong></td>
+          <td colspan="2"><strong>Lesson</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21 Nov</td>
+          <td>18</td>
+          <td>Standard queueing models</td>
+          <td>
+            <a href="lessons/18.pdf">notes</a><br>
+            <a href="lessons/18_problem_1.pdf">solutions to Problem 1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>16 Nov<br>18 Nov</td>
+          <td>17</td>
+          <td>The birth-death process &mdash; performance measures</td>
+          <td>
+            <a href="lessons/17.pdf">notes</a><br>
+            <a href="lessons/17_problems.pdf">solutions to Problems 1 and 2</a>
+          </td>
+        </tr>
+        <tr>
+          <td>7 Nov<br>9 Nov</td>
+          <td>16</td>
+          <td>Introduction to queueing processes &mdash; the birth-death process</td>
+          <td>
+            <a href="lessons/16.pdf">notes</a><br>
+            <a href="lessons/16_problem_1.pdf">solutions to Problem 1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>31 Oct<br>7 Nov</td>
+          <td>15</td>
+          <td>A quick start guide to Markov processes</td>
+          <td>
+            <a href="lessons/15.pdf">notes</a><br>
+            <a href="lessons/15_problem_1.pdf">solutions to Problem 1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>28 Oct</td>
+          <td></td>
+          <td>How to win at Monopoly</td>
+          <td><a href="https://github.com/nelsonuhan/winmonopoly">notebook</a></td>
+        </tr>
+        <tr>
+          <td>24 Oct<br>26 Oct</td>
+          <td>14</td>
+          <td>Markov chains &mdash; modeling and assumptions</td>
+          <td>
+            <a href="lessons/14.pdf">notes</a><br>
+            <a href="lessons/14_problems_1_and_2.pdf">solutions to Problems 1 and 2</a>
+          </td>
+        </tr>
+        <tr>
+          <td>19 Oct<br>21 Oct</td>
+          <td>13</td>
+          <td>Markov chains &mdash; time-independent performance measures</td>
+          <td>
+            <a href="lessons/13.pdf">notes</a><br>
+            <a href="lessons/13_problem_1.pdf">solutions to Problem 1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>14 Oct<br>17 Oct</td>
+          <td>12</td>
+          <td>Markov chains &mdash; time-dependent performance measures</td>
+          <td>
+            <a href="lessons/12.pdf">notes</a><br>
+            <a href="lessons/12_problem_1.pdf">solutions to Problem 1</a>
+          </td>
+        </tr>
+        <tr>
+          <td>12 Oct</td>
+          <td>11</td>
+          <td>Introduction to Markov chains</td>
+          <td><a href="lessons/11.pdf">notes</a></td>
+        </tr>
+        <tr>
+          <td>7 Oct</td>
+          <td></td>
+          <td>Poisson processes for fun and profit</td>
+          <td><a href="https://github.com/nelsonuhan/poissonfun">notebook</a></td>
+        </tr>
+        <tr>
+          <td>3 Oct</td>
+          <td>10</td>
+          <td>Nonstationary Poisson processes</td>
+          <td><a href="lessons/10.pdf">notes</a></td>
+        </tr>
+        <tr>
+          <td>28 Sep<br>30 Sep</td>
+          <td>9</td>
+          <td>Poisson arrival processes, cont.</td>
+          <td><a href="lessons/09.pdf">notes</a></td>
+        </tr>
+        <tr>
+          <td>23 Sep<br>26 Sep</td>
+          <td>8</td>
+          <td>Arrival counting processes and the Poisson arrival process</td>
+          <td>
+            <a href="lessons/08.pdf">notes</a><br>
+            <a href="lessons/08_memoryless.pdf">notes on the memoryless property</a>
+          </td>
+        </tr>
+        <tr>
+          <td>16 Sep<br>19 Sep</td>
+          <td></td>
+          <td>Review</td>
+          <td>
+            <a href="lessons/review_01.pdf">problems</a><br>
+            <a href="lessons/review_01_sol.pdf">solutions</a>
+          </td>
+        </tr>
+        <tr>
+          <td>14 Sep</td>
+          <td>7</td>
+          <td>A general stochastic process model</td>
+          <td>
+            <a href="lessons/07.pdf">notes</a>
+          </td>
+        </tr>
+        <tr>
+          <td>9 Sep<br>12 Sep</td>
+          <td>6</td>
+          <td>Introduction to stochastic processes</td>
+          <td>
+            <a href="lessons/06.pdf">notes</a><br>
+          </td>
+        </tr>
+       <tr>
+          <td>7 Sep<br>9 Sep</td>
+          <td>5</td>
+          <td>Random variate generation</td>
+          <td>
+            <a href="lessons/05.pdf">notes</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td>6 Sep</td>
+          <td>4</td>
+          <td>Conditional probability review, cont.</td>
+          <td>
+            <a href="lessons/04.pdf">notes</a><br>
+            <a href="lessons/04_problems.pdf">solutions to problems</a>
+          </td>
+        </tr>
+        <tr>
+          <td>31 Aug<br>2 Sep</td>
+          <td>3</td>
+          <td>Conditional probability review</td>
+          <td>
+            <a href="lessons/03.pdf">notes</a><br>
+            <a href="lessons/03_example_6.pdf">solutions to Example 6</a>
+          </td>
+        </tr>
+        <tr>
+          <td>24 Aug<br>26 Aug<br>29 Aug</td>
+          <td>2</td>
+          <td>Probability review</td>
+          <td>
+            <a href="lessons/02.pdf">notes</a><br>
+            <a href="lessons/02_exercises.pdf">solutions to exercises</a>
+          </td>
+        </tr>
+        <tr>
+          <td>22 Aug<br>24 Aug</td>
+          <td>1</td>
+          <td>Sample paths</td>
+          <td><a href="lessons/01.pdf">notes</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Quizzes</h2>
+      <ul>
+        <li>Solutions are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHdlZLM1E4ZDREMjA?usp=sharing">here</a> on Google Drive.</li>
+      </ul>
+      <table summary="Quizzes">
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Standards</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>30 Nov</td>
+          <td>F3, F4, F5, F6, F7</td>
+          <td><a href="quizzes/10.pdf">quiz</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="quizzes/10_info.pdf">formulas</a></td>
+        </tr>
+        <tr>
+          <td>14 Nov</td>
+          <td>E5, E6, F1, F2</td>
+          <td><a href="quizzes/09.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>26 Oct</td>
+          <td>E2, E3, E4</td>
+          <td><a href="quizzes/08.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>19 Oct</td>
+          <td>E1, E2</td>
+          <td><a href="quizzes/07.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>14 Oct</td>
+          <td>D4, D5, D6</td>
+          <td><a href="quizzes/06.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>5 Oct</td>
+          <td>D1, D2, D3</td>
+          <td><a href="quizzes/05.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>28 Sep</td>
+          <td>C2, D1, D2</td>
+          <td><a href="quizzes/04.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>16 Sep</td>
+          <td>B1, B2, C1, C2</td>
+          <td><a href="quizzes/03.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>7 Sep</td>
+          <td>B3, B4, B5</td>
+          <td><a href="quizzes/02.pdf">quiz</a></td>
+        </tr>
+        <tr>
+          <td>31 Aug</td>
+          <td>A1, B1, B2</td>
+          <td><a href="quizzes/01.pdf">quiz</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Exams</h2>
+      <ul>
+        <li>Solutions are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHdlZLM1E4ZDREMjA?usp=sharing">here</a> on Google Drive.</li>
+      </ul>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Exam</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4 Nov</td>
+          <td>Exam 2</td>
+          <td><a href="exams/exam2.pdf">exam</a></td>
+        </tr>
+        <tr>
+          <td>21 Sep</td>
+          <td>Exam 1</></td>
+          <td>
+            <a href="exams/exam1.pdf">exam</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Project</h2>
+      <ul>
+        <li><a href="project.html">Instructions</a></li>
+      </ul>
+    </section>
+  </div>
+
+<script type="text/javascript">
+  function toggleOlderAnnouncements() {
+    $(".old_ann").fadeToggle();
+  }
+</script>
+
+</body>
+
+</html>

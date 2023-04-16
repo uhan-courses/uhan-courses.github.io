@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SA305 - Linear Programming</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&amp;subset=all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&amp;display=swap" rel="stylesheet">
+    <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/skeleton.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/toggle.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <h1 id="course-title">Linear Programming</h1>
+        <p id="course-info">SA305 &nbsp;&#11037;&nbsp; Spring 2021 &nbsp;&#11037;&nbsp; Section 1202<br>Assoc. Prof. Nelson Uhan</p>
+      </section>
+      <section>
+        <h2>Announcements</h2>
+        <table>
+          <colgroup>
+            <col width="120">
+            <col>
+          </colgroup>
+          <tr class="highlight">
+            <td><p>5/17</p></td>
+            <td><p>The semester is over!</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/26</p></td>
+            <td><ul>
+<li>The <strong>project</strong> is due Wednesday 5/5 at 23:59. See the <em>Labs</em> section below.</li>
+<li>Resubmissions:<ul>
+<li>You may resubmit <strong>two</strong> quizzes/exams/labs next week (week of 5/3), but...</li>
+<li><strong>The final deadline to resubmit a quiz/exam/lab is Thursday 5/6 at 23:59.</strong></li>
+<li>You cannot resubmit the project or final exam.</li>
+<li>I will post solutions to all quizzes, exams, and labs on Friday 5/7, so you can have them to study for the final exam.</li>
+</ul>
+</li>
+<li><strong>Final Exam</strong> &mdash; Tuesday 5/11 at 13:00<ul>
+<li>Section 1202B &rarr; CH051, Section 1202G &rarr; CH045</li>
+<li>Covers everything!</li>
+<li>You may refer to one 8.5in x 11in sheet of <em>handwritten</em> notes, both sides. No other materials allowed.</li>
+<li>No collaboration allowed.</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/21</p></td>
+            <td><p><strong>Quiz 8</strong> will take place on Tuesday 4/27.</p>
+<ul>
+<li>Covers Lesson 20.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/14<br>
+(updated 4/16)</p></td>
+            <td><p><strong>Quiz 7</strong> will take place on Tuesday 4/20.</p>
+<ul>
+<li>Covers Lessons 18 and 19 (Sections 0, 1 and 2 &mdash; degeneracy and convergence).</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/12</p></td>
+            <td><ul>
+<li>No quiz this week!</li>
+<li>Quiz 7 will take place on Tuesday 4/20. More details later this week.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/31<br>
+(updated 4/6)</p></td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>T</td>
+                  <td>4/6</td>
+                  <td><p>Finish Lesson 17</p>
+<p>Review for Exam 2</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>4/7</td>
+                  <td><p>Exam EI, 20:00 - 21:00</p></td>
+                </tr>
+                <tr class="white">
+                  <td>R</td>
+                  <td>4/8</td>
+                  <td><p>Exam 2</p></td>
+                </tr>
+              </table><p><strong>Exam 2</strong> will take place on Thursday 4/8.</p>
+<ul>
+<li>Covers Lessons 11-17.</li>
+<li>You will not be asked to read or write Python/Pyomo code.</li>
+<li>You may refer to <strong>one</strong> 8.5 in &times; 11 in sheet of <strong>handwritten</strong> notes.</li>
+<li>You may use your TI-36X Pro calculator.</li>
+<li>No collaboration allowed.</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/29</p></td>
+            <td><ul>
+<li>No quiz or exam this week!</li>
+<li>Exam 2 will take place on Thursday 4/8, <em>after</em> the 12-week marking period ends. Details forthcoming.</li>
+<li>This week is the last week for resubmissions to count for your 12-week marking period grade.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/25</p></td>
+            <td><ul>
+<li>No quiz or exam next week!</li>
+<li>Exam 2 will take place on Thursday 4/8, <em>after</em> the 12-week marking period ends. Details forthcoming.</li>
+<li>Next week is the last week for resubmissions to count for your 12-week marking period grade.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/22</p></td>
+            <td><p><strong>Quiz 6</strong> will take place on Thursday 3/25.</p>
+<ul>
+<li>Covers Lesson 13.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/15</p></td>
+            <td><p><strong>Quiz 5</strong> will take place on Thursday 3/18.</p>
+<ul>
+<li>Covers Lesson 11.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/8</p></td>
+            <td><p>No quiz this week!</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/24</p></td>
+            <td><p>This is the last week for resubmissions to count for your 6-week marking period grade.</p>
+<ul>
+<li>This week's resubmissions are due on Sunday 2/28 at 23:59.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/24</p></td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>T</td>
+                  <td>3/2</td>
+                  <td><p>Review for Exam 1</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>3/3</td>
+                  <td><p>Exam EI, 20:00 - 21:00</p></td>
+                </tr>
+                <tr class="white">
+                  <td>R</td>
+                  <td>3/4</td>
+                  <td><p>Exam 1</p></td>
+                </tr>
+              </table><p><strong>Exam 1</strong> will take place on Thursday 3/4.</p>
+<ul>
+<li>Covers Lessons 1-10.</li>
+<li>You will not be asked to write Python/Pyomo code, but you may be
+  asked to read and interpret Python/Pyomo code.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, homework, website) during the exam.</li>
+<li>No collaboration allowed.</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/18</p></td>
+            <td><ul>
+<li>The grading policy for the 6-week marking period has been posted in the <em>Course Logistics</em> section below.</li>
+<li>Exam 1 will take place on Thursday 3/4, <em>after</em> the 6-week marking period ends. Details forthcoming.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/15<br>
+(updated 2/17)</p></td>
+            <td><p><strong>Quiz 4</strong> will take place on Tuesday 2/23.</p>
+<ul>
+<li>Covers Lesson 7.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/8</p></td>
+            <td><p><strong>Quiz 3</strong> will take place on Thursday 2/11.</p>
+<ul>
+<li>Covers Lesson 5-6.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/1</p></td>
+            <td><p><strong>Quiz 2</strong> will take place on Thursday 2/4.</p>
+<ul>
+<li>Covers Lesson 3-4.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/25</p></td>
+            <td><p><strong>Quiz 1</strong> will take place on Thursday 1/28.</p>
+<ul>
+<li>Covers Lesson 2.</li>
+<li>15 minutes, during class.</li>
+<li>Closed book: you may <strong>not</strong> refer to any other materials (e.g.,
+  notes, textbook, website) during the quiz.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/25</p></td>
+            <td><p><strong>Quiz 0</strong> is due on Tuesday 1/26 at 23:59.</p>
+<ul>
+<li>Counts as a regular quiz.</li>
+<li>Purpose: practice with<ul>
+<li>scanning handwritten work into a single PDF file,</li>
+<li>submitting your work using the submission form.</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/19</p></td>
+            <td><p>Welcome!</p></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderAnnouncements();">
+            <span id="toggle-announcements">Show older announcements</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>Schedule</h2>
+        <table>
+          <colgroup>
+            <col width="120">
+            <col width="420">
+            <col width="420">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="1">Class</th>
+            <th colspan="1">Homework, labs, etc.</th>
+          </tr>
+          <tr class="highlight">
+            <td><p>5/4</p></td>
+            <td><ul>
+<li>Work on the project</li>
+<li>Wrap up</li>
+<li>Student opinion forms</li>
+</ul></td>
+            <td><ul>
+<li>Project due on Wednesday 5/5 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr>
+            <td><p>4/29</p></td>
+            <td><ul>
+<li>Work on the project</li>
+</ul></td>
+            <td><ul>
+<li>Work on previously assigned homework problems</li>
+<li>Project due on Wednesday 5/5 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr>
+            <td><p>4/27</p></td>
+            <td><ul>
+<li>Lesson 22</li>
+<li>Quiz 8</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 9.7</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/22</p></td>
+            <td><ul>
+<li>Finish Lesson 20</li>
+<li>Lesson 21</li>
+</ul></td>
+            <td><ul>
+<li>Lab 5 due Thursday 4/22 at 23:59</li>
+<li>Work on Rader 9.5</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/20</p></td>
+            <td><ul>
+<li>Finish Lesson 19</li>
+<li>Start Lesson 20</li>
+<li>Quiz 7</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 9.1, 9.2, 9.3, 9.4</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/15</p></td>
+            <td><ul>
+<li>Start Lesson 19</li>
+</ul></td>
+            <td><ul>
+<li>Work on previously assigned homework problems</li>
+<li>Work on Lab 5</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/13</p></td>
+            <td><ul>
+<li>Lesson 18</li>
+<li>Work on resubmissions</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 8.11ab, 8.12ab</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/8</p></td>
+            <td><ul>
+<li>Exam 2</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/6</p></td>
+            <td><ul>
+<li>Finish Lesson 17</li>
+<li>Review for Exam 2</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/1</p></td>
+            <td><ul>
+<li>Continue Lesson 17</li>
+</ul></td>
+            <td><ul>
+<li>Lab 4 due Tuesday 4/6 at 23:59</li>
+<li>Work on Rader 8.1, 8.2, 8.3, 8.8</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/30</p></td>
+            <td><ul>
+<li>Finish Lesson 16</li>
+<li>Start Lesson 17</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/25</p></td>
+            <td><ul>
+<li>Start Lesson 16</li>
+<li>Quiz 6</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 7.14, 7.16</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/23</p></td>
+            <td><ul>
+<li>Finish Lesson 15</li>
+</ul></td>
+            <td><ul>
+<li>Lab 3 due Tuesday 3/23 at 23:59</li>
+<li>Work on Rader 7.3, 7.4</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/18</p></td>
+            <td><ul>
+<li>Finish Lesson 14</li>
+<li>Start Lesson 15</li>
+<li>Quiz 5</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 6.14, 6.18, 7.2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/16</p></td>
+            <td><ul>
+<li>Continue Lesson 13</li>
+<li>Start Lesson 14</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 6.8, 6.9</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/11</p></td>
+            <td><ul>
+<li>Finish Lesson 12</li>
+<li>Start Lesson 13</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 6.1, 6.2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/9</p></td>
+            <td><ul>
+<li>Lesson 11</li>
+<li>Start Lesson 12</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 1.1abcd, 1.2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/4</p></td>
+            <td><ul>
+<li>Exam 1</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/2</p></td>
+            <td><ul>
+<li>Review for Exam 1</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 1</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/25</p></td>
+            <td><ul>
+<li>Finish Lesson 9</li>
+<li>Start Lesson 10</li>
+</ul></td>
+            <td><ul>
+<li>Work on Example 2 in Lesson 10</li>
+<li>Work on Rader 2.9, 2.10</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/23</p></td>
+            <td><ul>
+<li>Start Lesson 9</li>
+<li>Quiz 4</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 2.20, 2.22 (use sets and parameters)</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/18</p></td>
+            <td><ul>
+<li>Classes cancelled</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/16</p></td>
+            <td><ul>
+<li>Finish Lesson 8</li>
+<li>Lab 2</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 2.3, 2.24 (use sets and parameters)</li>
+<li>Work on Lab 2, due Tuesday 2/23 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/11</p></td>
+            <td><ul>
+<li>Finish Lesson 7</li>
+<li>Start Lesson 8</li>
+<li>Quiz 3</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 2.6, 2.13, 2.14, 2.16 (use sets and parameters)</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/9</p></td>
+            <td><ul>
+<li>Finish Lesson 6</li>
+<li>Start Lesson 7</li>
+</ul></td>
+            <td><ul>
+<li>Lab 1 due Tuesday 2/9 at 23:59</li>
+<li>Work on Problems 4, 5, 6 in Handout 1</li>
+<li>Work on Problems 3 and 4 in Handout 2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/4</p></td>
+            <td><ul>
+<li>Lesson 5</li>
+<li>Start Lesson 6</li>
+<li>Quiz 2</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 2.6</li>
+<li>Work on Problems 1 and 2 in Handout 2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/2</p></td>
+            <td><ul>
+<li>Finish Lesson 4</li>
+<li>Lab 1</li>
+</ul></td>
+            <td><ul>
+<li>Work on previously assigned homework problems</li>
+<li>Work on Lab 1, due Tuesday 2/9 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/28</p></td>
+            <td><ul>
+<li>Finish Lesson 3</li>
+<li>Start Lesson 4</li>
+<li>Quiz 1</li>
+</ul></td>
+            <td><ul>
+<li>Work on Rader 2.11, 2.12</li>
+<li>Follow the instructions in <em>Getting started with Jupyter and Python</em>, linked below</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/26</p></td>
+            <td><ul>
+<li>Finish Lesson 2</li>
+<li>Start Lesson 3</li>
+<li>Grading rubric and resubmission policy</li>
+<li>Quiz logistics</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 0 due on Tuesday 1/26 at 23:59</li>
+<li>Work on Problems 1, 2acde, 3 in Handout 1</li>
+<li>Work on Rader 2.1, 2.3, 2.4a (formulation only)</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/21</p></td>
+            <td><ul>
+<li>Course logistics</li>
+<li>Lesson 1</li>
+<li>Start Lesson 2</li>
+</ul></td>
+            <td><ul>
+<li>Complete the student questionnaire (sent by email)</li>
+</ul></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderSchedules();">
+            <span id="toggle-schedule">Show past days</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>Course Logistics</h2>
+        <ul>
+          <li>
+            <a href="logistics/policy-20210118.pdf">Course policy statement</a>
+          </li>
+          <li>
+            <a href="logistics/syllabus.pdf">Syllabus</a>
+          </li>
+          <li>
+            <a href="logistics/grading-20210125.pdf">Grading rubric and resubmission policy</a>
+          </li>
+          <li>
+            <a href="logistics/resubmission-example.pdf">Resubmission example</a>
+          </li>
+          <li>
+            <a href="logistics/submitting-handwritten-work-electronically-20210117.pdf">Submitting handwritten work electronically</a>
+          </li>
+          <li>
+            <a href="logistics/grades-6wk.pdf">Grading policy - 6-week marking period</a>
+          </li>
+          <li>
+            <a href="https://script.google.com/a/macros/usna.edu/s/AKfycbz4GxztTY2AkeVWSr7AvuRm467_AD66y3bztpmZZBPyZORzjlWw7UXJsw/exec">SA305 Assignment Submission Form</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li>
+            <span>Python</span>
+          </li>
+          <ul>
+            <li>
+              <a href="resources/getting-started-jupyter-python.pdf">Getting started with Jupyter and Python</a>
+            </li>
+            <li>
+              <a href="https://docs.python.org/3/">Python documentation</a>
+            </li>
+          </ul>
+          <li>
+            <span>Supplementary readings</span>
+          </li>
+          <ul>
+            <li>
+              <a href="resources/Handout 01 Modeling Definitions.pdf">Handout 1: the language of optimization - modeling definitions</a>
+            </li>
+            <li>
+              <a href="resources/Handout 02 Sets Summations For Statements.pdf">Handout 2: sets, summations, for statements</a>
+            </li>
+          </ul>
+          <li>
+            <span>Solutions to homework problems (removed, now that the semester is over)</span>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Lessons</h2>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col width="30">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Dates</th>
+            <th colspan="2">Lesson</th>
+            <th colspan="1"></th>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/27</li>
+              </ul>
+            </td>
+            <td>22</td>
+            <td>An economic interpretation of LP duality</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 22 An Economic Interpretation of LP Duality.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 22 An Economic Interpretation of LP Duality completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/22</li>
+              </ul>
+            </td>
+            <td>21</td>
+            <td>Weak and strong duality</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 21 Weak and Strong Duality.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 21 Weak and Strong Duality completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/22</li>
+                <li class="vcompact">4/20</li>
+              </ul>
+            </td>
+            <td>20</td>
+            <td>Bounds and the dual LP</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 20 Bounds and the Dual LP.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 20 Bounds and the Dual LP completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/15</li>
+              </ul>
+            </td>
+            <td>19</td>
+            <td>Degeneracy, convergence, multiple optimal solutions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 19 Degeneracy Convergence Multiple Optimal Solutions.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 19 Degeneracy Convergence Multiple Optimal Solutions completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/13</li>
+              </ul>
+            </td>
+            <td>18</td>
+            <td>Finding an initial BFS</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 18 Finding an Initial BFS.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 18 Finding an Initial BFS completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4/1</li>
+                <li class="vcompact">3/30</li>
+              </ul>
+            </td>
+            <td>17</td>
+            <td>The simplex method</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 17 The Simplex Method.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 17 The Simplex Method completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/30</li>
+                <li class="vcompact">3/25</li>
+              </ul>
+            </td>
+            <td>16</td>
+            <td>Linear programs in canonical form</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 16 Linear Programs in Canonical Form.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 16 Linear Programs in Canonical Form completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/23</li>
+                <li class="vcompact">3/18</li>
+              </ul>
+            </td>
+            <td>15</td>
+            <td>Geometry and algebra of corner points</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 15 Geometry and Algebra of Corner Points.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 15 Geometry and Algebra of Corner Points completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/18</li>
+                <li class="vcompact">3/16</li>
+              </ul>
+            </td>
+            <td>14</td>
+            <td>Improving search &mdash; convexity and optimality</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 14 Improving Search Convexity and Optimality.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 14 Improving Search Convexity and Optimality completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/16</li>
+                <li class="vcompact">3/11</li>
+              </ul>
+            </td>
+            <td>13</td>
+            <td>Improving search &mdash; finding better solutions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 13 Improving Search Finding Better Solutions.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 13 Improving Search Finding Better Solutions completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/11</li>
+                <li class="vcompact">3/9</li>
+              </ul>
+            </td>
+            <td>12</td>
+            <td>Introduction to algorithm design</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 12 Introduction to Algorithm Design.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 12 Introduction to Algorithm Design completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">3/9</li>
+              </ul>
+            </td>
+            <td>11</td>
+            <td>Graphical solution of linear programs</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 11 Graphical Solution of Linear Programs.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 11 Graphical Solution of Linear Programs completed.pdf">Completed notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 11 Animation - Warmup.pdf">Animation &mdash; Warmup</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 11 Animation - Solving.pdf">Animation &mdash; Solving</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 11 Animation - Outcomes.pdf">Animation &mdash; Outcomes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/25</li>
+              </ul>
+            </td>
+            <td>10</td>
+            <td>Production process models</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 10 Production Process Models.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 10 Production Process Models completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/23</li>
+              </ul>
+            </td>
+            <td>9</td>
+            <td>Multiperiod models</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 09 Multiperiod Models.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 09 Multiperiod Models completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/11</li>
+              </ul>
+            </td>
+            <td>8</td>
+            <td>Work scheduling models, revisited</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 08 Work Scheduling Models Revisited.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 08 Work Scheduling Models Revisited completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/11</li>
+                <li class="vcompact">2/9</li>
+              </ul>
+            </td>
+            <td>7</td>
+            <td>Resource allocation and blending models, revisited</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 07 Resource Allocation and Blending Models Revisited.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 07 Resource Allocation and Blending Models Revisited completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/9</li>
+                <li class="vcompact">2/4</li>
+              </ul>
+            </td>
+            <td>6</td>
+            <td>Sets, summations, for statements</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 06 Sets Summations For Statements.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 06 Sets Summations For Statements completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/4</li>
+              </ul>
+            </td>
+            <td>5</td>
+            <td>Work scheduling models</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 05 Work Scheduling Models.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 05 Work Scheduling Models completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2/2</li>
+                <li class="vcompact">1/28</li>
+              </ul>
+            </td>
+            <td>4</td>
+            <td>Blending models</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 04 Blending Models.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 04 Blending Models completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">1/26</li>
+              </ul>
+            </td>
+            <td>3</td>
+            <td>Resource allocation models</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 03 Resource Allocation Models.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 03 Resource Allocation Models completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">1/26</li>
+                <li class="vcompact">1/21</li>
+              </ul>
+            </td>
+            <td>2</td>
+            <td>Introduction to optimization modeling</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 02 Introduction to Optimization Modeling.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 02 Introduction to Optimization Modeling completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">1/21</li>
+              </ul>
+            </td>
+            <td>1</td>
+            <td>Introduction</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Lesson 01 Introduction notes.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="lessons/Lesson 01 Introduction completed.pdf">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Labs</h2><ul>
+<li>Now that the semester is over, I have removed the solutions to the labs.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col>
+            <col width="425">
+            <col width="250">
+          </colgroup>
+          <tr>
+            <th colspan="1">Lab</th>
+            <th colspan="1">Instructions</th>
+            <th colspan="1"></th>
+          </tr>
+          <tr>
+            <td><p>Project &mdash; The Diet Problem</p></td>
+            <td><p>Due Wednesday 5/5 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/project-diet-problem/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Lab 5 &mdash; Fitness Sneaker Company</p></td>
+            <td><p>Due Thursday 4/22 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-fitness-sneaker/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Lab 4 &mdash; Cavity Candies</p></td>
+            <td><p>Due Tuesday 4/6 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-cavity-candies/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Lab 3 &mdash; National Disc Corporation</p></td>
+            <td><p>Due Tuesday 3/23 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-national-disc-corp/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Lab 2 &mdash; Parameterized Optimization Models with Pyomo</p></td>
+            <td><p>Due Tuesday 2/23 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-pyomo-parameterized/zipball/student">Files (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-pyomo-parameterized/zipball/class">Files with class notes (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Lab 1 &mdash; Introduction to Jupyter and Pyomo</p></td>
+            <td><p>Due Tuesday 2/9 at 23:59.</p>
+<p>Work on your own.
+Submit 1 lab per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-intro-jupyter-pyomo/zipball/student">Files (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sa305/lab-intro-jupyter-pyomo/zipball/class">Files with class notes (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Quizzes</h2><ul>
+<li>Now that the semester is over, I have removed the quizzes and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="2">Quiz</th>
+          </tr>
+          <tr>
+            <td>4/27</td>
+            <td>Quiz 8</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>4/20</td>
+            <td>Quiz 7</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>3/25</td>
+            <td>Quiz 6</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>3/18</td>
+            <td>Quiz 5</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2/23</td>
+            <td>Quiz 4</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2/11</td>
+            <td>Quiz 3</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>2/4</td>
+            <td>Quiz 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>1/28</td>
+            <td>Quiz 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>1/26</td>
+            <td>Quiz 0</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Exams</h2><ul>
+<li>Now that the semester is over, I have removed the exams and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="2">Exam</th>
+          </tr>
+          <tr>
+            <td>4/8</td>
+            <td>Exam 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>3/4</td>
+            <td>Exam 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

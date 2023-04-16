@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA305 - Linear Programming</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700' />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SA305 &mdash; Linear Programming</h1>
+      <h2>Spring 2015</h2>
+      <h2>Sections 3031 and 5031</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <div class="block" id="ann">
+        <h3>Announcements</h3>
+        <table id="ann">
+          <colgroup>
+            <col width="75">
+            <col width="525">
+          </colgroup>
+          <tr>
+            <td>20 Apr</td>
+            <td>End-of-semester announcements:
+              <ul>
+                <li><strong>Projects.</strong> Changes to instructions posted below: 
+                <ul>
+                  <li>Due <strong>COB Thursday 30 April</strong></li>
+                  <li>E-mail your report and GMPL model/data files to me</li>
+                  </ul>
+                </li>
+                <li><strong>Final Exam.</strong> 
+                <ul>
+                  <li><strong>Tuesday 5 May at 19:30</strong></li>
+                  <li>For more information, see the "Exams" section below</li>
+                </ul></li>
+                <li><strong>GMPL Exercises.</strong> 
+                <ul>
+                  <li>Due at <strong>noon on Wednesday 6 May</strong></li> 
+                  <li>I will send you the status of your GMPL exercises
+                  electronically on Monday 27 April, Thursday 30 April, and
+                  Monday 4 May</li>
+                </ul>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td>Exam 2 is on <strong>Thursday 2 April</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>10 Mar</td>
+            <td>Instructions for the course project have been posted. See below
+              for details.</td>
+          </tr>
+          <tr>
+            <td>3 Feb</td>
+            <td>Exam 1 is on <strong>Thursday 12 February</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>8 Jan</td>
+            <td>Welcome!</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="syllabus.pdf">Syllabus</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="gmpl">
+        <h3>GMPL information</h3>
+        <ul>
+          <li><a href="http://en.wikibooks.org/wiki/GLPK">GLPK Wikibook</a></li>
+          <li><a href="gmpl.pdf">GMPL language reference manual</a></li>
+          <li><a href="https://script.google.com/a/macros/usna.edu/s/AKfycbzl_hUX01wg08Mk0sSgNBMokJzs_UlCqBELsCWo21FVvMIPMZA/exec">GMPL Exercise Submission Form</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+        <p style="padding-bottom:1ex; color:#d00000;">Note: Now that the semester is over, I have taken down the homework solutions.</p>
+        <p style="padding-bottom:1ex;">Numbered problems are from Rader.</p>
+        <p style="padding-bottom:2ex; color:#d00000;">GMPL exercises are
+        starred*. For GMPL exercises, formulate a model on paper and write the
+        accompanying GMPL code. Submit your GMPL code using <a
+          href="https://script.google.com/a/macros/usna.edu/s/AKfycbzl_hUX01wg08Mk0sSgNBMokJzs_UlCqBELsCWo21FVvMIPMZA/exec">this
+          submission form</a> (also linked above).</p>
+
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="450">
+            <col width="125">
+          </colgroup>
+          <tr>
+            <td><strong>Date</strong></td>
+            <td><strong>Problems</strong></td>
+            <td><strong>Solutions</strong></td>
+          </tr>
+          <tr>
+            <td>21 Apr</td>
+            <td>
+              <a href="homework/rock-paper-scissors.pdf">rock-paper-scissors</a>
+            </td>
+            <td>
+              rock-paper-scissors
+            </td>
+          </tr>
+          <tr>
+            <td>16 Apr</td>
+            <td>
+              <a href="homework/pirates.pdf">pirates</a>*.
+              This is the last GMPL exercise of the semester.
+            </td>
+            <td>
+              pirates
+            </td>
+          </tr>
+          <tr>
+            <td>14 Apr</td>
+            <td>
+              9.5, 9.7, <a href="homework/cars.pdf">cars</a>
+            </td>
+            <td>
+              9.5,
+              9.7,
+              cars
+            </td>
+          </tr>
+          <tr>
+            <td>9 Apr</td>
+            <td>
+              9.1, 9.2, 9.3, 9.4
+            </td>
+            <td>
+              9.1,
+              9.2,
+              9.3,
+              9.4
+            </td>
+          </tr>
+          <tr>
+            <td>7 Apr</td>
+            <td>
+              8.11ab, 8.12ab
+            </td>
+            <td>
+              8.11,
+              8.12
+            </td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td>
+              8.1, 8.2, 8.3, 8.8
+            </td>
+            <td>
+              8.1,
+              8.2,
+              8.3,
+              8.8
+            </td>
+          </tr>
+          <tr>
+            <td>24 Mar</td>
+            <td>
+              7.14, 7.16, 7.17
+            </td>
+            <td>
+              7.14,
+              7.16,
+              7.17
+            </td>
+          </tr>
+          <tr>
+            <td>12 Mar</td>
+            <td>
+              7.2, 7.3, 7.4
+            </td>
+            <td>
+              7.2,
+              7.3,
+              7.4
+            </td>
+          </tr>
+          <tr>
+            <td>10 Mar</td>
+            <td>
+              6.14, 6.18
+            </td>
+            <td>
+              6.14,
+              6.18
+            </td>
+          </tr>
+          <tr>
+            <td>3 Mar</td>
+            <td>
+              6.1, 6.2, 6.8, 6.9
+            </td>
+            <td>
+              6.1,
+              6.2,
+              6.8,
+              6.9
+            </td>
+          </tr>
+          <tr>
+            <td>24 Feb</td>
+            <td>
+              2.6 (redo). Use symbolic input parameters.<br>
+              <a href="homework/diet-part2.pdf">diet-part2</a>* (<span style="color:#d00000;">updated 10 March</span> partial model file, data file)
+            </td>
+            <td>
+              2.6
+            </td>
+          </tr>
+          <tr>
+            <td>19 Feb</td>
+            <td>
+              2.9 (redo), 2.10 (redo), 2.13*, 2.20, 2.22. Use symbolic input parameters.
+              Complete part b in Lesson 14.
+            </td>
+            <td>
+              2.9,
+              2.10,
+              2.13,
+              2.20,
+              2.22
+            </td>
+          </tr>
+          <tr>
+            <td>5 Feb,<br> 10 Feb</td>
+            <td>
+              2.14, 2.16. Use symbolic input parameters.
+            </td>
+            <td>
+              2.14,
+              2.16
+            </td>
+          </tr>
+          <tr>
+            <td>3 Feb</td>
+            <td>
+              <a href="homework/sets.pdf">sets</a>, 2.3 (redo), 2.24, <a
+                href="homework/diet-part1.pdf">diet-part1</a>. 
+              Use symbolic input parameters.
+              Bring your laptops to the next class.
+            </td>
+            <td>
+              sets,
+              2.3,
+              2.24,
+              diet-part1
+            </td>
+          </tr>
+          <tr>
+            <td>29 Jan</td>
+            <td>
+              <a href="homework/inventory.pdf">inventory</a>,
+              <a href="homework/finco.pdf">finco</a>
+            </td>
+            <td>
+              inventory,
+              finco
+            </td>
+          </tr>
+          <tr>
+            <td>27 Jan</td>
+            <td>
+              2.9, 2.10*
+            </td>
+            <td>
+              2.9,
+              2.10
+            </td>
+          </tr>
+          <tr>
+            <td>22 Jan</td>
+            <td>
+              2.6, 2.11*, 2.12
+            </td>
+            <td>
+              2.6,
+              2.11,
+              2.12
+            </td>
+          </tr>
+          <tr>
+            <td>15 Jan</td>
+            <td>
+              2.1, 2.3*
+            </td>
+            <td>
+              2.1,
+              2.3
+            </td>
+          </tr>
+          <tr>
+            <td>13 Jan</td>
+            <td>1.1abcd, 1.2. Bring your laptops to the next class.</td>
+            <td>1.1abcd, 1.2</td>
+          </tr>
+          <tr>
+            <td>8 Jan</td>
+            <td style="padding-right: 10px;">1.1abcd using trial-and-error. For each optimization model,
+              find a few feasible solutions and determine their values. Try to
+              find the best feasible solution you can.</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lessons</h3>
+        <table>
+          <colgroup>
+            <col width="120">
+            <col width="30">
+            <col width="340">
+            <col width="160">
+          </colgroup>
+          <tr>
+            <td><strong>Dates</strong></td>
+            <td colspan="2"><strong>Lesson</strong></td>
+            <td><strong>Files</strong></td>
+          </tr>
+          <tr>
+            <td>23 Apr, 28 Apr</td>
+            <td>31</td>
+            <td>Review</td>
+            <td><a href="lessons/31.pdf">notes</a>, <a href="lessons/31.sol.pdf">solutions</a></td>
+          </tr>
+          <tr>
+            <td>21 Apr</td>
+            <td>30</td>
+            <td>LP duality and game theory</td>
+            <td><a href="lessons/30.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>16 Apr</td>
+            <td>29</td>
+            <td>Maximin and minimax objectives</td>
+            <td><a href="lessons/29.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>14 Apr</td>
+            <td>28</td>
+            <td>An economic interpretation of LP duality</td>
+            <td><a href="lessons/28.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>14 Apr</td>
+            <td>27</td>
+            <td>Weak and strong duality</td>
+            <td><a href="lessons/27.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>9 Apr</td>
+            <td>26</td>
+            <td>Bounds and the dual LP</td>
+            <td><a href="lessons/26.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>7 Apr</td>
+            <td>25</td>
+            <td>Degeneracy, convergence, multiple optimal solutions</td>
+            <td><a href="lessons/25.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>7 Apr</td>
+            <td>24</td>
+            <td>Finding an initial BFS</td>
+            <td><a href="lessons/24.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>31 Mar</td>
+            <td>23</td>
+            <td>The simplex method &mdash; example</td>
+            <td><a href="lessons/23.pdf">notes</a>, <a href="lessons/23.completed.pdf">completed notes</a></td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td>22</td>
+            <td>The simplex method</td>
+            <td><a href="lessons/22.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>24 Mar</td>
+            <td>21</td>
+            <td>Basic solutions in canonical form LPs</td>
+            <td><a href="lessons/21.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>24 Mar</td>
+            <td>20</td>
+            <td>Linear programs in canonical form</td>
+            <td><a href="lessons/20.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>12 Mar</td>
+            <td>19</td>
+            <td>Geometry and algebra of "corner points"</td>
+            <td><a href="lessons/19.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>10 Mar</td>
+            <td>18</td>
+            <td>Improving search: convexity and optimality</td>
+            <td><a href="lessons/18.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>3 Mar</td>
+            <td>17</td>
+            <td>Improving search: finding better solutions</td>
+            <td><a href="lessons/17.pdf">notes</a>,
+              <a href="lessons/17.completed.pdf">completed notes</a></td>
+          </tr>
+          <tr>
+            <td>24 Feb</td>
+            <td>16</td>
+            <td>Introduction to algorithm design</td>
+            <td><a href="lessons/16.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>24 Feb</td>
+            <td>15</td>
+            <td>Work scheduling models, revisited</td>
+            <td><a href="lessons/15.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>19 Feb</td>
+            <td>14</td>
+            <td>Production process models, revisited</td>
+            <td><a href="lessons/14.pdf">notes</a>, <a href="lessons/14.completed.pdf">completed notes</a></td>
+          </tr>
+          <tr>
+            <td>19 Feb</td>
+            <td>13</td>
+            <td>Multiperiod models, revisited</td>
+            <td><a href="lessons/13.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>5 Feb, 10 Feb</td>
+            <td>12</td>
+            <td>Blending models, revisited</td>
+            <td><a href="lessons/12.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>3 Feb, 5 Feb</td>
+            <td>11</td>
+            <td>Resource allocation models, revisited</td>
+            <td><a href="lessons/11.pdf">notes</a>,
+              <a href="lessons/11-farmerjones.mod">farmerjones.mod</a>,
+              <a href="lessons/11-farmerjones-original.dat">farmerjones-original.dat</a>,
+              <a href="lessons/11-farmerjones-new.dat">farmerjones-new.dat</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Feb</td>
+            <td>10</td>
+            <td>Sets, summations, for statements</td>
+            <td><a href="lessons/10.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>29 Jan</td>
+            <td>9</td>
+            <td>Multiperiod models</td>
+            <td><a href="lessons/09.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>27 Jan, 29 Jan</td>
+            <td>8</td>
+            <td>Production process models</td>
+            <td><a href="lessons/08.pdf">notes</a>,
+              <a href="lessons/08.notes.pdf">notes on Alvin Fine</a></td>
+          </tr>
+          <tr>
+            <td>22 Jan, 27 Jan</td>
+            <td>7</td>
+            <td>Work scheduling models</td>
+            <td><a href="lessons/07.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>22 Jan</td>
+            <td>6</td>
+            <td>Blending models</td>
+            <td><a href="lessons/06.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>15 Jan</td>
+            <td>5</td>
+            <td>Resource allocation models</td>
+            <td><a href="lessons/05.pdf">notes</a>,
+                <a href="lessons/05-thdc.mod">thdc.mod</a></td>
+          </tr>
+          <tr>
+            <td>15 Jan</td>
+            <td>4</td>
+            <td>Solving optimization models with a computer</td>
+            <td><a href="lessons/04.pdf">notes</a>,
+                <a href="lessons/04-farmerjones.mod">farmerjones.mod</a></td>
+          </tr>
+          <tr>
+            <td>13 Jan</td>
+            <td>3</td>
+            <td>Graphical solutions of optimization models</td>
+            <td>
+              <a href="lessons/03.pdf">notes</a>,
+              <a href="lessons/03-solving.pdf">solving animation</a>,
+              <a href="lessons/03-outcomes.pdf">outcomes animation</a>
+            </td>
+          </tr>
+          <tr>
+            <td>8 Jan, 13 Jan</td>
+            <td>2</td>
+            <td>Introduction to optimization modeling</td>
+            <td><a href="lessons/02.pdf">notes</a></td>
+          </tr>
+          <tr>
+            <td>8 Jan</td>
+            <td>1</td>
+            <td>Introduction</td>
+            <td><a href="lessons/01.pdf">notes</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+        <p style="padding-bottom:1ex; color:#d00000;">Note: Now that the semester is over, I have taken down the quiz solutions.</p>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="375">
+            <col width="150">
+          </colgroup>
+          <tr>
+            <td><strong>Date</strong></td>
+            <td><strong>Quiz</strong></td>
+            <td><strong>Solutions</strong></td>
+          </tr>
+          <tr>
+            <td>16 Apr</td>
+            <td>Quiz 11</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>9 Apr</td>
+            <td>Quiz 10</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td>Quiz 9</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>24 Mar</td>
+            <td>Quiz 8</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td><strike>5 Mar</strike><br>
+              10 Mar</td>
+            <td>Quiz 7</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td><strike>26 Feb</strike><br> 
+              3 Mar</td>
+            <td>Quiz 6</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>19 Feb</td>
+            <td>Quiz 5 - not really a quiz</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5 Feb</td>
+            <td>Quiz 4</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>29 Jan</td>
+            <td>Quiz 3</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>22 Jan</td>
+            <td>Quiz 2</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>15 Jan</td>
+            <td>Quiz 1</td>
+            <td>pdf</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+        <p style="padding-bottom:1ex; color:#d00000;">Note: Now that the semester is over, I have taken down the solutions and previous exams.</p>
+        <ul>
+          <li>Exam 1 (12 February)
+            <ul>
+              <li><a href="exams/exam1.info.pdf">Information</a></li>
+              <li>Last year's Exam 1 and solutions</li>
+              <li>Solutions</li>
+            </ul>
+          </li>
+          <li>Exam 2 (2 April)
+            <ul>
+              <li><a href="exams/exam2.info.pdf">Information</a></li>
+              <li>Last year's Exam 2 and solutions. Ignore Problems 2d, 3b. Also see Problem 2 from last year's Exam 1 above.</li>
+              <li>Solutions</li>
+            </ul>
+          </li>
+          <li>Final Exam (5 May)
+            <ul>
+              <li><a href="exams/final.info.pdf">Information</a></li>
+              <li>Final Exam from 2013 and solutions. Ignore Problems 6de. Also see Lesson 31 above.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block" id="project">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="project.pdf">Instructions</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

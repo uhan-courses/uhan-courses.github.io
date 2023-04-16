@@ -1,0 +1,27 @@
+body {
+  width: 320px;
+}
+
+img, table {
+  max-width: 320px;
+}
+
+#container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 320px;
+  padding: 10px;
+}
+
+#block-left {
+    float: none;
+}
+
+#block-right {
+    float: none;
+}
+
+.mobile_hidden {
+  display: none;
+} 

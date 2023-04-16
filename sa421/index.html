@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SA421 - Simulation Modeling</title>
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Metadata -->
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <section id="course">
+      <h1 id="course-name">Simulation Modeling</h1>
+      <p id="course-info">
+        SA421 &#9632; Fall 2017 &#9632; Sections 2001 and 3001
+        <br> Assoc. Prof. Nelson Uhan
+      </p>
+    </section>
+    <section>
+      <h2>Announcements</h2>
+      <table id="ann">
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td>4 Dec</td>
+          <td>
+            <p><strong>Final Exam</strong></p>
+            <ul>
+              <li>When: Tuesday 12 December, 13:30-16:30</li>
+              <li>Where: 2nd period &ndash; CH225,&nbsp;&nbsp;3rd period &ndash; CH237</li>
+              <li>Format:
+                <ul>
+                  <li>You will be given a report describing a simulation study.</li>
+                  <li>You will be asked to critique both the technical aspects and the writing of the report.</li>
+                  <li>You may refer to all your course materials (e.g. lessons notes, assignments, projects) during the exam.</li>
+                </ul>
+              </li>
+              <li>EI: I'm around. Just e-mail me and we can set up a time to meet.
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>8 Nov</td>
+          <td>
+            <p>For Project 2, <strong>you must submit your report as a PDF</strong> (in particular, the output from "Knit to PDF"), in addition to your R Markdown, JaamSim, and image files.</p>
+            <p>See Lesson 12 for guidance. If you need help, please ask!</p>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>3 Nov</td>
+          <td>Your score on Assignment 5 will not count towards your 12-week marking period grade.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>27 Oct</td>
+          <td><strong>Quiz on Lessons 10 and 11 in class on Wednesday 1 November.</strong> This quiz will count as an assignment. You may refer to your notes during this quiz.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>4 Oct</td>
+          <td>Your revised report for Project 0 is due at the beginning of class on Friday 6 October.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>2 Oct</td>
+          <td>Again, I have posted an improved version of the Nimitz Coffee Bar analysis report, this time with a better problem statement and conclusion &mdash; see Lesson 1 below. Check it out.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>2 Oct</td>
+          <td>Please bring a <strong>hard copy</strong> of your Project 0 to class on Wednesday.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>25 Sep</td>
+          <td>
+            You may have an <strong>automatic extension on Assignment 4</strong> until noon on Thursday 28 September.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>25 Sep</td>
+          <td>
+            When submitting an R Markdown file, please make sure your header looks like this:
+            <pre style="margin-bottom:0">
+---
+title: "Title of My Assignment"
+author: "My Name"
+date: "SA421 Fall 2017 -- Date of Submission"
+output: html_notebook
+---
+            </pre> In particular, make sure <code>output</code> is set to <code>html_notebook</code> like above.
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>22 Sep</td>
+          <td>The last day to resubmit an assignment for the 6 week marking period is <strong>Friday 29 September</strong>.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>21 Sep</td>
+          <td>There is another update to the NCB analysis report &mdash; see Lesson 1 below.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>20 Sep</td>
+          <td>I have posted <strong>another</strong> improved version of the Nimitz Coffee Bar analysis report &mdash; see Lesson 1 below. Please make sure to download it, run the Rmd file, and take a look!</td>
+        </tr>
+        <tr class="old_ann">
+          <td>11 Sep</td>
+          <td>You may have an <strong>automatic extension on Assignment 3</strong> until the beginning of class on Wednesday 13 September.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>8 Sep</td>
+          <td>I have posted an improved version of the Nimitz Coffee Bar analysis report &mdash; see Lesson 1 below.</td>
+        </tr>
+        <tr>
+          <td>8 Sep</td>
+          <td>
+            <p class="ann"><strong>Instructions for resubmissions</strong></p>
+            <ul>
+              <li>Resubmit your assignments and projects using the <a href="https://script.google.com/a/macros/usna.edu/s/AKfycbyghge8agOFgKlEizJV7ZAqGNI_C8iDwf-Jhyv1sKAQuZRxmig/exec">SA421 Assignment Submission Form</a></li>
+              <li>Notify me by e-mail that you resubmitted an assignment or project, and include the following honor statement:
+                <blockquote>
+                  I pledge on my honor that I have not used any unauthorized materials, and that I have not given or received any unauthorized assistance for this resubmission.
+                </blockquote>
+              </li>
+              <li>For resubmissions, follow the collaboration policy for the original assignment/project
+                <ul>
+                  <li>For example, if you were allowed to work in teams on the original assignment/project, you may work with the same team on your resubmission</li>
+                </ul>
+              </li>
+              <li><strong>Exception: Assignment 5.</strong> Give me a hard copy of your resubmission with the honor statement above, signed.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>28 Aug</td>
+          <td>
+            <p>Some notes on Assignment 2:</p>
+            <ul>
+              <li>I have updated the instructions slightly to fix some bugs. See below.</li>
+              <li>
+                <p>Make sure you have the following inputs in your JaamSim model:</p>
+                <table>
+                  <tr>
+                    <td><strong>Object</strong></td>
+                    <td><strong>Keyword</strong></td>
+                    <td><strong>Value</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Simulation</td>
+                    <td>RunDuration</td>
+                    <td>8 h</td>
+                  </tr>
+                  <tr>
+                    <td>Simulation</td>
+                    <td>UnitTypeList</td>
+                    <td>(should be empty)</td>
+                  </tr>
+                  <tr>
+                    <td>Simulation</td>
+                    <td>RunOutputList</td>
+                    <td>(should be empty)</td>
+                  </tr>
+                  <tr>
+                    <td>Baristas</td>
+                    <td>Capacity</td>
+                    <td>1</td>
+                  </tr>
+                </table>
+                <p>You may find that your model already has these inputs configured correctly. If you used the base JaamSim model linked in the instructions before noon on 28 August, you will need to make these changes.</p>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>21 Aug</td>
+          <td>Welcome!</td>
+        </tr>
+      </table>
+      <p style="text-align:right;"><a href="javascript:;" onmousedown="toggleOlderAnnouncements();"><span id="toggle_ann">Show older announcements</span></a></p>
+    </section>
+    <section>
+      <h2>General information</h2>
+      <div class="row" id="info">
+        <div class="twelve columns">
+          <ul>
+            <li><a href="policy-20170820.pdf">Course policy statement</a></li>
+            <li><a href="syllabus-20170820.pdf">Syllabus</a></li>
+            <li><a href="https://script.google.com/a/macros/usna.edu/s/AKfycbyghge8agOFgKlEizJV7ZAqGNI_C8iDwf-Jhyv1sKAQuZRxmig/exec">SA421 Assignment Submission Form</a>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Resources</h2>
+      <div class="row" id="info">
+        <div class="twelve columns">
+          <ul>
+            <li><a href="http://jaamsim.com/downloads.html">JaamSim documentation and examples</a></li>
+            <li><a href="http://rmarkdown.rstudio.com/articles.html">Notes on using R Markdown</a></li>
+            <li><a href="http://dplyr.tidyverse.org">dplyr website and documentation</a></li>
+            <li><a href="http://ggplot2.tidyverse.org">ggplot2 website and documentation</a></li>
+            <li><a href="https://cran.r-project.org/web/packages/fitdistrplus/fitdistrplus.pdf">fitdistrplus documentation</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Assignments and Projects</h2>
+      <ul>
+        <li>Due dates are at the beginning of class, unless stated otherwise.</li>
+        <li>Submit your assignments with the submission form linked above, unless stated otherwise.</li>
+      </ul>
+      <table>
+        <colgroup>
+          <col>
+          <col width="425">
+          <col width="275">
+        </colgroup>
+        <tr>
+          <td><strong>Assigment / Project</strong></td>
+          <td><strong>Due Date</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Final Project</td>
+          <td>
+            <ul class="vlist">
+              <li>Problem statement and plan &ndash; Monday 20 November</li>
+              <li>Final report &ndash; Thursday 7 December @ 23:59</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="projects/final.pdf">Instructions</a></li>
+              <li><a href="projects/final-rubric.pdf">Rubric</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Project 2</td>
+          <td>
+            <ul class="vlist">
+              <li>Wednesday 15 November @ 23:59 (revised draft)</li>
+              <li>Monday 13 November (first draft)</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="projects/02.pdf">Instructions</a></li>
+              <li><a href="https://github.com/usna-sa421/project-02/zipball/master">Data</a></li>
+              <li><a href="projects/02-hints.pdf">Hints</a></li>
+              <li><a href="projects/02-feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Assignment 5 &ndash; Quiz</td>
+          <td>Wednesday 1 November (quiz in class)</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="assignments/05.pdf">Quiz</a></li>
+              <li><a href="assignments/05-notes.pdf">Notes</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Project 1</td>
+          <td>
+            <ul class="vlist">
+              <li>Monday 23 October @ 23:59 (revised draft)</li>
+              <li>Wednesday 18 October (first draft)</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="projects/01.pdf">Instructions</a></li>
+              <li><a href="https://github.com/usna-sa421/project-01/zipball/master">Data</a></li>
+              <li><a href="projects/01-hints.pdf">Hints</a></li>
+              <li><a href="projects/01-feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Project 0</td>
+          <td>
+            <ul class="vlist">
+              <li>Friday 6 October (revised draft)</li>
+              <li>Wednesday 4 October (first draft)</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="projects/00.pdf">Instructions</a></li>
+              <li><a href="https://github.com/usna-sa421/project-00/zipball/master">JaamSim file</a></li>
+              <li><a href="projects/00-feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Assignment 4</td>
+          <td>Wednesday 27 September</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="assignments/04.pdf">Instructions</a></li>
+              <li><a href="https://github.com/usna-sa421/assignment-04/zipball/master">Data files</a></li>
+              <li><a href="assignments/04 feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Assignment 3</td>
+          <td>Monday 11 September</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="assignments/03.pdf">Instructions</a></li>
+              <li><a href="https://github.com/usna-sa421/assignment-03/zipball/master">JaamSim file</a></li>
+              <li><a href="assignments/03 feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Assignment 2</td>
+          <td>Friday September 1</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="assignments/02 updated.pdf">Instructions (updated 1 Sep)</a></li>
+              <li><a href="https://github.com/usna-sa421/assignment-02/zipball/master">Base JaamSim model file</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Assignment 1</td>
+          <td>Friday 25 August</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="assignments/01.pdf">Instructions</a></li>
+              <li><a href="assignments/01 feedback.pdf">Feedback</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Lessons / Schedule</h2>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col width="30">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Dates</strong></td>
+          <td colspan="2"><strong>Lesson / Activity</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>6 Dec</li>
+              <li>4 Dec</li>
+              <li>1 Dec</li>
+              <li>29 Nov</li>
+            </ul>
+          </td>
+          <td></td>
+          <td>Work on Final Project</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27 Nov</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Work on Final Project</li>
+              <li>Feedback on Project 2</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>22 Nov</li>
+              <li>20 Nov</li>
+            </ul>
+          </td>
+          <td></td>
+          <td>Data collection for Final Project</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17 Nov</td>
+          <td></td>
+          <td>Work on problem statement and plan for Final Project</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15 Nov</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Work on Project 2</li>
+              <li>Work on problem statement and plan for Final Project</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr> 
+        <tr>
+          <td>13 Nov</td>
+          <td></td>
+          <td>Work on Project 2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8 Nov</td>
+          <td>12</td>
+          <td>
+            <ul class="vlist">
+              <li>Creating Polished R Markdown Documents</li>
+              <li>Work on Project 2</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/12.pdf">Notes</a></li>
+              <li><a href="https://github.com/usna-sa421/lesson-12/zipball/master">Source files</a></li>
+              <li><a href="lessons/12a.pdf">Tradeoff curve examples</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>6 Nov</td>
+          <td></td>
+          <td>Work on Project 2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3 Nov</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Feedback on Project 1</li>
+              <li>Work on Project 2</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1 Nov</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Assignment 5 &ndash; Quiz</li>
+              <li>Work on Project 2</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>30 Oct</td>
+          <td></td>
+          <td>Work on Project 2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class=vlist>
+              <li>27 Oct</li>
+              <li>25 Oct</li>
+            </ul>
+          </td>
+          <td>11</td>
+          <td>
+            <ul class="vlist">
+              <li>Variance Reduction &ndash; Common Random Numbers</li>
+              <li>Generating Randomness in JaamSim</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/11.pdf">Notes</a></li>
+              <li><a href="https://github.com/usna-sa421/lesson-11/zipball/master">JaamSim Files</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>23 Oct</td>
+          <td></td>
+          <td>Work on Project 1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20 Oct</td>
+          <td>10</td>
+          <td>Generating Randomness</td>
+          <td><a href="lessons/10.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>18 Oct</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Feedback on Project 0</li>
+              <li>Peer review of Project 1</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>16 Oct</li>
+              <li>13 Oct</li>
+              <li>11 Oct</li>
+            </ul>
+          </td>
+          <td></td>
+          <td>Work on Project 1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>6 Oct</li>
+              <li>2 Oct</li>
+            </ul>
+          </td>
+          <td>9</td>
+          <td>Reneging and Balking</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/09.pdf">Notes</a></li>
+              <li><a href="https://github.com/usna-sa421/lesson-09/zipball/master">JaamSim File</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>4 Oct</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Feedback on Assignment 4</li>
+              <li>Peer review of Project 0</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>29 Sep</td>
+          <td>8</td>
+          <td>Custom Performance Measures in JaamSim</td>
+          <td>
+            <ul class="vlist">
+              <li>
+                <a href="lessons/08.pdf">Notes</a>
+              </li>
+              <li><a href="https://github.com/usna-sa421/lesson-08/zipball/master">JaamSim File</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>27 Sep</td>
+          <td>7</td>
+          <td>Putting It All Together</td>
+          <td><a href="https://github.com/usna-sa421/lesson-07/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>25 Sep</td>
+          <td>6b</td>
+          <td>More on Input Data Analysis</td>
+          <td><a href="https://github.com/usna-sa421/lesson-06b/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>22 Sep</td>
+          <td></td>
+          <td>Work on Assignment 4</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20 Sep</td>
+          <td>6a</td>
+          <td>Presenting Input Data Analysis</td>
+          <td><a href="https://github.com/usna-sa421/lesson-06a/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>18 Sep</td>
+          <td></td>
+          <td>Feedback on Assignment 3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>18 Sep</li>
+              <li>15 Sep</li>
+              <li>13 Sep</li>
+            </ul>
+          </td>
+          <td>6</td>
+          <td>Input Data Analysis and Fitting Distributions</td>
+          <td><a href="https://github.com/usna-sa421/lesson-06/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>11 Sep</li>
+              <li>9 Sep</li>
+            </ul>
+          </td>
+          <td></td>
+          <td>Work on Assignment 3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8 Sep</td>
+          <td>5a</td>
+          <td>Presenting Output Data Analysis</td>
+          <td><a href="https://github.com/usna-sa421/lesson-05a/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>5 Sep</li>
+              <li>6 Sep</li>
+            </ul>
+          </td>
+          <td>5</td>
+          <td>Replicating Simulations and Output Data Analysis</td>
+          <td><a href="https://github.com/usna-sa421/lesson-05/zipball/master">Notes and Files</a></td>
+        </tr>
+        <tr>
+          <td>1 Sep</td>
+          <td>4</td>
+          <td>Sample Mean and Variance, Confidence Intervals</td>
+          <td><a href="lessons/04.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>30 Aug</td>
+          <td></td>
+          <td>
+            <ul class="vlist">
+              <li>Feedback on Assignment 1</li>
+              <li>Attributes in JaamSim &mdash; Assignment 2</li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>28 Aug</td>
+          <td></td>
+          <td>Work on Assignment 2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>25 Aug</td>
+          <td>3</td>
+          <td>Introduction to JaamSim</td>
+          <td><a href="lessons/03.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>23 Aug</td>
+          <td>2</td>
+          <td>Performance Measures for Queueing Systems</td>
+          <td><a href="lessons/02.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>21 Aug</td>
+          <td>1</td>
+          <td>Introduction</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/01.pdf">Notes</a></li>
+              <li><a href="https://github.com/usna-sa421/nimitz-cafe/zipball/master">Nimitz Coffee Bar Files (updated 2 Oct)</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  <script type="text/javascript">
+  function toggleOlderAnnouncements() {
+    $(".old_ann").fadeToggle();
+    txt = $("#toggle_ann").text();
+    if (txt == "Show older announcements") {
+      $("#toggle_ann").text("Hide older announcements");
+    } else {
+      $("#toggle_ann").text("Show older announcements");
+    }
+
+  }
+  </script>
+</body>
+
+</html>

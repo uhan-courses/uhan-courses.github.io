@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SM223 - Calculus III with Optimization</title>
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Javascript -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Metadata -->
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+  <div class="container">
+    <section id="course">
+      <h1 id="course-name">Calculus III with Optimization</h1>
+      <p id="course-info">
+        SM223 &#9632; Fall 2017 &#9632; Section 4021
+        <br> Assoc. Prof. Nelson Uhan
+      </p>
+    </section>
+    <section>
+      <h2>Announcements</h2>
+      <table id="ann">
+        <colgroup>
+          <col width="100">
+          <col>
+        </colgroup>
+        <tr>
+          <td>23 Nov</td>
+          <td>
+            Plan for the end of the semester:
+            <table class="white">
+              <tr class="white">
+                <td>R</td>
+                <td>30 Nov</td>
+                <td>Work on resubmissions for Exam 4</td>
+              </tr>
+              <tr class="white">
+                <td>F</td>
+                <td>1 Dec</td>
+                <td>Review Quiz 1 (covers Exam 1 material)</td>
+              </tr>
+              <tr class="white">
+                <td>M</td>
+                <td>4 Dec</td>
+                <td>Review Quiz 2 (covers Exam 2 material)</td>
+              </tr>
+              <tr class="white">
+                <td>W</td>
+                <td>6 Dec</td>
+                <td>Review Quiz 3 (covers Exam 3 material)</td>
+              </tr>
+              <tr class="white">
+                <td>R</td>
+                <td>7 Dec</td>
+                <td>Review Quiz 4 (covers Exam 4 material)
+                  <br>Wrap-up</tr>
+              <tr class="white">
+                <td>W</td>
+                <td>13 Dec</td>
+                <td>Final Exam</tr>
+            </table>
+            <ul style="margin-top:1.5rem;margin-bottom:0;">
+              <li>Review Quizzes:</li>
+              <ul style="margin-top:0;">
+                <li>Multiple choice questions</li>
+                <li>We will go over the questions that you had most difficulty with after the quiz</li>
+                <li>Review quizzes count as <strong>extra credit</strong>: each review quiz is worth an additional 25% of a regular quiz</li>
+                <li>No resubmissions or makeups for review quizzes</li>
+              </ul>
+              <li>Final Exam: see below for details</li>
+              <li>The last day to resubmit a quiz or exam is Thursday 7 December
+            </ul>
+            </td>
+        </tr>
+        <tr class="old_ann">
+          <td>20 Nov</td>
+          <td>Exam 4 will take place on Wednesday 29 November. See below for details.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>1 Nov</td>
+          <td>Your score on Exam 3 will not count towards your 12-week marking period grade.
+            <br>
+            <br> The last day to resubmit a quiz/exam for the 12 week marking period is <strong>Friday 3 November</strong>.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>19 Oct</td>
+          <td>Exam 3 will take place on Friday 27 October. See below for details.</td>
+        </tr>
+        <tr>
+          <td>11 Oct</td>
+          <td>To resubmit Problems 5-7 for Exam 2, submit your solutions to the problems given in "Problems 5-7 for resubmission" <a href="#exam2resub">linked below.</a></td>
+        </tr>
+        <tr class="old_ann">
+          <td>27 Sep</td>
+          <td>Exam 2 will take place on Thursday 5 October. See below for details.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>20 Sep</td>
+          <td>The last day to resubmit a quiz/exam for the 6 week marking period is <strong>Friday 29 September</strong>.</td>
+        </tr>
+        <tr class="old_ann">
+          <td>1 Sep</td>
+          <td>Exam 1 will take place on Friday 8 September. See below for details.</td>
+        </tr>
+        <tr>
+          <td>25 Aug</td>
+          <td>
+            <p class="ann"><strong>Instructions for resubmissions</strong></p>
+            <ul>
+              <li>Redo the problems you want to resubmit on a <strong>blank quiz</strong> (see below).</li>
+              <li>Follow the guidelines in the <a href="#coursepolicy">course policy statement</a>. In particular:
+                <ul>
+                  <li><strong>No collaboration allowed.</strong> All work must be your own.</li>
+                  <li>You may use your own course materials (e.g., notes, homework), as well as any materials directly linked from the course website. <strong>You may not use any other materials.</strong></li>
+                  <li>Your resubmissions must include the following <strong>signed</strong> honor statement:
+                    <blockquote>
+                      I pledge on my honor that I have not used any unauthorized materials, and that I have not given or received any unauthorized assistance for this resubmission.
+                    </blockquote>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="old_ann">
+          <td>21 Aug</td>
+          <td>Welcome!</td>
+        </tr>
+      </table>
+      <p style="text-align:right;"><a href="javascript:;" onmousedown="toggleOlderAnnouncements();"><span id="toggle_ann">Show older announcements</span></a></p>
+    </section>
+    <section>
+      <h2>General information</h2>
+      <div class="row" id="info">
+        <div class="twelve columns">
+          <ul>
+            <li><a id="coursepolicy" href="policy-20170820.pdf">Course policy statement</a></li>
+            <li><a href="syllabus-20170820.pdf">Syllabus</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Homework</h2>
+      <ul>
+        <li>See the <a href="syllabus-20170820.pdf">syllabus</a> for homework problems.</li>
+        <li><a href="https://www.webassign.net">WebAssign</a></li>
+        <li>Solutions to homework problems not on WebAssign are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHWl9jV0JGVVU1OGs?usp=sharing">here</a> on Google Drive.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Lessons</h2>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col width="30">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Dates</strong></td>
+          <td colspan="2"><strong>Lesson</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7 Dec</td>
+          <td></td>
+          <td>Review Quiz 4</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/Review Quiz 4.pdf">Quiz</a></li>
+              <li><a href="lessons/Review Quiz 4 Solutions.pdf">Solutions</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>6 Dec</td>
+          <td></td>
+          <td>Review Quiz 3</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/Review Quiz 3.pdf">Quiz</a></li>
+              <li><a href="lessons/Review Quiz 3 Solutions.pdf">Solutions</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>4 Dec</td>
+          <td></td>
+          <td>Review Quiz 2</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/Review Quiz 2.pdf">Quiz</a></li>
+              <li><a href="lessons/Review Quiz 2 Solutions.pdf">Solutions</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>1 Dec</td>
+          <td></td>
+          <td>Review Quiz 1</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/Review Quiz 1.pdf">Quiz</a></li>
+              <li><a href="lessons/Review Quiz 1 Solutions.pdf">Solutions</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>22 Nov</li>
+              <li>20 Nov</li>
+              <li>17 Nov</li>
+            </ul>
+          </td>
+          <td>35</td>
+          <td>Triple Integrals</td>
+          <td><a href="lessons/35 Triple Integrals.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>16 Nov</td>
+          <td>34</td>
+          <td>Applications: Probability</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/34 Applications - Probability.pdf">Notes</a></li>
+              <li><a href="lessons/34 Example 2.pdf">Solutions to Example 2</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>15 Nov</td>
+          <td>33</td>
+          <td>Applications: Center of Mass</td>
+          <td><a href="lessons/33 Applications - Center of Mass.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>13 Nov</li>
+              <li>9 Nov</li>
+            </ul>
+          </td>
+          <td>32</td>
+          <td>Double Integrals in Polar Coordinates</td>
+          <td><a href="lessons/32 Double Integrals in Polar Coordinates.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>8 Nov</li>
+              <li>6 Nov</li>
+            </ul>
+          </td>
+          <td>31</td>
+          <td>Double Integrals over General Regions</td>
+          <td><a href="lessons/31 Double Integrals over General Regions.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>3 Nov</li>
+              <li>2 Nov</li>
+            </ul>
+          </td>
+          <td>30</td>
+          <td>Double Integrals over Rectangles</td>
+          <td><a href="lessons/30 Double Integrals over Rectangles.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>1 Nov</td>
+          <td>29</td>
+          <td>Lagrange Multipliers, cont.</td>
+          <td><a href="lessons/29 Lagrange Multipliers cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>30 Oct</td>
+          <td>28</td>
+          <td>Lagrange Multipliers</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/28 Lagrange Multipliers.pdf">Notes</a></li>
+              <li><a href="lessons/28 Example 3.pdf">Solutions to Example 3</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>25 Oct</td>
+          <td>27</td>
+          <td>Absolute Minima and Maxima</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/27 Absolute Minima and Maxima.pdf">Notes</a></li>
+              <li><a href="lessons/27 Example 3.pdf">Solutions to Example 3</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>23 Oct</td>
+          <td>26</td>
+          <td>Local Minima and Maxima, cont.</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/26 Local Minima and Maxima cont.pdf">Notes</a></li>
+              <li><a href="lessons/26 Solutions.pdf">Solutions</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>20 Oct</td>
+          <td>25</td>
+          <td>Local Minima and Maxima</td>
+          <td><a href="lessons/25 Local Minima and Maxima.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>19 Oct</td>
+          <td>24</td>
+          <td>Tangent Planes and Normal Lines</td>
+          <td><a href="lessons/24 Tangent Planes and Normal Lines.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>18 Oct</td>
+          <td>23</td>
+          <td>Maximizing the Directional Derivative</td>
+          <td><a href="lessons/23 Maximizing the Directional Derivative.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>16 Oct</td>
+          <td>22</td>
+          <td>The Gradient Vector and Directional Derivatives</td>
+          <td><a href="lessons/22 The Gradient and Directional Derivatives.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>13 Oct</li>
+              <li>12 Oct</li>
+              <li>11 Oct</li>
+            </ul>
+          </td>
+          <td>21</td>
+          <td>The Chain Rule</td>
+          <td><a href="lessons/21 The Chain Rule.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>6 Oct</td>
+          <td>20</td>
+          <td>Tangent Planes and Linear Approximation</td>
+          <td><a href="lessons/20 Tangent Planes and Linear Approximation.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>2 Oct</td>
+          <td>19</td>
+          <td>Partial Derivatives, cont.</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/19 Partial Derivatives cont.pdf">Notes</a></li>
+              <li><a href="lessons/19 Examples 4 and 5.pdf">Solutions to Examples 4 and 5</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>29 Sep</li>
+              <li>28 Sep</li>
+              <li>27 Sep</li>
+            </ul>
+          </td>
+          <td>18</td>
+          <td>Partial Derivatives</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/18 Partial Derivatives.pdf">Notes</a></li>
+              <li><a href="lessons/18 Solved Examples.pdf">Solutions to Examples in Section 5</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>25 Sep</td>
+          <td>17</td>
+          <td>Level Curves</td>
+          <td><a href="lessons/17 Level Curves.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>22 Sep</td>
+          <td>16</td>
+          <td>Multivariable Functions</td>
+          <td><a href="lessons/16 Multivariable Functions.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>21 Sep</li>
+              <li>20 Sep</li>
+            </ul>
+          </td>
+          <td>15</td>
+          <td>Projectile Motion, cont.</td>
+          <td><a href="lessons/15 Projectile Motion cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>18 Sep</td>
+          <td>14</td>
+          <td>Projectile Motion</td>
+          <td><a href="lessons/14 Projectile Motion.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>15 Sep</td>
+          <td>13</td>
+          <td>Velocity and Acceleration</td>
+          <td><a href="lessons/13 Velocity and Acceleration.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>14 Sep</li>
+              <li>13 Sep</li>
+            </ul>
+          </td>
+          <td>12</td>
+          <td>Derivatives and Integrals of Vector Functions</td>
+          <td><a href="lessons/12 Derivatives and Integrals of Vector Functions.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>
+            <ul class="vlist">
+              <li>13 Sep</li>
+              <li>11 Sep</li>
+            </ul>
+          </td>
+          <td>11</td>
+          <td>Vector Functions and Space Curves</td>
+          <td><a href="lessons/11 Vector Functions and Space Curves.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>7 Sep</td>
+          <td></td>
+          <td>Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6 Sep</td>
+          <td>10</td>
+          <td>Cylinders and Quadric Surfaces, cont.</td>
+          <td><a href="lessons/10 Cylinders and Quadric Surfaces cont.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>5 Sep</td>
+          <td>9</td>
+          <td>Cylinders and Quadric Surfaces</td>
+          <td><a href="lessons/09 Cylinders and Quadric Surfaces.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>1 Sep</td>
+          <td>8</td>
+          <td>Equations of Lines and Planes in 3D</td>
+          <td><a href="lessons/08 Equations of Lines and Planes in 3D.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>31 Aug</td>
+          <td>7</td>
+          <td>Equations of Planes in 3D</td>
+          <td><a href="lessons/07 Equations of Planes in 3D.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>30 Aug</td>
+          <td>6</td>
+          <td>Equations of Lines in 3D</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/06 Equations of Lines in 3D.pdf">Notes</a></li>
+              <li><a href="lessons/06 Example 4.pdf">Solutions to Example 4</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>28 Aug</td>
+          <td>5</td>
+          <td>The Cross Product</td>
+          <td><a href="lessons/05 The Cross Product.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>25 Aug</td>
+          <td>4</td>
+          <td>The Dot Product, cont.</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="lessons/04 The Dot Product cont.pdf">Notes</a></li>
+              <li><a href="lessons/04 Examples 4-6.pdf">Solutions to Examples 4-6</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>24 Aug</td>
+          <td>3</td>
+          <td>The Dot Product</td>
+          <td><a href="lessons/03 The Dot Product.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>23 Aug</td>
+          <td>2</td>
+          <td>Vectors</td>
+          <td><a href="lessons/02 Vectors.pdf">Notes</a></td>
+        </tr>
+        <tr>
+          <td>21 Aug</td>
+          <td>1</td>
+          <td>Three Dimensional Space</td>
+          <td><a href="lessons/01 Three Dimensional Space.pdf">Notes</a></td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Quizzes</h2>
+      <p>Solutions are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHWl9jV0JGVVU1OGs?usp=sharing">here</a> on Google Drive.</p>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Quiz</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16 Nov</td>
+          <td>Quiz 8</td>
+          <td><a href="quizzes/08.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>9 Nov</td>
+          <td>Quiz 7</td>
+          <td><a href="quizzes/07.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>19 Oct</td>
+          <td>Quiz 6</td>
+          <td><a href="quizzes/06.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>28 Sep</td>
+          <td>Quiz 5</td>
+          <td><a href="quizzes/05.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>21 Sep</td>
+          <td>Quiz 4</td>
+          <td><a href="quizzes/04.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>14 Sep</td>
+          <td>Quiz 3</td>
+          <td><a href="quizzes/03.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>31 Aug</td>
+          <td>Quiz 2</td>
+          <td><a href="quizzes/02.pdf">Quiz</a></td>
+        </tr>
+        <tr>
+          <td>24 Aug</td>
+          <td>Quiz 1</td>
+          <td><a href="quizzes/01.pdf">Quiz</a></td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Exams</h2>
+      <p>Solutions are available <a href="https://drive.google.com/drive/folders/0B5KXKoKA8wPHWl9jV0JGVVU1OGs?usp=sharing">here</a> on Google Drive.</p>
+      <table>
+        <colgroup>
+          <col width="100">
+          <col>
+          <col width="300">
+        </colgroup>
+        <tr>
+          <td><strong>Date</strong></td>
+          <td><strong>Exam</strong></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13 Dec</td>
+          <td>Final Exam</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="exams/Final Exam Info.pdf">Information</a></li>
+              <li><a href="https://www.usna.edu/MathDept/resources/course-materials.php#panel4CalculusIII">Past final exams (look for SM223)</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>29 Nov</td>
+          <td>Exam 4</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="exams/Exam 4 Info and Review.pdf">Information and Review Problems</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>27 Oct</td>
+          <td>Exam 3</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="exams/Exam 3 Info and Review.pdf">Information and Review Problems</a></li>
+              <li><a href="exams/Exam 3.pdf">Exam</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>5 Oct</td>
+          <td>Exam 2</td>
+          <td>
+            <ul class="vlist">
+              <li><a href="exams/Exam 2 Info and Review.pdf">Information and Review Problems</a></li>
+              <li><a href="exams/Exam 2.pdf">Exam</a></li>
+              <li><a id="exam2resub" href="exams/Exam 2 Problems 5-7 for Resubmission.pdf">Problems 5-7 for resubmission</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>8 Sep</td>
+          <td>Exam 1</td>
+          <td>
+            <ul class="hlist">
+              <li><a href="exams/Exam 1 Info and Review.pdf">Information and Review Problems</a></li>
+              <li><a href="exams/Exam 1.pdf">Exam</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  <script type="text/javascript">
+    function toggleOlderAnnouncements() {
+      $(".old_ann").fadeToggle();
+      txt = $("#toggle_ann").text();
+      if (txt == "Show older announcements") {
+        $("#toggle_ann").text("Hide older announcements");
+      } else {
+        $("#toggle_ann").text("Show older announcements");
+      }
+
+    }
+  </script>
+</body>
+
+</html>

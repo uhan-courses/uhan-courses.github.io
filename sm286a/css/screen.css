@@ -1,0 +1,132 @@
+/* Reset margins and padding
+---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic formatting
+-------------------- */
+html {
+    min-height: 100%;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    font-family: Bitter, serif !important;
+    font-weight: normal;
+    font-size: 11pt;
+    line-height: 1.4;
+}
+
+h1 {
+    color: #000000;
+    font-size: 22pt;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 0.5em;
+    line-height: 1.2;
+}
+
+h3 {
+    color: #000000;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+}
+
+h4 {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 1.0em;
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+}
+
+a {
+    color: #004276;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #004276;
+    border-bottom-style: dotted;
+    border-width: 1px;
+    border-color: #004276;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-left: 2em;
+    text-indent: -1em;
+}
+
+ol {
+    list-style-position: inside;
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+li {
+    margin-top: 0.5em;
+}
+
+table {
+    width: 100%;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+td {
+  vertical-align: top;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+p {
+    margin-left: 0em;
+    text-indent: 0em;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    line-height: 1.8;
+}
+
+/* Container for all blocks */
+#container {
+    width: 800px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Block */
+.block {
+    //margin-top: 20px;
+    //margin-bottom: 20px;
+    color: #000000;
+    font-size: 100%;    
+}

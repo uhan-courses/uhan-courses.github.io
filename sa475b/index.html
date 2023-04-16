@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>SA475B - Improving USNA Through OR</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Metadata -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  </head>
+
+  <body>
+    <div class="container">
+      <section id="course">
+        <h1 id="course-name">Improving USNA Through Operations Research</h1>
+        <p id="course-info">
+        SA475B &#9632; Spring 2018 &#9632; Sections 3401 and 5601
+        <br> Assoc. Prof. Nelson Uhan
+        </p>
+      </section>
+      <section>
+        <h2>Announcements</h2>
+        <table id="ann">
+          <colgroup>
+            <col width="100">
+            <col>
+          </colgroup>
+          <tr>
+            <td>26 Apr</td>
+            <td>
+              <ul>
+                <li>Your final report is due at <strong>23:59 on Wednesday 2 May</strong>.</li>
+                <li>
+                  Instructions for submission: <strong>share a Google Drive folder with me containing</strong>
+                  <ul>
+                    <li>PDF of your report generated from R Markdown</li>
+                    <li>R Markdown file</li>
+                    <li>All images required to compile your R Markdown file</li>
+                    <li>Presentation slides</li>
+                    <li>All other source code files (e.g. GMPL files, Jupyter notebooks), data files (e.g. Excel workbooks, Google Sheets, GMPL dat files) and interface files (e.g. Excel workbooks) you used and created for your project</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="old_ann">
+            <td>10 Apr</td>
+            <td>
+            <p><strong>Key dates for the end of the semester</strong></p>
+            <table class="white">
+              <tr class="white">
+                <td>T</td>
+                <td>10 Apr</td>
+                <td>Lesson: Writing about OR &mdash; Experiment Setup, Results, and Conclusion</td>
+              </tr>
+              <tr class="white">
+                <td>R</td>
+                <td>12 Apr</td>
+                <td>Lesson: Giving a technical talk</td>
+              </tr>
+              <tr class="white">
+                <td>R</td>
+                <td>19 Apr</td>
+                <td>Draft of final report (all sections) <strong>due at 23:59</strong></td>
+              </tr>
+              <tr class="white">
+                <td>T</td>
+                <td>24 Apr</td>
+                <td>Draft of presentation slides <strong>due in class</strong></td>
+              </tr>
+              <tr class="white">
+                <td>W</td>
+                <td>25 Apr</td>
+                <td>Capstone Day: Presentations</td>
+              </tr>
+              <tr class="white">
+                <td>W</td>
+                <td>2 May</td>
+                <td>Final report <strong>due at 23:59</strong></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+          <tr class="old_ann">
+            <td>1 Apr</td>
+            <td>Resubmissions for the 12 week marking period are due at <strong>23:59 on Thursday 5 April</strong>.</td>
+          </tr>
+          <tr class="old_ann">
+            <td>1 Mar</td>
+            <td>
+              <ul>
+                <li>A draft of your introduction, literature review, <strong>input data and model description</strong> sections is due at <strong>23:59 on Thursday 22 March</strong>.</li>
+                <li>From now on, <strong>you must submit your report as a PDF generated from R Markdown</strong> based on <a href="https://github.com/nelsonuhan/sa475b-template/zipball/master">this template</a> (also linked below). If you need help setting this up, please ask!</li>
+                <li><a href="policy-12week.pdf">Here</a> is the grading policy for the 12 week marking period (also linked below).</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="old_ann">
+            <td>20 Feb</td>
+            <td>Since you've spent most of the 6 week marking period in the beginning stages of your project, your grade for this marking period will be based on <a href="policy-6week.pdf">a relaxed version of the grading policy</a> in the course policy statement.</td>
+          </tr>
+          <tr class="old_ann">
+            <td>30 Jan</td>
+            <td>
+               <ul>
+                 <li>Notes on feedback:
+                   <ul>
+                     <li>If you have questions, ask me!</li>
+                     <li>Your scores on the grading rubric are meant to represent the <strong>current</strong> status of your project.</li>
+                     <li>Scores can go up and down, especially for the standards on the written report and presentation.</li>
+                     <li>You can edit and resubmit any time. I will try my best to give you feedback within one week.</li>
+                   </ul>
+                 </li>
+                 <li>A draft of your introduction <strong>and literature review</strong> is due at <strong>23:59 on Tuesday 13 February</strong>.</li>
+                 <li>I posted an updated course policy statement with a few minor typos fixed.</li>
+               </ul>
+            </td>
+          </tr>
+          <tr class="old_ann">
+            <td>16 Jan</td>
+            <td>
+              <ul>
+                <li>A first draft of your introduction section is due at <strong>23:59 on Thursday 25 January</strong>.</li>
+                <li>We will meet in <strong>Nimitz 108</strong> on <strong>Tuesday 23 January</strong> to learn how to use the library resources to find existing literature in operations research.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="old_ann">
+            <td>11 Jan</td>
+            <td>Welcome!</td>
+          </tr>
+        </table>
+        <p style="text-align:right;"><a href="javascript:;" onmousedown="toggleOlderAnnouncements();"><span id="toggle_ann">Show older announcements</span></a></p>
+      </section>
+      <section>
+        <h2>General information</h2>
+        <div class="row" id="info">
+          <div class="twelve columns">
+            <ul>
+              <li><a href="policy.pdf">Course policy statement</a></li>
+                <ul>
+                  <li><a href="policy-6week.pdf">Grading policy for 6 week marking period</a></li>
+                  <li><a href="policy-12week.pdf">Grading policy for 12 week marking period</a></li>
+                </ul>
+              <li><a href="syllabus.pdf">Syllabus</a></li>
+              <li><a href="editing-marks-20180130.pdf">Editing marks</a></li>
+              <li><a href="http://www.navy.mil/submit/navyStyleGuide.pdf">U.S. Navy Style Guide</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="guidelines">
+        <h2>Project Guidelines</h2>
+        <div class="row" id="info">
+          <div class="twelve columns">
+            <ul>
+              <li><a href="https://github.com/nelsonuhan/sa475b-template/zipball/master">Report template in R Markdown</a></li>
+              <li><a href="lessons/02 Writing - The Introduction.pdf">Writing about OR &mdash; The Introduction</a></li>
+              <li><a href="lessons/03 Writing - Literature Review.pdf">Writing about OR &mdash; Literature Review</a></li>
+              <li><a href="lessons/04 Writing - Input Data and Model Description.pdf">Writing about OR &mdash; Input Data and Model Description</a></li>
+              <li><a href="lessons/05 Writing - Experiment Setup Results Conclusion.pdf">Writing about OR &mdash; Experiment Setup, Results, and Conclusion</a></li>
+              <li><a href="lessons/06 Giving a Presentation - 10 Tips for OR Talks.pdf">Giving a Presentation &mdash; 10 Tips for OR Talks</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Schedule</h2>
+        <table id="schedule">
+          <colgroup>
+            <col width="100">
+            <col>
+          </colgroup>
+          <tr>
+            <td><strong>Date</strong></td>
+            <td><strong>Activities</strong></td>
+          </tr>
+          <tr>
+            <td>1 May</td>
+            <td>
+              <ul>
+                <li>Office hours</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>26 Apr</td>
+            <td>
+              <ul>
+                <li>Wrap-up</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>25 Apr</td>
+            <td>
+              <ul>
+                <li>Capstone Day: presentations</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>24 Apr</td>
+            <td>
+              <ul>
+                <li>Review presentation slides</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vlist">
+                <li>19 Apr</li>
+                <li>17 Apr</li>
+              </ul>
+            </td>
+            <td>
+            <ul>
+              <li>Interpret model outputs</li>
+              <li>Write experiment setup, results, and conclusion sections</li>
+              <li>Write presentation slides</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>12 Apr</td>
+            <td>
+            <ul>
+              <li>Giving a Presentation &mdash; 10 Tips for OR Talks [See <a href="#guidelines">Project Guidelines</a> for notes]</li>
+              <li>Continue generating model outputs</li>
+              <li>Start interpreting model outputs</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>10 Apr</td>
+            <td>
+            <ul>
+              <li>Writing about OR &mdash; Experiment Setup, Results, and Conclusion [See <a href="#guidelines">Project Guidelines</a> for notes]</li>
+              <li>Continue generating model outputs</li>
+              <li>Start interpreting model outputs</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vlist">
+                <li>5 Apr</li>
+                <li>3 Apr</li>
+                <li>29 Mar</li>
+                <li>27 Mar</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Revise report</li>
+                <li>Finalize data processing and model formulation</li>
+                <li>Start generating model outputs</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vlist">
+                <li>22 Mar</li>
+                <li>20 Mar</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Revise introduction and literature review</li>
+                <li>Write input data and model description sections</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vlist">
+                <li>8 Mar</li>
+                <li>6 Mar</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Focus on data processing and model formulation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Mar</td>
+            <td>
+            <ul>
+              <li>Writing about OR &mdash; Input Data and Model Description [See <a href="#guidelines">Project Guidelines</a> for notes]</li>
+              <li>Continue with data processing and model formulation</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vlist">
+                <li>27 Feb</li>
+                <li>22 Feb</li>
+                <li>20 Feb</li>
+                <li>15 Feb</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Focus on data processing and model formulation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Feb</td>
+            <td>
+              <ul>
+                <li>Finish first draft of literature review, revise introduction</li>
+                <li>Continue data gathering/manipulation, model formulation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>8 Feb</td>
+            <td>
+              <ul>
+                <li>Continue writing literature review, revise introduction</li>
+                <li>Continue data gathering/manipulation, model formulation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Feb</td>
+            <td>
+              <ul>
+                <li>Start writing literature review</li>
+                <li>Continue data gathering/manipulation, model formulation</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Feb</td>
+            <td>
+              <ul>
+                <li>Continue looking for relevant literature, start writing literature review</li>
+                <li>Start gathering and manipulating data, formulating a model</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>30 Jan</td>
+            <td>
+              <ul>
+                <li>Continue looking for relevant literature</li>
+                <li>Start gathering and manipulating data, formulating a model</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>25 Jan</td>
+            <td>
+              <ul>
+                <li>Finish first draft of introduction</li>
+                <li>Continue looking for relevant literature</li>
+                <li>Start thinking about modeling</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>23 Jan</td>
+            <td>
+              <ul>
+                <li>Library instruction</li>
+                <li>Continue to work on introduction, problem formulation</li>
+                <li>Start looking for relevant literature</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>18 Jan</td>
+            <td>
+              <ul>
+                <li>Writing about OR &mdash; Literature Review [See <a href="#guidelines">Project Guidelines</a> for notes]</li>
+                <li>Continue to work on formulating your problem</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>16 Jan</td>
+            <td>
+              <ul>
+                <li>Form project teams</li>
+                <li>Writing about OR &mdash; The Introduction [See <a href="#guidelines">Project Guidelines</a> for notes]</li>
+                <li>Example of a successful capstone report [<a href="http://www.optimization-online.org/DB_FILE/2017/09/6218.pdf">Report</a>]</li>
+                <li>Schedule meetings with stakeholders</li>
+                <li>Start formulating your problem:
+                  <ul>
+                    <li>Describe the relevant features of the system you want to study.</li>
+                    <li>What performance measure/objective function do you want to study?</li>
+                    <li>What data is available?</li>
+                    <li>What questions do you have for the stakeholders?</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>11 Jan</td>
+            <td>
+              <ul>
+                <li>Introduction [<a href="lessons/01.slides.pdf">Slides</a>]</li>
+                <li>Discuss and brainstorm project topics</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <script type="text/javascript">
+      function toggleOlderAnnouncements() {
+        $(".old_ann").fadeToggle();
+        txt = $("#toggle_ann").text();
+        if (txt == "Show older announcements") {
+          $("#toggle_ann").text("Hide older announcements");
+        } else {
+          $("#toggle_ann").text("Show older announcements");
+        }
+
+      }
+    </script>
+  </body>
+
+</html>

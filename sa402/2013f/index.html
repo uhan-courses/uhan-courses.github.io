@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA402 - Dynamic and Stochastic Modeling</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700' />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" /> 
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SA402 &mdash; Dynamic and Stochastic Models</h1>
+      <h2>Fall 2013</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <div class="block" id="ann">
+        <h3>Announcements</h3>
+        <ul>
+          <li><strong>Nov 5</strong>&nbsp; Solutions to Exam 2 have been posted.</li>
+          <li><strong>Oct 24</strong>&nbsp; Information on Exam 2 has been posted.</li>
+          <li><strong>Oct 17</strong>&nbsp; A revised syllabus has been posted.</li>
+          <li><strong>Sep 24</strong>&nbsp; Information on the course project have been posted.</li>
+          <li><strong>Sep 24</strong>&nbsp; Solutions to Exam 1 have been posted.</li>
+        </ul>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="syllabus-revised.pdf">Syllabus</a> (revised Oct 17)</li>
+          <li><a href="solutions.pdf">Solutions manual</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+        <ul>
+          <li><strong>Aug 20</strong>&nbsp; 2.1</li>
+          <li><strong>Aug 22</strong>&nbsp; 3.1, 3.2, 3.3, 3.5</li>
+          <li><strong>Aug 27</strong>&nbsp; 3.6, 3.8, 3.9</li>
+          <li><strong>Aug 29</strong>&nbsp; 3.31</li>
+          <li><strong>Sep 5</strong>&nbsp; 3.17, 3.18, 3.19, 3.20</li>
+          <li><strong>Sep 10</strong>&nbsp; 2.7, 4.4
+            <ul>
+              <li>2.7: Start by computing the demand for hamburgers each day using the given table and system logic</li>
+              <li>4.4: Start by letting D<sub>n</sub> be the number of hamburgers demanded on the nth day, and assume that demand between days is independent</li>
+            </ul>
+          </li>
+          <li><strong>Sep 12</strong>&nbsp; 2.10, 4.6
+          <ul>
+              <li>2.10: Keep track of the number of jobs waiting to be processed by CPU A and CPU B</li>
+              <li>4.6: Let B be a random variable that takes value 0 with probability 1/2, and 1 with probability 1/2. Map B = 0 to CPU A, and B = 1 to CPU B.</li>
+            </ul>
+          </li>
+          <li><strong>Sep 26</strong>&nbsp; 5.1, 5.3abcd, 5.5, 5.6</li>
+          <li><strong>Oct 1</strong>&nbsp; 5.3ef, 5.8, 5.10, 5.12</li> 
+          <li><strong>Oct 3</strong>&nbsp; 5.15, 5.17, 5.20, 5.21
+          <ul>
+            <li> 5.21: take the average number of cars in each hour and round
+            to obtain an estimate for the arrival rate in that hour; ignore the
+            standard error part of the question</li>
+          </ul></li>
+          <li><strong>Oct 8</strong>&nbsp; 5.13, 5.14</strong></li>
+          <li><strong>Oct 10</strong>&nbsp; redo 5.20, 5.21</strong></li>
+          <li><strong>Oct 15</strong>&nbsp; 6.4, 6.5 
+          <ul>
+            <li>6.4: assume the process starts in state 1 with certainty</li>
+            <li>6.5: draw the transition diagram only</li>
+          </ul></li>
+          <li><strong>Oct 17</strong>&nbsp; <a
+            href="homework/6.11.modified.pdf">modified 6.11</a>, 6.17ab, 6.18
+          <ul>
+            <li> 6.18: start by finding the <em>probabilities</em> of preferred
+            beer brands in years 1979 and 2013</li>
+            <li><a href="homework/6.11.modified.sol.pdf">solutions to modified 6.11</a></li>
+          </ul></li> 
+          <li><strong>Oct 22</strong>&nbsp; finish Example 5 in Lesson 16, 6.5 (now do all parts), 6.6ac, 6.8, 6.11
+          <ul>
+            <li><a href="homework/16.example5.pdf">solutions to Example 5</a></li>
+          </ul></li>
+          <li><strong>Oct 24</strong>&nbsp; 6.14 (we did this in class), 6.16, 6.17c, 6.20, 6.21</li> 
+          <li><strong>Nov 5</strong>&nbsp; 7.1, 7.10</li> 
+          <li><strong>Nov 7</strong>&nbsp; 7.14 (warning: the solutions appear to be slightly off)</li> 
+          <li><strong>Nov 12</strong>&nbsp; finish Example 1 in Lesson 20, 8.6a, 8.11a</li> 
+          <li><strong>Nov 19</strong>&nbsp; 8.5, 8.8abc, 8.10abcd</li> 
+        </ul>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lesson notes</h3>
+        <ul>
+          <li><a href="lessons/01.pdf">1. Sample paths (Aug 20)</a>
+          <ul>
+            <li><a href="lessons/01.servicetime.pdf">Service time computations and histograms</a></li>
+            <li><a href="lessons/01.simulation.pdf">Simulation of first 10 customers in self-service system</a></li>
+          </ul>
+          </li>
+          <li><a href="lessons/02.pdf">2. Probability review (Aug 22)</a></li>
+          <li><a href="lessons/03.pdf">3. Conditional probability review (Aug 27)</a></li>
+          <li><a href="lessons/04.pdf">4. Conditional probability review, cont. (Aug 29)</a>
+          <ul>
+            <li><a href="lessons/04.sol.pdf">Solutions</a></li>
+          </ul>
+          </li>
+          <li><a href="lessons/05.pdf">5. Random variate generation (Sep 4)</a>
+          <ul>
+            <li><a href="lessons/05.example3.pdf">Solution to Example 3</a></li>
+          </ul>
+          </li>
+          <li><a href="lessons/06.pdf">6. Introduction to stochastic processes (Sep 10)</a></li>
+          <li><a href="lessons/07.pdf">7. A general stochastic process model (Sep 12)</a></li>
+          <li><a href="lessons/08.pdf">8. Arrival counting processes (Sep 24)</a></li>
+          <li><a href="lessons/09.pdf">9. The Poisson arrival process (Sep 26)</a></li>
+          <li><a href="lessons/10.pdf">10. Poisson processes - decomposition and superposition (Oct 1)</a>
+          <ul>
+            <li><a href="lessons/10.completed.pdf">Completed notes</a></li>
+          </ul>
+          </li>
+          <li><a href="lessons/11.pdf">11. Nonstationary Poisson processes (Oct 3)</a>
+          <ul>
+            <li><a href="lessons/11.completed.pdf">Completed notes</a></li>
+          </ul>
+          </li>
+          <li><a href="lessons/12.pdf">12. Poisson processes - review (Oct 8)</a></li>
+          <li><a href="lessons/13.pdf">13. Nonstationary Poisson processes - review (Oct 10)</a></li>
+          <li><a href="lessons/14.pdf">14. Introduction to Markov chains (Oct 15)</a></li>
+          <li><a href="lessons/15.pdf">15. Markov chains - time-dependent performance measures (Oct 17)</a></li>
+          <li><a href="lessons/16.pdf">16. Markov chains - time-independent performance measures (Oct 22)</a></li>
+          <li><a href="lessons/17.pdf">17. Markov chains - modeling and assumptions (Oct 24)</a>
+          <ul>
+            <li><a href="lessons/17.indep.pdf">What if every transition is independent of the previous state?</a></li>
+          </ul></li>
+          <li><a href="lessons/18.pdf">18. A quick start guide to Markov processes (Nov 5)</a>
+          <ul>
+            <li><a href="lessons/18.example3.pdf">Solution to Example 3</a></li>
+          </ul></li>
+          <li><a href="lessons/19.pdf">19. An introduction to queueing processes (Nov 7)</a></li>
+          <li><a href="lessons/20.pdf">20. The birth-death process (Nov 12)</a>
+          <ul>
+            <li><a href="lessons/20.example1.pdf">Solution to Example 1</a></li>
+          </ul></li>
+          <li><a href="lessons/21.pdf">21. The birth-death process - performance measures (Nov 14)</a>
+          <ul>
+            <li><a href="lessons/21.example1.pdf">Solution to Example 1</a></li>
+          </ul></li>
+          <li><a href="lessons/22.pdf">22. Standard queueing models (Nov 19)</a> <span style="color: red">- updated Nov 21</span></li>
+          <li><a href="lessons/23.pdf">23. Lab - helicopter maintenance (Nov 21)</a>
+          <ul>
+            <li><a href="lessons/23.sol.pdf">Solutions</a></li>
+            <li>MATLAB code: <a href="lessons/23/class/experiment.m">experiment.m</a>, <a href="lessons/23/class/simulation.m">simulation.m</a>, <a href="lessons/23/class/event.m">event.m</a>, <a href="lessons/23/class/print_info.m">print_info.m</a></li>
+            <li>MATLAB code solutions: <a href="lessons/23/solutions/experiment.m">experiment.m</a>, <a href="lessons/23/solutions/simulation.m">simulation.m</a>, <a href="lessons/23/solutions/event.m">event.m</a>, <a href="lessons/23/solutions/print_info.m">print_info.m</a></li>
+          </ul></li>
+          <li><a href="lessons/24.pdf">24. Lab - how to win at Monopoly (Nov 26)</a>
+          <ul>
+            <li><a href="lessons/24.sol.pdf">Solutions</a></li>
+            <li>MATLAB code: <a href="lessons/24/transition.m">transition.m</a></li>
+          </ul></li>
+          <li><a href="lessons/25.pdf">25. Spatial Poisson processes (Dec 3)</a>
+          <ul>
+            <li>MATLAB code: <a href="lessons/25/poisson.m">poisson.m</a></li>
+            <li>MATLAB code solutions: <a href="lessons/25/poisson_sol.m">poisson_sol.m</a></li>
+          </ul></li>
+        </ul>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+        <p class="note">Now that the semester is over, I have taken down the quiz solutions.</p>
+        <ul>
+          <li>1. Aug 29</li>
+          <li>2. Sep 5</li>
+          <li>3. Sep 12</li>
+          <li>4. Sep 26 - not really a quiz</li>
+          <li>5. Oct 3</li>
+          <li>6. Oct 10</li>
+          <li>7. Oct 17</li>
+          <li>8. Oct 24</li>
+          <li>9. Nov 14</li>
+        </ul>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+        <p class="note">Now that the semester is over, I have taken down the solutions to the exams and review problems.</p>
+        <ul>
+          <li>Exam 1 (Sep 19)
+          <ul>
+            <li><a href="exams/exam1_info.pdf">Information and review problems</a></li>
+            <li>Solutions to review problems</li>
+            <li>Solutions</li>
+          </ul></li>
+          <li>Exam 2 (Oct 31)
+          <ul>
+            <li><a href="exams/exam2_info.pdf">Information and review problems</a></li>
+            <li>Solutions to review problems</li>
+            <li>Solutions</li>
+          </ul></li>
+          <li>Final Exam (Dec 11)
+          <ul>
+            <li><a href="exams/final_info.pdf">Information and review problems</a></li>
+            <li>Solutions to review problems</li>
+          </ul></li>
+        </ul>
+      </div>
+
+      <div class="block" id="project">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="project/index.html">Project information</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA421 - Simulation Modeling</title>
+
+    <!-- CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SA421 &mdash; Simulation Modeling</h1>
+      <h2>Fall 2015</h2>
+      <h2>Section 5041</h2>
+      <h2>Asst. Prof. Nelson Uhan</h2>
+
+      <div class="block">
+        <h3>Announcements</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="725">
+          </colgroup>
+          <tr>
+            <td>2 Dec</td>
+            <td>
+              The final exam will take place in MI006. See below for more information on the final exam.
+            </td>
+          </tr>
+          <tr>
+            <td>12 Nov</td>
+            <td>
+              <a href="roadmap.pdf">Here</a> is a roadmap for the rest of the semester. <br> 
+              The final exam will take place on <strong>Wednesday 16 December at 13:30</strong>. See below for details.
+            </td>
+          </tr>
+          <tr>
+            <td>27 Oct</td>
+            <td>Exam 2 will take place during <strong>the week of 2 November</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>
+              Information about the course project has been posted below.<br>
+              Your preliminary problem description is due on <strong>Tuesday 20 October</strong>. 
+            </td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>Exam 1 will take place during <strong>the week of 28 September</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>21 Aug</td>
+            <td>Welcome!</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="syllabus.pdf">Syllabus</a></li>
+          <li><a href="install-python/index.html">Installing Python, Jupyter/IPython Notebook, and SimPy</a></li>
+          <li>Assignment Submission Form</li>
+          <li><a href="http://nbviewer.ipython.org">nbviewer &mdash; view IPython Notebooks</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="doc">
+        <h3>Python documentation and guides</h3>
+        <ul>
+          <li><a href="https://docs.python.org/3/">Python 3 documentation</a></li>
+          <li><a href="http://simpy.sourceforge.net/old/SimPy_Manual/">SimPy 2.3 documentation</a></li>
+          <li><a href="http://www.scipy.org/docs.html">NumPy, SciPy, and Matplotlib documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="other">
+        <h3>Other useful information</h3>
+        <ul>
+          <li><a href="http://en.wikipedia.org/wiki/List_of_probability_distributions">List of probability distributions (from Wikipedia)</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="375">
+            <col width="175">
+            <col width="175">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>problem</strong></td>
+            <td><strong>solutions</strong></td>
+          </tr>
+          <!--
+          <tr>
+            <td>6 Nov</td>
+            <td>Finish the problem in Lesson 19. Compare your solution to the completed notes.</td>
+            <td></td>
+            <td></td>
+          </tr>          
+          -->
+          <tr>
+            <td>10 Nov</td>
+            <td>Finish the problem in Lesson 18.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>27 Oct</td>
+            <td>cronuts</td>
+            <td>
+              <a href="homework/cronuts.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/cronuts.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/cronuts.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/cronuts.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>callcenter</td>
+            <td>
+              <a href="homework/callcenter.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/callcenter.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/callcenter.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/callcenter.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>butcher5</td>
+            <td>
+              <a href="homework/butcher5.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher5.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/butcher5.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher5.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td>icecream</td>
+            <td>
+              <a href="homework/icecream.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/icecream.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/icecream.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/icecream.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Oct</td>
+            <td>tube</td>
+            <td>
+              <a href="homework/tube.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/tube.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/tube.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/tube.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>inverse</td>
+            <td>
+              <a href="homework/inverse.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/inverse.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/inverse.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/inverse.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Oct</td>
+            <td>lcg</td>
+            <td>
+              <a href="homework/lcg.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/lcg.ipynb">nbviewer</a>
+            <td>
+              <a href="homework/lcg.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/lcg.sol.ipynb">nbviewer</a>
+          </tr>
+          <tr>
+            <td></td>
+            <td>indep</td>
+            <td>
+              <a href="homework/indep.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/indep.ipynb">nbviewer</a>
+            <td>
+              <a href="homework/indep.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/indep.sol.ipynb">nbviewer</a>
+          </tr>
+          <tr>
+            <td>24 Sep</td>
+            <td>ks</td>
+            <td>
+              <a href="homework/ks.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/ks.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/ks.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/ks.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>
+              chisq<br>
+              Finish the problem in Lesson 8.
+            </td>
+            <td>
+              <a href="homework/chisq.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/chisq.ipynb">nbviewer</a><br>
+            </td>
+            <td>
+              <a href="homework/chisq.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/chisq.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17 Sep</td>
+            <td>parking</td>
+            <td>
+              <a href="homework/parking.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/parking.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/parking.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/parking.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Sep</td>
+            <td>
+              butcher4<br>
+              Finish the problem in Lesson 6.
+            </td>
+            <td>
+              <a href="homework/butcher4.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher4.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/butcher4.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher4.sol.ipynb">nbviewer</a><br>
+              see below
+            </td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td>Finish the problem in Lesson 5.</td>
+            <td></td>
+            <td>see below</td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>butcher3</td>
+            <td>
+              <a href="homework/butcher3.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher3.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/butcher3.sol.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher3.sol.ipynb">nbviewer</a>
+            </td> 
+          </tr>
+          <tr>
+            <td>1 Sep</td>
+            <td>butcher2</td>
+            <td>
+              <a href="homework/butcher2.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher2.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/butcher2.sol.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/butcher2.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>27 Aug</td>
+            <td>python</td>
+            <td>
+              <a href="homework/python.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/python.ipynb">nbviewer</a>
+            </td>
+            <td>
+              <a href="homework/python.sol.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/homework/python.sol.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>25 Aug</td>
+            <td>
+              butcher<br>
+              Download WinPython (see Step 1 of <a href="install-python/index.html">these instructions</a>) &mdash; we will complete the installation at the beginning of next class.
+              </td>
+            <td><a href="homework/butcher.pdf">pdf</a></td>
+            <td><a href="homework/butcher.sol.pdf">pdf</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lessons</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="50">
+            <col width="425">
+            <col width="250">
+          </colgroup>
+          <tr>
+            <td>12 Nov</td>
+            <td>19</td>
+            <td>Transient vs. steady state behavior</td>
+            <td>
+              <a href="lessons/19.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/19.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>10 Nov</td>
+            <td>18</td>
+            <td>SimPy &mdash; queueing networks</td>
+            <td>
+              <a href="lessons/18.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/18.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>27 Oct<br> 29 Oct</td>
+            <td>17</td>
+            <td>Practice with advanced SimPy constructs</td>
+            <td>
+              <a href="lessons/17.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/17.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/17.completed.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/17.completed.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>27 Oct</td>
+            <td>16</td>
+            <td>SimPy &mdash; levels</td>
+            <td>
+              <a href="lessons/16.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/16.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>15</td>
+            <td>SimPy &mdash; priority queues, preemption</td>
+            <td>
+              <a href="lessons/15.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/15.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>14</td>
+            <td>SimPy &mdash; different arrival types, user-defined distributions</td>
+            <td>
+              <a href="lessons/14.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/14.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td>13</td>
+            <td>SimPy &mdash; balking and reneging</td>
+            <td>
+              <a href="lessons/13.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/13.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/13.completed.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/13.completed.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Oct</td>
+            <td>12</td>
+            <td>Variance reduction: common random numbers</td>
+            <td>
+              <a href="lessons/12.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/12.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/12.completed.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/12.completed.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>11</td>
+            <td>Random variate generation</td>
+            <td>
+              <a href="lessons/11.pdf">pdf</a> 
+              <a href="lessons/11.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/11.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Oct</td>
+            <td>10</td>
+            <td>Random number generation, testing for independence</td>
+            <td>
+              <a href="lessons/10.pdf">pdf</a> 
+              <a href="lessons/10.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/10.ipynb">nbviewer</a><br>
+              completed:
+              <a href="lessons/10.completed.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/10.completed.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>The simulation study process</td>
+            <td>
+              <a href="lessons/process.pdf">pdf</a> 
+            </td>
+          </tr>
+          <tr>
+            <td>24 Sep</td>
+            <td>9</td>
+            <td>Input data analysis &ndash; continuous distributions</td>
+            <td>
+              <a href="lessons/09.pdf">pdf</a> 
+              <a href="lessons/09.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/09.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>WTF: some debugging exercises</td>
+            <td>
+              <a href="lessons/wtf.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/wtf.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>8</td>
+            <td>Input data analysis &ndash; discrete distributions</td>
+            <td>
+              <a href="lessons/08.pdf">pdf</a> 
+              <a href="lessons/08.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/08.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/08.completed.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/08.completed.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17 Sep</td>
+            <td>7</td>
+            <td>Comparing alternate systems</td>
+            <td>
+              <a href="lessons/07.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/07.ipynb">nbviewer</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Sep</td>
+            <td>6</td>
+            <td>Replicating simulations: sample mean and variance, confidence intervals</td>
+            <td>
+              <a href="lessons/06.pdf">pdf</a> 
+              <a href="lessons/06.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/06.ipynb">nbviewer</a><br>
+              completed:
+              <a href="lessons/06.completed.ipynb">ipynb</a>
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/06.completed.ipynb">nbviewer</a><br>
+             </td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td>5</td>
+            <td>Practice with SimPy</td>
+            <td>
+              <a href="lessons/05.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/05.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/05.completed.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/05.completed.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>4</td>
+            <td>SimPy &mdash; Monitors</td>
+            <td>
+              <a href="lessons/04.ipynb">ipynb</a> 
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/04.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/04.completed.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/04.completed.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Sep</td>
+            <td>3</td>
+            <td>Introduction to SimPy</td>
+            <td>
+              <a href="lessons/03.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/03.ipynb">nbviewer</a><br>
+              completed: <a href="lessons/03.completed.ipynb">ipynb</a>&nbsp;
+             <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/03.completed.ipynb">nbviewer</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>27 Aug</td>
+            <td>2</td>
+            <td>Introduction to Python and Jupyter</td>
+            <td>
+              <a href="lessons/02.ipynb">ipynb</a>&nbsp;
+              <a href="http://nbviewer.ipython.org/url/www.usna.edu/users/math/uhan/sa421/lessons/02.ipynb">nbviewer</a>
+              </td>
+          </tr>
+          <tr>
+            <td>25 Aug</td>
+            <td>1</td>
+            <td>Introduction to simulation</td>
+            <td><a href="lessons/01.pdf">pdf</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+        <p style="color:#d00000;">Now that the semester is over, I have removed the quiz solutions.</p>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="375">
+            <col width="175">
+            <col width="175">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>quiz</strong></td>
+            <td><strong>solutions</strong></td>
+          </tr>
+          <tr>
+            <td>29 Oct</td>
+            <td>Quiz 7</td>
+            <td></td>
+            <td>
+              pdf
+            </td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>Quiz 6</td>
+            <td></td>
+            <td>
+              pdf
+            </td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td>Quiz 5</td>
+            <td><a href="quizzes/quiz05.ipynb">ipynb</a></td>
+            <td>
+              ipynb
+              nbviewer
+            </td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>(not really a) Quiz 4</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>Quiz 3a</td>
+            <td><a href="quizzes/quiz03a.ipynb">ipynb</a></td>
+            <td>
+              ipynb
+              nbviewer
+            </td>
+          </tr>
+          <tr>
+            <td>17 Sep</td>
+            <td>Quiz 3</td>
+            <td><a href="quizzes/quiz03.ipynb">ipynb</a></td>
+            <td>
+              ipynb
+              nbviewer
+            </td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td>Quiz 2</td>
+            <td><a href="quizzes/quiz02.ipynb">ipynb</a></td>
+            <td>
+              ipynb
+              nbviewer
+            </td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>Quiz 1</td>
+            <td><a href="quizzes/quiz01.ipynb">ipynb</a></td>
+            <td>
+              ipynb
+              nbviewer
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+        <p style="color:#d00000;">Now that the semester is over, I have removed the exam solutions.</p>
+        <h4>Exam 1 (week of 28 September)</h4>
+        <ul>
+          <li><a href="exams/exam1_info.pdf">Information</a></li>
+          <li>.ipynb files
+            <ul>
+              <li><a href="exams/exam1p2.ipynb">exam1p2.ipynb</a></li>
+              <li><a href="exams/exam1p3.ipynb">exam1p3.ipynb</a></li>
+              <li><a href="exams/exam1p4.ipynb">exam1p4.ipynb</a></li>
+            </ul>
+          </li>
+          <li>Solutions
+            <ul>
+              <li>Exam problems and solutions to Problem 1</li>
+              <li>Solutions to Problem 2</li>
+              <li>Solutions to Problem 3</li>
+              <li>Solutions to Problem 4</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Exam 2 (week of 2 November)</h4>
+        <ul>
+          <li><a href="exams/exam2_info.pdf">Information</a></li>
+          <li>.ipynb files
+            <ul>
+              <li><a href="exams/exam2p1.ipynb">exam2p1.ipynb</a></li>
+              <li><a href="exams/exam2p2.ipynb">exam2p2.ipynb</a></li>
+              <li><a href="exams/exam2p3.ipynb">exam2p3.ipynb</a></li>
+            </ul>
+          </li>
+          <li>Solutions
+            <ul>
+              <li>Exam problems</li>
+              <li>Solutions to Problem 1</li>
+              <li>Solutions to Problem 2</li>
+              <li>Solutions to Problem 3</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Final Exam (Wednesday 16 December)</h4>
+        <ul>
+          <li><a href="exams/final_info.pdf">Information</a></li>
+          <li>.ipynb files
+            <ul>
+              <li><a href="exams/finalexamp1.ipynb">finalexamp1.ipynb</a></li>
+              <li><a href="exams/finalexamp2.ipynb">finalexamp2.ipynb</a></li>
+              <li><a href="exams/finalexamp3.ipynb">finalexamp3.ipynb</a></li>
+              <li><a href="exams/finalexamp4.ipynb">finalexamp4.ipynb</a></li>
+              <li><a href="exams/finalexamp5.ipynb">finalexamp5.ipynb</a></li>
+              <li><a href="exams/finalexamp6.ipynb">finalexamp6.ipynb</a></li>
+              <li><a href="exams/finalexamp7.ipynb">finalexamp7.ipynb</a></li>
+              <li><a href="exams/finalexamp8.ipynb">finalexamp8.ipynb</a></li>
+              <li><a href="exams/finalexamp9.ipynb">finalexamp9.ipynb</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block" id="project">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="project.pdf">Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

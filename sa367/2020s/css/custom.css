@@ -1,0 +1,187 @@
+a {
+    color: #0099cc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:focus, a:hover {
+    color: #d00;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+h1 { font-size: 3.0rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2.0rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.2rem; text-transform: none; font-style: italic}
+
+section {
+    margin: 0;
+    padding: 3rem 0 2rem;
+}
+
+strong {
+    font-weight: 600;
+}
+
+ul {
+  list-style: disc outside none;
+  margin-left: 1.25em;
+  padding-left: 0.25em;
+}
+
+ol {
+  list-style: decimal outside none;
+  margin-left: 1.25em;
+  padding-left: 0.25em;
+}
+
+li {
+  padding-left: 0.25em;
+}
+
+ul ul {
+  font-size: 1.6rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+ol ul {
+  font-size: 1.6rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+table {
+    width: 100%;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+td {
+  vertical-align: top;
+  padding: 1rem;
+}
+
+tr {
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+tr:nth-child(even) {
+  background: #ffffff;
+}
+
+tr:nth-child(odd) {
+  background: #f8f8f8;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0.5em; }
+th:last-child,
+td:last-child {
+  padding-right: 0.5em; }
+
+td p {
+  margin-bottom: 0.75rem;
+}
+
+td ul {
+  margin-bottom: 1rem;
+}
+
+td ul li {
+  margin-bottom: 0.75rem;
+}
+
+td > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+table.white {
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+tr.white {
+  padding: 0;
+}
+
+tr.white:nth-child(even) {
+  background: #ffffff;
+}
+
+tr.white:nth-child(odd) {
+  background: #ffffff;
+}
+
+tr.old-announcement {
+  display: none;
+}
+
+ul.vcompact {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.vcompact {
+  margin: 0;
+  padding: 0;
+}
+
+ul.hcompact {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.hcompact {
+  display: inline;
+  padding: 0 1em 0 0;
+  margin: 0;
+}
+
+#course {
+  margin-top: 4.0rem;
+}
+
+#course-title {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 3.0rem;
+    font-weight: 600;
+}
+
+#course-info {
+    font-size: 1.8rem;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #eee;
+}
+
+.spacer {
+    margin: 2rem 0rem;
+}

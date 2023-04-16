@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>Using R's goodness-of-fit tests in iPython Notebook - SA421 - Simulation Modeling</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700' />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container" style="width:800px;">
+      <h1>Using R's goodness-of-fit tests in iPython Notebook</h1>
+      <h4>SA421 Fall 2014</h4>
+
+      <h3>Setup</h3>
+      <div class="block">
+        <p>Some additional items need to be first installed on the SA421 virtual machine in order for this to work:</p>
+        <ol style="margin-top:1em;">
+          <li style="margin-bottom:1em;">Open UXTerm.</strong></li>
+          <img src="uxterm.png" style="margin-top:0em; margin-bottom:1em;"></img>
+          <li style="margin-bottom:1em;">In the UXTerm window, install <code>rpy2</code> by typing <code>sudo pip install rpy2</code> at the prompt. Use
+          <code>simulation</code> when prompted for a password.</li>
+          <img src="rpy2.png" style="margin-top:0em; margin-bottom:1em;"></img></li>
+          <li style="margin-bottom:1em;">In the UXTerm window, install <code>singledispatch</code> by typing <code>sudo pip install singledispatch</code> at the prompt.</li>
+          <img src="singledispatch.png" style="margin-top:0em; margin-bottom:1em;"></img>
+          <li style="margin-bottom:1em;">Run R in the UXTerm window by typing <code>sudo R</code> at the prompt.</li>
+          <img src="r.png" style="margin-top:0em; margin-bottom:1em;"></img>
+          <li style="margin-bottom:1em;">Install the <code>fitdistrplus</code> package in R by typing <code>install.packages("fitdistrplus")</code> at the prompt.
+          A dialog window will appear with a list of mirrors. Choose any one.</li>
+          <img src="fitdistrplus.png" style="margin-top:0em; margin-bottom:1em;"></img>
+          <li style="margin-bottom:1em;">Quit R by typing <code>quit()</code> at the R prompt. Close the UXTerm window.</li> 
+        </ol>
+        <p>You should now be ready to run R and its goodness-of-fit tests in iPython Notebook.</p>
+      </div>
+
+      <h3>R's goodness-of-fit tests in iPython Notebook</h3>
+      <div class="block">
+        <ul>
+          <li><a href="twitter.ipynb">This iPython Notebook</a> uses R's goodness-of-fit tests to determine whether arrivals to a Twitter feed follow a Poisson process (i.e. exponentially distributed interarrival times).</li>
+          <li>This iPython Notebook depends on <a href="twitter.txt">this data file</a>. Make sure both files are in the same folder.</li>
+          <li>The documentation for the <code>fitdistrplus</code> package can be found <a href="http://cran.r-project.org/web/packages/fitdistrplus/fitdistrplus.pdf">here</a>.</li>
+        </ul>
+      </div>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA421 - Simulation Modeling</title>
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!--
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      function toggleDiv(divId) {
+        $("#"+divId).slideToggle(400);
+      }
+    </script>
+    -->
+  </head>
+
+  <body>
+    <div id="main">
+      <h1>SA421 &mdash; Simulation Modeling</h1>
+      <h2>Spring 2013</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <h3>Announcements</h3>
+      <div id="ann">
+        <ul class="ann">
+          <li><strong>Apr 8</strong>&nbsp; The schedule for the rest of the semester
+          is <a href="endschedule.pdf">here</a>.</li><p class="ann"></p>
+          <li><strong>Mar 27</strong>&nbsp; Exam 2 is on Wednesday April 3.
+          See below for more information.</li><p class="ann"></p>
+          <li><strong>Feb 22</strong>&nbsp; Information on the project is now
+          available; see below. The first project milestone &ndash; problem
+          definition and initial model ideas &ndash; is due on March 8.</li>
+          <p class="ann"></p>
+          <li><strong>Feb 6</strong>&nbsp; Exam 1 is on Wednesday February 13.
+          See below for more information.</li>
+        </ul>
+      </div>
+
+      <h3>General information</h3>
+      <div id="info">
+        <ul>
+          <li><a href="syllabus.pdf">Syllabus</a></li>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="http://www.promodel.com/onlinehelp/ProModel/80/">ProModel documentation</a></li>
+          <li><a href="OutputViewerUserGuide.pdf">ProModel Output Viewer documentation</a></li>
+        </ul>
+      </div>
+
+      <h3>Textbook</h3>
+      <p class="note">Note: Now that the semester is over, I have taken down the textbook.</p>
+      <p class="note">Available only within USNA.</p>
+      <div id="textbook">
+        <ul>
+          <li><a href="textbook/titlepage.pdf">Title page</a></li>
+          <li><a href="textbook/contents.pdf">Contents</a></li>
+          <li><a href="textbook/chapter01.pdf">Chapter 1: Introduction to simulation</a></li>
+          <li><a href="textbook/chapter02.pdf">Chapter 2: Random numbers</a></li>
+          <li><a href="textbook/chapter03.pdf">Chapter 3: Random variate generation</a></li>
+          <li><a href="textbook/chapter04.pdf">Chapter 4: Introduction to ProModel</a></li>
+          <li><a href="textbook/chapter05.pdf">Chapter 5: Empirical distributions and attributes</a></li>
+          <li><a href="textbook/chapter06.pdf">Chapter 6: Processing and initial state</a></li>
+          <li><a href="textbook/chapter07.pdf">Chapter 7: Trace, multiple runs and background graphics</a></li>
+          <li><a href="textbook/chapter08.pdf">Chapter 8: Model parameters and scenarios</a></li>
+          <li><a href="textbook/chapter09.pdf">Chapter 9: SPLIT and COMBINE statements</a></li>
+          <li><a href="textbook/chapter10.pdf">Chapter 10: Path networks, resources, and the JOIN command</a></li>
+          <li><a href="textbook/chapter11.pdf">Chapter 11: Input data analysis</a></li>
+          <li><a href="textbook/chapter12.pdf">Chapter 12: Verification, validation, and model testing</a></li>
+          <li><a href="textbook/chapter13.pdf">Chapter 13: Output data analysis</a></li>
+          <li><a href="textbook/appendixb.pdf">Appendix B: The exponential distribution and the Poisson process</a></li>
+        </ul>
+      </div>
+
+      <h3>Homework</h3>
+      <div id="hw">
+        <p class="note">Note: Now that the semester is over, I have taken down the homework solutions.</p>
+        <ul>
+          <li>Jan 8: 1.1a</li>
+          <li>Jan 9: 1.1b</li>
+          <li>Jan 11: 1.1c</li>
+          <li>Jan 14: none</li>
+          <li>Jan 16: 1.1def. Parts e and f should start with "Using your results from part d..."</li>
+          <li>Jan 18: 1.2 [solutions]</li>
+          <li>Jan 23: 2.1-2.4</li>
+          <li>Jan 25: 2.5. Generate 200 random numbers and use subintervals of length 0.05 instead.
+          <li>Jan 28: 2.6, 2.7</li>
+          <li>Jan 30: finish the problem in Lesson 10</li>
+          <li>Feb 1: 3.2, 3.3</li>
+          <li>Feb 4: 3.5, 3.6, 3.8, 3.9</li>
+          <li>Feb 6: none</li>
+          <li>Feb 8: 3.10</li>
+          <li>Feb 15: 4.1a [solution ProModel file]</li>
+          <li>Feb 20: 4.1b [solution ProModel file]</li>
+          <li>Feb 22: 5.1 [solution ProModel file]</li>
+          <li>Feb 25: 6.1 [solution ProModel file]</li>
+          <li>Mar 4: 7.1 [solution ProModel file]</li>
+          <li>Mar 6: 8.1 [solution ProModel file] Note this is almost identical to 5.1, except that it sets up scenarios for different numbers of butchers.</li>
+          <li>Mar 18: 9.1 [solution ProModel file]</li>
+          <li>Mar 20: 9.3 [solution ProModel file] Read the comments in the Processing table carefully.</li>
+          <li>Mar 22: 10.1 [solution ProModel file]</li>
+          <li>Mar 25: 11.2</li>
+        </ul>
+      </div>
+
+      <h3>Lesson notes</h3>
+      <div id="lesson">
+        <ul>
+          <li><a href="lessons/01.pdf">1. Introduction to simulation (Jan 8)</a></li>
+          <li><a href="lessons/02.pdf">2. Simulation using Excel (Jan 9)</a> [<a href="lessons/02.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/03.pdf">3. Performance measures (Jan 11)</a> [<a href="lessons/03.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/04.pdf">4. Sample mean, sample variance, confidence intervals (Jan 14)</a></li>
+          <li><a href="lessons/05.pdf">5. Replications in Excel (Jan 16)</a> [<a href="lessons/05.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/06.pdf">6. An example (Jan 18)</a> [<a href="lessons/06.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/07.pdf">7. Random number generation (Jan 23)</a> [<a href="lessons/07.xlsx">Excel file</a>, <a href="lessons/07-completed.xlsx">completed Excel file</a>]</li>
+          <li><a href="lessons/08.pdf">8. Chi-squared test for uniformity (Jan 25)</a> [<a href="lessons/08.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/09.pdf">9. Kolmogorov-Smirnov test for uniformity, testing for independence (Jan 28)</a> [<a href="lessons/09.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/10.pdf">10. A diversion (Jan 30)</a> [<a href="lessons/10.xlsx">Excel file</a>, <a href="lessons/10-completed.xlsx">completed Excel file</a>]</li>
+          <li><a href="lessons/11.pdf">11. Random variate generation and the inverse transform method (Feb 1)</a></li>
+          <li><a href="lessons/12.pdf">12. Chi-square goodness-of-fit test (Feb 4)</a> [<a href="lessons/12.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/13.pdf">13. An application (Feb 6)</a> [<a href="lessons/13-completed.xlsx">completed Excel file</a>]</li>
+          <li><a href="lessons/14.pdf">14. Using random numbers to estimate area (Feb 8)</a> [<a href="lessons/14.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/15.pdf">15. Introduction to ProModel (Feb 15)</a></li>
+          <li><a href="lessons/16.pdf">16. Global variables in ProModel (Feb 20)</a> [<a href="lessons/16.mod">ProModel file</a>]</li>
+          <li><a href="lessons/17.pdf">17. Attributes and user-defined distributions in ProModel (Feb 22)</a> [<a href="lessons/17.mod">ProModel file</a>]</li>
+          <li><a href="lessons/18.pdf">18. Advanced routing (Feb 25)</a> [<a href="lessons/18a.mod">first ProModel file</a>, <a href="lessons/18b.mod">second ProModel file</a>]</li>
+          <li><a href="lessons/19.pdf">19. Basic ProModel review (Feb 27, Mar 1)</a> [<a href="lessons/19-solutions.pdf">solutions</a>, <a href="lessons/19-solutions.mod">solution ProModel file</a>]</li>
+          <li><a href="lessons/20.pdf">20. Trace, streams, and replications (Mar 4)</a> [<a href="lessons/20.mod">ProModel file</a>]</li>
+          <li><a href="lessons/21.pdf">21. Model parameters and scenarios (Mar 6)</a> [<a href="lessons/21.mod">ProModel file</a>]</li>
+          <li><a href="lessons/22.pdf">22. More ProModel review (Mar 8)</a> [<a href="lessons/22-solutions.mod">solution ProModel file</a>]</li>
+          <li><a href="lessons/23.pdf">23. COMBINE and SPLIT statements (Mar 18)</a> [<a href="lessons/23a.mod">first ProModel file</a>, <a href="lessons/23b.mod">second ProModel file</a>]</li> 
+          <li><a href="lessons/24.pdf">24. Path networks and resources (Mar 20)</a> [<a href="lessons/24.mod">ProModel file</a>]</li>
+          <li><a href="lessons/25.pdf">25. Advanced ProModel review (Mar 22)</a> [<a href="lessons/25.mod">ProModel file</a>, <a href="lessons/25-completed.mod">completed ProModel file</a>]</li>
+          <li><a href="lessons/26.pdf">26. Input data analysis (Mar 25)</a> [<a href="lessons/26.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/27.pdf">27. Input data analysis, cont. (Mar 27)</a> [<a href="lessons/27.xlsx">Excel file</a>]</li>
+          <li><a href="lessons/28.pdf">28. Model testing and output data analysis (Mar 29)</a> [<a href="lessons/28.mod">ProModel file</a>]</li>
+        </ul>
+      </div>
+
+      <h3>Quizzes</h3>
+      <div id="quiz">
+        <p class="note">Note: Now that the semester is over, I have taken down the quiz solutions.</p>
+        <ul>
+          <li>1. Jan 16 [Excel file, solutions, solution Excel file]</li>
+          <li>2. Jan 23 [Excel file, solutions, solution Excel file]</li>
+          <li>3. Jan 30 [Excel file, solutions]</li> 
+          <li>4. Feb 7 [solutions, solution Excel file]</li>
+          <li>5. Feb 20 - not really a quiz</li>
+          <li>6. Feb 27 - see Lesson 19</li>
+          <li>7. Mar 6 [ProModel file, solutions, solution ProModel file]</li>
+          <li>8. Mar 27 [ProModel file, solutions]</li>
+        </ul>
+      </div>
+
+      <h3>Exams</h3>
+      <div id="exam">
+        <p class="note">Note: Now that the semester is over, I have taken down the exam solutions.</p>
+        <ul>
+          <li>Exam 1 (Feb 11)</li>
+          <ul>
+            <li><a href="exams/exam1_info.pdf">Information</a></li>
+            <li><a href="exams/exam1.xlsx">Excel file</a></li>
+            <li>Solutions, solution Excel file</li>
+          </ul><p class="ann"></p>
+          <li>Exam 2 (Apr 3)</li>
+          <ul>
+            <li><a href="exams/exam2_info.pdf">Information</a></li>
+            <li><a href="exams/exam2.xlsx">Excel file</a></li>
+            <li>Solutions: Excel file, ProModel file for 1a, ProModel file for 1b, ProModel file for 3</li>
+          </ul><p class="ann"></p>
+          <li>Final Exam (May 3)</li>
+          <ul>
+            <li><a href="exams/final_info.pdf">Information</a></li>
+            <li><a href="exams/final.xlsx">Excel file</a></li>
+            <li><a href="exams/simworld.mod">ProModel file</a></li>
+          </ul>
+        </ul>
+      </div>
+
+      <h3>Project</h3>
+      <div id="project">
+        <ul>
+          <li><a href="project/project.pdf">Information</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

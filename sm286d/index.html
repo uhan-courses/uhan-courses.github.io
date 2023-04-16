@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SM286D - Introduction to Applied Mathematics with Python</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&amp;subset=all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&amp;display=swap" rel="stylesheet">
+    <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/skeleton.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/toggle.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <h1 id="course-title">Introduction to Applied Mathematics with Python</h1>
+        <p id="course-info">SM286D &nbsp;&#11037;&nbsp; Spring 2020 &nbsp;&#11037;&nbsp; Sections 5602<br>Assoc. Prof. Nelson Uhan</p>
+      </section>
+      <section>
+        <h2>Announcements</h2>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+          </colgroup>
+          <tr>
+            <td>11 May</td>
+            <td><p>The semester is over!</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>1 May</td>
+            <td><p><strong>Final Exam</strong></p>
+<ul>
+<li>
+<p>Wednesday 6 May @ 9:30 - 12:30 (Eastern Time).</p>
+</li>
+<li>
+<p>You <strong>must</strong> take the exam during this time.</p>
+<ul>
+<li>The exam will be posted on the course website on Wednesday at around 9:20.</li>
+<li>The exam is due on Wednesday at 12:30.</li>
+</ul>
+</li>
+<li>
+<p>The format will be similar to the in-class exams.</p>
+</li>
+<li>
+<p>Two parts: closed-book and open-book.</p>
+<ul>
+<li>
+<p><strong>Part I: Closed-book.</strong></p>
+<ul>
+<li>Focuses on Python fundamentals: Lessons 1-9.</li>
+<li>Multiple choice using Google Forms.</li>
+<li>No outside assistance allowed (i.e., closed computer, closed book, closed notes, closed internet, etc.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Part II: Open-book.</strong></p>
+<ul>
+<li>Covers all lessons.</li>
+<li>You may start the open-book part once you've submitted your closed-book part.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>Open computer, open textbook, open notes. Websites directly linked from class website also allowed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>No collaboration allowed throughout the exam.</strong></p>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>22 Apr</td>
+            <td><p>The final exam will take place on <strong>Wednesday 6 May @ 9:30 - 12:30 (Eastern Time)</strong>.
+Details will be provided next week.</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>15 Apr</td>
+            <td><p><strong>Quiz 6</strong> will take place on <strong>Tuesday 21 April</strong>.</p>
+<ul>
+<li>Logistics:<ul>
+<li>The quiz will be posted on the course website on Tuesday 21 April.</li>
+<li>Give yourself 15 minutes to complete the quiz.</li>
+<li>The quiz will be due on <strong>Tuesday 21 April at 23:59</strong> (your local time zone).</li>
+</ul>
+</li>
+<li>Focuses on exceptions (Lesson 9), images (Lesson 14), and steganography (Lesson 15).</li>
+<li>Multiple choice using Google Forms.</li>
+<li>You will <strong>not</strong> be allowed to use any outside assistance on this quiz:
+  closed book, closed notes, closed internet, etc.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>30 Mar (updated<br>1 Apr)</td>
+            <td><p><strong>Exam 2</strong> will take place next week.</p>
+<ul>
+<li>Logistics:<ul>
+<li>The exam will be posted on the course website on Tuesday 7 April.</li>
+<li>Give yourself 2 hours to complete the exam.</li>
+<li>The exam will be <strong>due on Thursday 9 April at 23:59</strong> (your local time zone).</li>
+<li>There will be no new lessons next week, so that you can have some dedicated time to work on the exam.</li>
+</ul>
+</li>
+<li>Covers Lessons 8-15.</li>
+<li>Two parts: closed-book and open-book.</li>
+<li><strong>Closed-book part:</strong><ul>
+<li>Multiple choice and short answer using Google Forms.</li>
+<li>No outside assistance (closed computer, closed book, closed
+  notes, closed internet, etc.)</li>
+</ul>
+</li>
+<li><strong>Open-book part:</strong><ul>
+<li>You may start the open-book part once you've submitted your closed-book part.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>Open computer, open textbook, open notes. Websites directly linked from class website also allowed.</li>
+</ul>
+</li>
+<li>No collaboration allowed throughout the exam.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>19 Mar (updated 21 Mar)</td>
+            <td><p>I have posted some guidance on our transition to online learning &mdash;
+see <em>General Information</em> below.</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>5 Mar (updated 19 Mar)</td>
+            <td><p><strong>Quiz 5</strong> will take place on <strong>Thursday 26 March</strong>.</p>
+<ul>
+<li>Logistics:<ul>
+<li>The quiz will be posted on the class website on Wednesday.</li>
+<li>Give yourself 25 minutes to complete the quiz.</li>
+<li>The quiz will be due on Thursday at 23:59 (your local time zone).</li>
+</ul>
+</li>
+<li>Covers Lessons 11-12.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>You will be allowed to use your computer, textbook, notes, and websites directly linked from the class website.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>25 Feb</td>
+            <td><p><strong>Quiz 4</strong> will take place in class on <strong>Thursday 27 February</strong>.</p>
+<ul>
+<li>Focuses on Lessons 8 and 9.</li>
+<li>Pen and paper, multiple choice and short answer.</li>
+<li>You will <strong>not</strong> be allowed to use any outside assistance on this quiz:
+  closed computer, closed book, closed notes, closed internet, etc.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>4 Feb (updated 6 Feb, 11 Feb)</td>
+            <td><p>Upcoming schedule:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>R</td>
+                  <td>6 Feb</td>
+                  <td><p>Quiz 2</p>
+<p>Lesson 7</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>11 Feb</td>
+                  <td><p>Quiz 3</p>
+<p>Review day</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>12 Feb</td>
+                  <td><p>Exam EI, 19:00 - 20:00, CH379 or nearby</p></td>
+                </tr>
+                <tr class="white">
+                  <td>R</td>
+                  <td>13 Feb</td>
+                  <td><p>Exam 1</p></td>
+                </tr>
+              </table><p><strong>Quiz 3</strong></p>
+<ul>
+<li>Focuses on Lessons 4-6, <em>and list comprehensions from Lesson 3</em>.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>You will be allowed to use your computer, textbook, notes, and websites directly linked from the class website.</li>
+<li>No collaboration allowed.</li>
+</ul>
+<p><strong>Exam 1</strong></p>
+<ul>
+<li>Covers Lessons 1-7.</li>
+<li>Two parts: closed-book and open-book.</li>
+<li><strong>Closed-book part:</strong><ul>
+<li>Pen and paper, multiple choice.</li>
+<li>No outside assistance (closed computer, closed book, closed
+  notes, closed internet, etc.)</li>
+</ul>
+</li>
+<li><strong>Open-book part:</strong><ul>
+<li>You may start the open-book part once you've submitted your closed-book part.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>Open computer, open textbook, open notes. Websites directly linked from class website also allowed.</li>
+</ul>
+</li>
+<li>No collaboration allowed throughout the exam.</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>30 Jan</td>
+            <td><p><strong>Quiz 2</strong> will take place in class on <strong>Thursday 6 February</strong>.</p>
+<ul>
+<li>Focuses on Lessons 4 and 5. (Lessons 1-3 are still relevant.)</li>
+<li>Pen and paper, multiple choice.</li>
+<li>You will <strong>not</strong> be allowed to use any outside assistance on this quiz:
+  closed computer, closed book, closed notes, closed internet, etc.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>23 Jan</td>
+            <td><p><strong>Quiz 1</strong> will take place in class on <strong>Tuesday 28 January</strong>.</p>
+<ul>
+<li>Covers Lessons 1-3, except plotting.</li>
+<li>You will be asked to write code in a Jupyter notebook.</li>
+<li>You will be allowed to use your computer, textbook, notes, and websites directly linked from the class website.</li>
+<li>No collaboration allowed.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9 Jan</td>
+            <td><p>Welcome!</p></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderAnnouncements();">
+            <span id="toggle-announcements">Show older announcements</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>General Information</h2>
+        <ul>
+          <li>
+            <a href="info/policy-20200108.pdf">Course policy statement (last updated: 8 January 2020)</a>
+          </li>
+          <li>
+            <a href="info/online-20200410.pdf">Transitioning to online learning (last updated: 10 April 2020)</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/spreadsheets/d/1AsnoFIUwYanzdscTGCe_Zy7txju-rC5znr6CsiDR5eQ/">Syllabus (course-wide)</a>
+          </li>
+          <li>
+            <a href="https://script.google.com/a/usna.edu/macros/s/AKfycbyfq0VqWgJ1Co_6Oq5UBinZJK_qk1tbeRjMVWlcPHcFQEqGQmAU/exec">SM286D Assignment Submission Form</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li>
+            <a href="https://docs.python.org/3.7/">Python documentation</a>
+          </li>
+          <li>
+            <a href="https://docs.xlwings.org/en/stable/">xlwings documentation</a>
+          </li>
+          <li>
+            <a href="https://numpy.org/devdocs/">NumPy documentation</a>
+          </li>
+          <li>
+            <a href="https://matplotlib.org/3.1.3/contents.html">Matplotlib documentation</a>
+          </li>
+          <li>
+            <a href="https://networkx.github.io/documentation/stable/">NetworkX documentation</a>
+          </li>
+          <li>
+            <a href="https://pyomo.readthedocs.io/en/stable/">Pyomo documentation</a>
+          </li>
+          <li>
+            <a href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy documentation</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col width="425">
+            <col width="275">
+          </colgroup>
+          <tr>
+            <td colspan="1">
+              <strong>Project</strong>
+            </td>
+            <td colspan="1">
+              <strong>Instructions</strong>
+            </td>
+            <td colspan="1">
+              <strong></strong>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 7 &mdash; Evolutionary Algorithms and the TSP</p></td>
+            <td><p>Due Tuesday 28 April @ 23:59.</p>
+<p>You may work in teams of up to 3.
+Submit 1 project per team.
+No collaboration between teams.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-evolutionary/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 6 &mdash; Steganography</p></td>
+            <td><p>Due Tuesday 14 April @ 23:59.</p>
+<p>Work on your own.
+Submit 1 project per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-steganography/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 5 &mdash; Social Network Analysis</p></td>
+            <td><p>Due Tuesday 31 March @ 23:59.</p>
+<p>You must work in teams of 2.
+Submit 1 project per team.
+No collaboration between teams.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-social-networks/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 4 &mdash; Baseball Statistics</p></td>
+            <td><p>Due Tuesday 3 March @ 23:59.</p>
+<p>Work on your own.
+Submit 1 project per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/baseball-statistics/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 3 &mdash; Linear Programming</p></td>
+            <td><p>Due Thursday 20 February @ 23:59.</p>
+<p>Work on your own.
+Submit 1 project per student.
+Verbal collaboration is allowed, but sharing of code is <strong>not</strong> permitted.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-linear-programming/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 2 &mdash; The Knapsack Problem</p></td>
+            <td><p>Due Thursday 30 January @ 23:59.</p>
+<p>You must work in teams of 2 (one team of 3).
+Submit 1 project per team.
+No collaboration between teams.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-knapsack/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><p>Project 1 &mdash; Histograms</p></td>
+            <td><p>Due Thursday 23 January @ 23:59.</p>
+<p>You must work in teams of 2 (one team of 3).
+Submit 1 project per team.
+No collaboration between teams.</p></td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/project-histograms/zipball/student">Files (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Homework</h2><ul>
+<li>Below, PCC = Python Crash Course (the course textbook).</li>
+<li>Now that the semester is over, I have removed the reading quizzes.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+          </colgroup>
+          <tr>
+            <td colspan="1">
+              <strong>Dates</strong>
+            </td>
+            <td colspan="1">
+              <strong>Problems</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>23 Apr</td>
+            <td><p>Finish the classwork from Lesson 19.</p></td>
+          </tr>
+          <tr>
+            <td>21 Apr</td>
+            <td><p>Finish the classwork from Lesson 18.</p></td>
+          </tr>
+          <tr>
+            <td>16 Apr</td>
+            <td><p>Finish the classwork from Lesson 17.</p></td>
+          </tr>
+          <tr>
+            <td>14 Apr</td>
+            <td><p>Finish the classwork from Lesson 16.</p></td>
+          </tr>
+          <tr>
+            <td>31 Mar</td>
+            <td><p>Finish the classwork from Lesson 15.</p></td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td><p>Finish the classwork from Lesson 14.</p></td>
+          </tr>
+          <tr>
+            <td>24 Mar</td>
+            <td><p>Finish the classwork from Lesson 13.</p></td>
+          </tr>
+          <tr>
+            <td>5 Mar</td>
+            <td><p>Finish the classwork from Lesson 12.</p></td>
+          </tr>
+          <tr>
+            <td>27 Feb</td>
+            <td><p>Finish Lesson 11.</p></td>
+          </tr>
+          <tr>
+            <td>25 Feb</td>
+            <td><p>Finish the classwork from Lesson 10.</p></td>
+          </tr>
+          <tr>
+            <td>20 Feb</td>
+            <td><p>Finish the classwork from Lesson 9.</p></td>
+          </tr>
+          <tr>
+            <td>18 Feb</td>
+            <td><p>Finish the classwork from Lesson 8. Read Chapter 10 of PCC. <a href="">Reading Quiz for PCC Chapter 10</a>.</p></td>
+          </tr>
+          <tr>
+            <td>13 Feb</td>
+            <td><p>Read Chapter 9 of PCC. <a href="">Reading Quiz for PCC Chapter 9</a>.</p></td>
+          </tr>
+          <tr>
+            <td>11 Feb</td>
+            <td><p>Finish classwork from prior lessons. Study for Exam 1.</p></td>
+          </tr>
+          <tr>
+            <td>6 Feb</td>
+            <td><p>Finish classwork from prior lessons.</p></td>
+          </tr>
+          <tr>
+            <td>4 Feb</td>
+            <td><p>Finish the classwork from Lesson 6.</p></td>
+          </tr>
+          <tr>
+            <td>30 Jan</td>
+            <td><p>Finish classwork from prior lessons. Read Chapter 8 of PCC. <a href="">Reading Quiz for PCC Chapter 8</a>.</p></td>
+          </tr>
+          <tr>
+            <td>28 Jan</td>
+            <td><p>Finish the classwork from Lesson 5.</p></td>
+          </tr>
+          <tr>
+            <td>23 Jan</td>
+            <td><p>Finish the classwork from Lesson 4. Read Chapter 7 of PCC. <a href="">Reading Quiz for PCC Chapter 7</a>.</p></td>
+          </tr>
+          <tr>
+            <td>21 Jan</td>
+            <td><p>Finish the classwork from Lesson 3. Read Chapter 6 of PCC. <a href="">Reading Quiz for PCC Chapter 6</a>.</p></td>
+          </tr>
+          <tr>
+            <td>16 Jan</td>
+            <td><p>Finish the classwork from Lesson 2. Read Chapter 5 of PCC. <a href="">Reading Quiz for PCC Chapter 5</a>.</p></td>
+          </tr>
+          <tr>
+            <td>14 Jan</td>
+            <td><p>Finish the classwork from Lesson 1. Read Chapters 3 and 4 of PCC. <a href="">Reading Quiz for PCC Chapter 4</a>.</p></td>
+          </tr>
+          <tr>
+            <td>9 Jan</td>
+            <td><p>Familiarize yourself with the course policy statement.</p>
+<p>Read Chapters 2 and 3 of PCC.
+<a href="">Reading Quiz for PCC Chapter 2</a>.
+<a href="">Reading Quiz for PCC Chapter 3</a>.</p></td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Lessons</h2>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col width="30">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <td colspan="1">
+              <strong>Dates</strong>
+            </td>
+            <td colspan="2">
+              <strong>Lesson</strong>
+            </td>
+            <td colspan="1"></td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">28 Apr</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>Review day</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Final Exam Review Part 1.pdf">Review Problems for Final Exam &mdash; Part I</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/review-final-exam/zipball/master">Review Problems for Final Exam &mdash; Part II</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/review-final-exam-solutions/zipball/master">Review Problems for Final Exam &mdash; Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">23 Apr</li>
+              </ul>
+            </td>
+            <td>19</td>
+            <td>More data visualization</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-data-visualization/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-data-visualization/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/more-data-visualization/blob/master/19%20More%20data%20visualization.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">21 Apr</li>
+              </ul>
+            </td>
+            <td>18</td>
+            <td>More genetic algorithms, visualizing location data</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-genetic-algorithms/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/1FWlGFgtUhUI5BPwPozKBGoi5hZrFuy18?usp=sharing">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-genetic-algorithms/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/more-genetic-algorithms/blob/master/18%20More%20genetic%20algorithms%20visualizing%20location%20data.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">16 Apr</li>
+              </ul>
+            </td>
+            <td>17</td>
+            <td>Genetic algorithms with Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/genetic-algorithms/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/u/0/folders/1fXDYN7InkkQVwUtDJxQWVVo2p409SsCY">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/genetic-algorithms/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/genetic-algorithms/blob/master/17%20Genetic%20algorithms%20with%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">14 Apr</li>
+              </ul>
+            </td>
+            <td>16</td>
+            <td>Linear programming with Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/linear-programming/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/1Ta8Q3ZpIIdsFENPeNUUsUuMNYAQYFYjv?usp=sharing">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/linear-programming/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/linear-programming/blob/master/16%20Linear%20Programming%20with%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">2 Apr</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>Review day</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Exam 2 Review Part 1.pdf">Review Problems for Exam 2 &mdash; Part I</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/review-exam-2/zipball/master">Review Problems for Exam 2 &mdash; Part II</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/review-exam-2-solutions/zipball/master">Review Problems for Exam 2 &mdash; Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">31 Mar</li>
+              </ul>
+            </td>
+            <td>15</td>
+            <td>Steganography</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/steganography/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/1_SvUHjbU7J8ckr9D5f837aadGSmGhfQt?usp=sharing">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/steganography/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/steganography/blob/master/15%20Steganography.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">26 Mar</li>
+              </ul>
+            </td>
+            <td>14</td>
+            <td>Working with images in Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/working-with-images/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/1Vi_YCaq9DVsmqXVgQCcUrEP_sO7PrSDD?usp=sharing">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/working-with-images/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/working-with-images/blob/master/14%20Working%20with%20images%20in%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">24 Mar</li>
+              </ul>
+            </td>
+            <td>13</td>
+            <td>Social network analysis</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/social-network-analysis/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/13kTHpjk0eA9rvVCA0PQB2s7pMeKB59fZ?usp=sharing">Videos</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/social-network-analysis/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/social-network-analysis/blob/master/13%20Social%20network%20analysis.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">5 Mar</li>
+              </ul>
+            </td>
+            <td>12</td>
+            <td>Graph theory with Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/graphs/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/graphs/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/graphs/blob/master/12%20Graph%20theory%20with%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">27 Feb</li>
+              </ul>
+            </td>
+            <td>11</td>
+            <td>Matrices with Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/matrix-algebra/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/matrix-algebra/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/matrix-algebra/blob/master/11%20Matrix%20algebra%20with%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">25 Feb</li>
+              </ul>
+            </td>
+            <td>10</td>
+            <td>Using spreadsheets with Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/using-spreadsheets/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/using-spreadsheets/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/using-spreadsheets/blob/master/10%20Using%20spreadsheets%20with%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">20 Feb</li>
+              </ul>
+            </td>
+            <td>9</td>
+            <td>Files and exceptions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/files-exceptions/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/files-exceptions/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/files-exceptions/blob/master/09%20Files%20and%20Exceptions.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">18 Feb</li>
+              </ul>
+            </td>
+            <td>8</td>
+            <td>Classes</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/classes/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/classes/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/classes/blob/master/08%20Classes.ipyn://nbviewer.jupyter.org/github/uhan-sm286d/classes/blob/master/08%20Classes.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11 Feb</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>Review day</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/Exam 1 Review Problems.pdf">Review Problems for Exam 1</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/review-exam-1/blob/master/Exam%201%20Review%20Problems%20Solutions.ipynb">Solutions to Review Problems</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">6 Feb</li>
+              </ul>
+            </td>
+            <td>7</td>
+            <td>Practice with functions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-functions/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/more-functions/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/more-functions/blob/master/07%20Practice%20with%20functions.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">4 Feb</li>
+              </ul>
+            </td>
+            <td>6</td>
+            <td>Functions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/functions/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/functions/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/functions/blob/master/06%20Functions.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">30 Jan</li>
+              </ul>
+            </td>
+            <td></td>
+            <td>Review day</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/review-20200130/zipball/master">Notes (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">28 Jan</li>
+              </ul>
+            </td>
+            <td>5</td>
+            <td>User input and while loops</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/user-input-while-loops/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/user-input-while-loops/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/user-input-while-loops/blob/master/05%20User%20input%20and%20while%20loops.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">23 Jan</li>
+              </ul>
+            </td>
+            <td>4</td>
+            <td>Dictionaries</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/dictionaries/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/dictionaries/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/dictionaries/blob/master/04%20Dictionaries.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">21 Jan</li>
+              </ul>
+            </td>
+            <td>3</td>
+            <td>List comprehensions, errors, conditional statements</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/errors-conditional-statements/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/errors-conditional-statements/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/errors-conditional-statements/blob/master/03%20List%20comprehensions%20errors%20conditional%20statements.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">16 Jan</li>
+              </ul>
+            </td>
+            <td>2</td>
+            <td>Loops, slicing, and plotting</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/loops-slicing-plotting/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/loops-slicing-plotting/zipball/master">Completed notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/loops-slicing-plotting/blob/master/02%20Loops%20slicing%20and%20plotting.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">14 Jan</li>
+                <li class="vcompact">9 Jan</li>
+              </ul>
+            </td>
+            <td>1</td>
+            <td>Introduction to Jupyter and Python</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/intro-jupyter-python/zipball/student">Notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://github.com/uhan-sm286d/intro-jupyter-python/zipball/master">Complete notes (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://nbviewer.jupyter.org/github/uhan-sm286d/intro-jupyter-python/blob/master/01%20Introduction%20to%20Jupyter%20and%20Python.ipynb">Completed notes (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9 Jan</li>
+              </ul>
+            </td>
+            <td>0</td>
+            <td>Introduction and setup</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/00 Introduction and setup.pdf">Notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Quizzes</h2><ul>
+<li>Now that the semester is over, I have removed the quizzes and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <td colspan="1">
+              <strong>Date</strong>
+            </td>
+            <td colspan="2">
+              <strong>Quiz</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>21 Apr</td>
+            <td>Quiz 6</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>26 Mar</td>
+            <td>Quiz 5</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>27 Feb</td>
+            <td>Quiz 4</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>11 Feb</td>
+            <td>Quiz 3</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Feb</td>
+            <td>Quiz 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>28 Jan</td>
+            <td>Quiz 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Exams</h2><ul>
+<li>Now that the semester is over, I have removed the exams and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <td colspan="1">
+              <strong>Date</strong>
+            </td>
+            <td colspan="2">
+              <strong>Exam</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>6 May</td>
+            <td>Final Exam</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Part I</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II (zip)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>7 Apr</td>
+            <td>Exam 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Part I</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II Solutions (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II Solutions (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Feb</td>
+            <td>Exam 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Part I Solutions</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II Solutions (zip)</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Part II Solutions (nbviewer)</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

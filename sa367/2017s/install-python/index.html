@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>Installing Python and Jupyter - SA367</title>
+
+   <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&subset=all" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/skeleton.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/custom.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container">
+      <section>
+      <h1>Installing Python and Jupyter</h1>
+      <p id="course-info">SA367 Spring 2017</p>
+      <p>Last updated: &nbsp;16 January 2017</p>
+      </section>
+
+      <section>
+      <h2>Overview</h2>
+        <p>For this course, we will use <a href="http://winpython.github.io">WinPython</a>, an easy-to-use Python distribution for Windows.
+        WinPython comes with <a href="http://www.jupyter.org">Jupyter</a> and a collection of useful scientific computing packages such as <a href="http://www.numpy.org">NumPy</a>, <a href="http://www.scipy.org">SciPy</a> and <a href="http://matplotlib.org">Matplotlib</a>. 
+      </section>
+
+      <section>
+      <h2>Instructions</h2>
+        <ol>
+          <li>
+            Go to the WinPython webpage <a href="http://winpython.github.io">here</a> to download the 64-bit version of WinPython 3.5.2.3 &mdash; see the pictures below.
+            <img class="screenshot" src="01-winpython-webpage.png">
+            <img class="screenshot" src="02-winpython-webpage.png">
+          </li>
+          <li>
+            Install WinPython by launching the .exe file you downloaded in the previous step.
+            The installer will ask you where to put the WinPython folder.
+            As you can see in the picture below, I just put it on my Desktop so that it's easy to find. 
+            <img class="screenshot" src="03-winpython-desktop.png">
+          </li>
+          <li>
+            Once the installation is complete, open the WinPython folder. 
+            To launch Jupyter, open <strong>Jupyter Notebook</strong> in the WinPython folder. 
+            <img class="screenshot" src="04-launch-jupyter.png">
+            A command prompt window titled "C:\Windows\system32\cmd.exe - winipython_notebook.bat" should appear &mdash; just leave this open while you use Jupyter. In addition, your default browser should open with the Jupyter file browser.
+            See the picture below.
+            <img class="screenshot" src="05-jupyter.png">
+            If you accidentally close your browser, you can get back to the Jupyter file browser at http://localhost:8888/, as long as the command prompt window that opened earlier is still open. 
+          </li>
+          <li>
+            Going forward, put any Jupyter notebooks you want to use in the "notebooks" folder in the WinPython folder: 
+            <img class="screenshot" src="06-notebooks.png">
+          </li>
+        </ol>
+        </section>
+   </div>
+  </body>
+</html>

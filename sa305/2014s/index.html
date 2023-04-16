@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA305 - Linear Programming</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700' />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" /> 
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SA305 &mdash; Linear Programming</h1>
+      <h2>Spring 2014</h2>
+      <h2>Sections 5001 and 6001</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <div class="block" id="ann">
+        <h3>Announcements</h3>
+        <ul>
+          <li><strong>Apr 25</strong>&nbsp;&nbsp; End-of-semester announcements:
+          <ul>
+            <li><strong>Projects:</strong> Due Monday April 28 in class</li>
+            <li><strong>Final Exam:</strong> Friday May 2, 7:55  
+            <ul>
+              <li>For more information, see the "Exams" section below</li>
+              <li>Exam EI on Thursday May 1, 1900-2000, CH348</li>
+            </ul></li>
+            <li><strong>GMPL exercises:</strong> Due Friday May 2 at noon
+            <ul>
+              <li>I will send you the status of your GMPL exercises electronically on Monday April 28 and Wednesday April 30</li>
+            </ul></li>
+          </ul></li>
+          <br>
+          <li><strong>Mar 28</strong>&nbsp;&nbsp; Exam 2 is on Friday April 4.  For more information, see the "Exams" section below.
+            <ul>
+              <li>Review in class on Wednesday April 2</li>
+              <li>Exam EI on Thursday April 3, 1900-2000, CH348</li>
+            </ul></li>
+          <li><strong>Mar 26</strong>&nbsp;&nbsp; GMPL clinic rescheduled for Thursday March 27, <span style="color:red;">2000-2100</span>, CH348</li>
+          <li><strong>Mar 24</strong>&nbsp;&nbsp; GMPL clinic on Thursday March 27, 1900-2000, CH348</li>
+          <li><strong>Mar 17</strong>&nbsp;&nbsp; Instructions for the course project have been posted; see below. Due dates:
+            <ul>
+              <li>Preliminary problem statement due Monday March 31</li>
+              <li>Final report due Monday April 28</li>
+            </ul></li>
+          <li><strong>Feb 19</strong>&nbsp;&nbsp; Solutions to Exam 1 have been posted.</li>
+          <li><strong>Feb 5</strong>&nbsp;&nbsp; Exam 1 is on Friday February 14.  For more information, see the "Exams" section below.
+            <ul>
+              <li>GMPL clinic on Tuesday February 11, 1900-2000, CH348</li>
+              <li>Review in class on Wednesday February 12</li>
+              <li>Exam EI on Thursday February 13, 1900-2000, CH348</li>
+            </ul></li>
+          <li><strong>Jan 7</strong>&nbsp;&nbsp; Welcome!</li>
+        </ul>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="syllabus.pdf">Syllabus</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="gmpl">
+        <h3>GMPL information</h3>
+        <ul>
+          <li><a href="http://en.wikibooks.org/wiki/GLPK">GLPK Wikibook</a></li>
+          <li><a href="gmpl.pdf">GMPL language reference manual</a></li>
+          <li><a href="gmpl-instructions.pdf">Instructions for GMPL exercises</a></p>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+
+        <p class="note">Note: Now that the semester is over, I have taken down the homework solutions.</p>
+
+        <p class="note">Solutions are only available within USNA.</p>
+
+        <p style="margin-bottom: 2ex;"><strong>GMPL exercises are starred.* For GMPL exercises, formulate a model on paper and write accompanying GMPL code. Submit your GMPL code, using the instructions above.</strong></p>
+
+        <ul>
+          <li><strong>Apr 18</strong>&nbsp;&nbsp; rock-paper-scissors [solutions]</li> 
+          <li><strong>Apr 16</strong>&nbsp;&nbsp; pirates*: Write a linear
+          program for Example 1 in Lesson 33 using symbolic input parameters.
+          This is the last GMPL exercise of the semester.
+          [solutions: see completed notes for Lesson 33 below]
+            <ul>
+              <li>Your model file should be named <u>pirates.mod</u></li>
+              <li>Your data file should be named <u>pirates.dat</u></li>
+              <li>The folder name should be <u>pirates</u></li>
+            </ul>
+          </li> 
+          <li><strong>Apr 14</strong>&nbsp;&nbsp; <strike style="color:red;"><span style="color:black;">2.30* &mdash; This is
+            the last GMPL exercise of the semester.</span></strike> &nbsp;
+          <span style="color:red;">Updated on April 15</span></li>
+          <li><strong>Apr 11</strong>&nbsp;&nbsp; cars [solutions]</li>
+          <li><strong>Apr 9</strong>&nbsp;&nbsp; 9.5ab [solutions]</li>
+          <li><strong>Apr 7</strong>&nbsp;&nbsp; 9.1, 9.2, 9.3, 9.4 [solutions: 9.1, 9.2, 9.3, 9.4]</li>
+          <li><strong>Mar 28</strong>&nbsp;&nbsp; 8.11ab, 8.12ab [solutions: 8.11ab, 8.12ab]
+            <ul>
+              <li>Note: part b of 8.11 and 8.12 are somewhat tedious, since the
+              LPs are rather large for solving with the simplex method by hand.
+              Nevertheless, they do serve as good practice for reinforcing the
+              mechanics of the simplex method. Make sure you know how to
+              <strong>interpret</strong> an optimal solution and the optimal
+              value of a Phase I LP.</li>
+            </ul></li>
+          <li><strong>Mar 26</strong>&nbsp;&nbsp; 8.3, 8.8 [solutions: 8.3, 8.8]</li>
+          <li><strong>Mar 24</strong>&nbsp;&nbsp; 8.1, 8.2 [solutions: 8.1, 8.2]</li>
+          <li><strong>Mar 21</strong>&nbsp;&nbsp; Work on diet-part2 if you haven't completed it yet. Here's a hint.</li>
+          <li><strong>Mar 19</strong>&nbsp;&nbsp; 7.16, 7.17 [solutions: 7.16, 7.17]</li>
+          <li><strong>Mar 7</strong>&nbsp;&nbsp; 7.14 [solutions]</li>
+          <li><strong>Mar 5</strong>&nbsp;&nbsp; 7.4 [solutions]</li>
+          <li><strong>Feb 28</strong>&nbsp;&nbsp; 7.2, 7.3 [solutions: 7.2, 7.3]</li>
+          <li><strong>Feb 24</strong>&nbsp;&nbsp; 6.14, 6.18 [solutions: 6.14, 6.18]</li>
+          <li><strong>Feb 21</strong>&nbsp;&nbsp; 6.1, 6.2, 6.8, 6.9 [solutions: 6.1, 6.2, 6.8, 6.9]</li>
+          <li><strong>Feb 19</strong>&nbsp;&nbsp; diet-part2* <span style="color: red;">Updated on February 20</span>
+          <ul>
+            <li>Partial GMPL model file, GMPL data file</li>
+          </ul>
+          </li>
+          <li><strong>Feb 10</strong>&nbsp;&nbsp; 2.20, 2.22 using symbolic input parameters [solutions: 2.20, 2.22]</li>
+          <li><strong>Feb 7</strong>&nbsp;&nbsp; redo 2.9 and 2.10 using symbolic input parameters [solutions: 2.9, 2.10]</li>
+          <li><strong>Feb 5</strong>&nbsp;&nbsp; redo 2.6 using symbolic input parameters [solutions]
+            <ul>
+              <li><span style="color: red;">Solutions updated with a correction on February 10</span></li>
+            </ul>
+          </li>
+          <li><strong>Feb 3</strong>&nbsp;&nbsp; 2.13*, 2.14, 2.16, using symbolic input parameters
+          [solutions: 2.13, 2.14, 2.16]
+            <ul>
+              <li>For 2.13, submit a GMPL model file (2.13.mod) and a GMPL data file (2.13.dat)</li>
+            </ul></li>
+          <li><strong>Jan 31</strong>&nbsp;&nbsp; redo 2.3; 2.24, diet-part1. Bring your laptop to class on Monday.
+          [solutions: 2.3, 2.24, diet-part1 <span style="color:red;">(updated on March 26)</span>]
+            <ul>
+              <li>For these exercises, <strong>use symbolic input parameters</strong>. 
+                For example, in 2.3, let:
+              <ul>
+                <li>F = set of film types</li>
+                <li>M = set of machines</li>
+                <li>r<sub>i</sub> = revenue of one square yard of film type i, for i &isin; F</li>
+                <li>a<sub>ij</sub> = minutes needed on machine j to make one square yard of film type i, for i &isin; F and j &isin; M</li>
+                <li>etc.</li>
+              </ul></li>
+            </ul></li>
+          <li><strong>Jan 29</strong>&nbsp;&nbsp; sets. Bring your laptop to class on Friday. [solutions]</li>
+          <li><strong>Jan 27</strong>&nbsp;&nbsp; inventory, finco [solutions: inventory, finco]</li>
+          <li><strong>Jan 24</strong>&nbsp;&nbsp; 2.10* [solutions]</li>
+          <li><strong>Jan 22</strong>&nbsp;&nbsp; 2.9 [solutions]</li>
+          <li><strong>Jan 17</strong>&nbsp;&nbsp; 2.11*, 2.12 [solutions: 2.11, 2.12]</li>
+          <li><strong>Jan 15</strong>&nbsp;&nbsp; 2.6 [solutions]</li>
+          <li><strong>Jan 13</strong>&nbsp;&nbsp; 2.1, 2.3* [solutions: 2.1, 2.3]</li>
+          <li><strong>Jan 10</strong>&nbsp;&nbsp; 1.1abcd, 1.2. Use the graphical method we discussed in Lesson 3 for 1.1. Bring your laptops on Monday. [solutions]</li> 
+          <li><strong>Jan 8</strong>&nbsp;&nbsp; 1.1abcd: By trial-and-error &mdash; for each linear program, find a few feasible solutions and determine their values. Try to find the best feasible solution you can.</li>
+          <li><strong>Jan 7</strong>&nbsp;&nbsp; Read the course policy statement. Watch out for an e-mail from POET and follow its instructions to set up an account at the POET website. Bring your laptop to class on Wednesday.</li>
+        </ul>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lesson notes</h3>
+        <ul>
+          <li><a href="lessons/01.pdf">1. Introduction (Jan 7)</a></li>
+          <li><a href="lessons/02.pdf">2. Introduction to optimization modeling (Jan 8)</a></li>
+          <li><a href="lessons/03.pdf">3. Graphical solution of optimization models (Jan 10)</a></li>
+          <li><a href="lessons/04.pdf">4. Solving optimization models with a computer, resource allocation models (Jan 13)</a>
+            <ul>
+              <li><a href="lessons/04/farmerjones.mod">GMPL code for the Farmer Jones problem</a>, <a href="lessons/04/thdc.mod">GMPL code for the Terre Haute Door Company Problem</a></li>
+            </ul></li>
+          <li><a href="lessons/05.pdf">5. Work scheduling models (Jan 15)</a>
+            <ul>
+              <li><a href="lessons/05.completed.pdf">Completed notes</a></li>
+            </ul></li>
+          <li><a href="lessons/06.pdf">6. Blending models (Jan 17)</a>
+            <ul>
+              <li><a href="lessons/06.example3.pdf">Solutions to Example 3</a></li>
+            </ul></li>
+          <li><a href="lessons/07.pdf">7. Production process models (Jan 22)</a></li>
+          <li><a href="lessons/08.pdf">8. Production process models, cont. (Jan 24)</a>
+            <ul>
+              <li><a href="lessons/08.notes.pdf">Notes on the Alvin Fine problem in Lesson 8</a></li>
+            </ul></li>
+          <li><a href="lessons/09.pdf">9. Multiperiod models (Jan 27)</a></li>
+          <li><a href="lessons/10.pdf">10. Sets, summations, for statements (Jan 29)</a>
+            <ul>
+              <li><a href="lessons/10.problem3.pdf">Solutions to Problem 3</a></li>
+            </ul></li>
+          <li><a href="lessons/11.pdf">11. Resource allocation models, revisited (Jan 31)</a>
+            <ul>
+              <li><a href="lessons/11/farmerjones.mod">GMPL model file for the
+                Farmer Jones problem</a>, <a
+                href="lessons/11/farmerjones-original.dat">GMPL data file for
+                the original Farmer Jones problem</a>, <a
+                href="lessons/11/farmerjones-new.dat">GMPL data file for
+                the revised Farmer Jones problem</a></li> 
+            </ul></li>
+            <li><a href="lessons/12.pdf">12. Blending models, revisited (Feb 3)</a>
+              <ul>
+                <li><a href="lessons/12/portfolio.mod">GMPL model file</a>,
+                <a href="lessons/12/portfolio.dat">GMPL data file</a></li>
+              </ul></li>
+            <li><a href="lessons/13.pdf">13. Work scheduling models, revisited (Feb 5)</a>
+              <ul>
+                <li><a href="lessons/13/postal.mod">GMPL model file</a>,
+                <a href="lessons/13/postal.dat">GMPL data file</a></li>
+              </ul></li>
+          <li><a href="lessons/14.pdf">14. Production process models, revisited (Feb 7)</a>
+            <ul>
+              <li><a href="lessons/14.completed.pdf">Completed notes</a></li>
+            </ul></li>
+          <li><a href="lessons/15.pdf">15. Multiperiod models, revisited (Feb 10)</a></li>
+          <li><a href="lessons/16.pdf">16. Introduction to algorithm design (Feb 19)</a></li>
+          <li><a href="lessons/17.pdf">17. Improving search: finding better solutions (Feb 21)</a></li>
+          <li><a href="lessons/18.pdf">18. Improving search: convexity and optimality (Feb 24)</a></li>
+          <li><a href="lessons/19.pdf">19. Improving search: review (Feb 26)</a>
+            <ul>
+              <li><a href="lessons/19.completed.pdf">Completed notes</a></li>
+            </ul>
+          </li>
+          <li><a href="lessons/20.pdf">20. Geometry and algebra of corner points (Feb 28)</a></li>
+          <li><a href="lessons/21.pdf">21. Geometry and algebra of corner points, cont. (Mar 5)</a></li>
+          <li><a href="lessons/22.pdf">22. Linear programs in canonical form (Mar 7)</a></li>
+          <li><a href="lessons/23.pdf">23. Basic solutions in canonical form LPs (Mar 19)</a>
+            <ul>
+              <li><a href="lessons/23.completed.pdf">Completed notes</a></li>
+            </ul>
+          </li>
+          <li><a href="lessons/24+25.pdf">24 + 25. The simplex method (Mar 21, Mar 24)</a></li>
+          <li><a href="lessons/26.pdf">26. The simplex method: review (Mar 26)</a>
+            <ul>
+              <li><a href="lessons/26.solutions.pdf">Solutions</a></li>
+            </ul>
+          </li>
+          <li><a href="lessons/27.pdf">27. Finding an initial BFS (Mar 28)</a></li>
+          <li><a href="lessons/28.pdf">28. Degeneracy, convergence, multiple optimal solutions (Mar 31)</a></li>
+          <li><a href="lessons/29.pdf">29. Bounds and the dual LP (Apr 7)</a></li>
+          <li><a href="lessons/30.pdf">30. Weak and strong duality (Apr 9)</a>
+            <ul>
+              <li><a href="lessons/30.completed.pdf">Completed notes</a></li>
+            </ul>
+          </li>
+          <li><a href="lessons/31.pdf">31. An economic interpretation of LP duality (Apr 11)</a></li>
+          <li><a href="lessons/32.pdf">32. Maximin and minimax objectives (Apr 14)</a></li>
+          <li><a href="lessons/33.pdf">33. Maximin and minimax objectives, cont. (Apr 16)</a>
+            <ul>
+              <li><a href="lessons/33.completed.pdf">Completed notes</a></li>
+            </ul>
+          </li>
+          <li><a href="lessons/34.pdf">34. LP duality and game theory (Apr 18)</a></li>
+          <li><a href="lessons/35.pdf">35. Review</a>
+            <ul>
+              <li><a href="lessons/35.sol.pdf">Solutions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+
+        <p class="note">Note: Now that the semester is over, I have taken down the quiz solutions.</p>
+
+        <ul>
+          <li>1. Jan 15</li>
+          <li>2. Jan 22</li>
+          <li>3. Jan 29</li>
+          <li>4. Feb 5</li>
+          <li>5. Not really a quiz</li>
+          <li>6. Feb 26 - see Lesson 19</li>
+          <li>7. Mar 7</li>
+          <li>8. Mar 28</li>
+          <li>8a. Mar 31</li>
+          <li>9. Apr 16</li>
+          <li>10. Apr 23</li>
+        </ul>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+
+        <p class="note">Note: Now that the semester is over, I have taken down the sample exams, review problems and solutions.</p>
+
+        <ul>
+          <li>Exam 1 (Feb 14)
+          <ul>
+            <li><a href="exams/exam1_info.pdf">Information and review problems</a></li>
+            <li>Solutions to review problems</li>
+            <li>Solutions</li>
+          </ul></li>
+          <li>Exam 2 (Apr 4)
+          <ul>
+            <li><a href="exams/exam2_info.pdf">Information and review problems</a></li>
+            <li>Solutions to review problem</li>
+            <li>Last year's Exam 2</li>
+            <li>Solutions to last year's Exam 2</li>
+            <li>Solutions</li>
+          </ul></li>
+          <li>Final Exam (May 2)
+          <ul>
+            <li><a href="exams/final_info.pdf">Information</a></li>
+            <li>Last year's Final Exam - Ignore 6d, 6e</li>
+            <li>Solutions to last year's Final Exam</li>
+          </ul></li>
+         </ul>
+      </div>
+
+      <div class="block" id="project">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="project.pdf">Project instructions</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

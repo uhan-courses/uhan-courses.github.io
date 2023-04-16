@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA305 - Linear Programming</title>
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!--
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      function toggleDiv(divId) {
+        $("#"+divId).slideToggle(400);
+      }
+    </script>
+    -->
+  </head>
+
+  <body>
+    <div id="main">
+      <h1>SA305 &mdash; Linear Programming</h1>
+      <h2>Spring 2013, Section 6001</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <h3>Announcements</h3>
+      <div id="ann">
+        <ul class="ann">
+          <li><strong>Mar 27</strong>&nbsp; Exam 2 is on Friday April 5. See
+          below for more information.</li>
+          <p class="ann"></p>
+          <li><strong>Mar 5</strong>&nbsp; <a
+            href="ex6.21.correction.pdf">Here</a> is a corrected version of
+          Example 6.21 in Rader.</li><p class="ann"></p>
+          <li><strong>Feb 22</strong>&nbsp; Information on the project is now
+          available; see below. The first project milestone &ndash; preliminary
+          problem statement &ndash; is due on March 8.</li>
+          <p class="ann"></p>
+          <li><strong>Feb 8</strong>&nbsp; Exam 1 is on Friday February 15. See
+          below for more information.</li>
+        </ul>
+      </div>
+
+      <h3>General information</h3>
+      <div id="info">
+        <ul>
+          <li><a href="syllabus.pdf">Syllabus</a></li>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="http://gusek.sourceforge.net/gusek.html">GUSEK</a></li>
+          <li><a href="gmpl.pdf">MathProg Manual</a></li>
+        </ul>
+      </div>
+
+      <h3>Homework</h3>
+      <div id="hw">
+        <p class="note">Note: Now that the semester is over, I have taken down the homework solutions.</p>
+        <p class="note">Starred problems should be submitted on Google Drive. <a href="gdrive.pdf">[instructions]</a></p>
+        <p class="note">Files and solutions available only within USNA.</p>
+        <ul>
+          <li>Jan 9: 1.1abcd [solutions]</li>
+          <li>Jan 11: 1.2 [solutions]</li>
+          <li>Jan 14: 2.1, 2.3* [solutions, code for 2.3, output for 2.3]</li>
+          <li>Jan 16: redo 2.3*, 2.6 [solutions]</li>
+          <li>Jan 18: 2.11*, 2.12 [solutions, code for 2.11, output for 2.11]</li>
+          <li>Jan 23: 2.9 [solutions]</li>
+          <li>Jan 25: 2.10* [solutions, code, output]</li>
+          <li>Jan 28: 2.20, 2.22 [solutions]</li>
+          <li>Feb 1: Finish Problem 3 in Lesson 11. [code], the diet problem [solution]</li>
+          <li>Feb 4: 2.13*, 2.14. Use symbolic input parameters. 
+            [solutions]
+            Your MathProg code must be in 2 files: (1) a model file with
+            symbolic input parameters, and (2) a data file with set elements
+            and numeric values for the symbolic input parameters
+            [.mod for 2.13, 
+             .dat for 2.13, 
+             output for 2.13].</li>
+          <li>Feb 6: redo 2.6 using symbolic input parameters, 2.7, 2.8 (the last 2 are quite challenging - give them a try) [solutions]
+          <li>Feb 8: the McDonald's diet problem* [.mod file, .dat file]
+          <li>Feb 11: redo 2.20, 2.22 with symbolic parameters [solutions], 2.16, 2.24 with
+          symbolic parameters [solutions]
+          <li>Feb 20: finish Example 1 in Lesson 16</li>
+          <li>Feb 22: 6.1, 6.2, 6.8, 6.9 [solutions]</li>
+          <li>Feb 25: 6.14, 6.18 [solutions]</li>
+          <li>Mar 1: 7.2, 7.3 [solutions]</li>
+          <li>Mar 4: 7.4 [solutions]</li>
+          <li>Mar 6: 7.14 [solutions]</li>
+          <li>Mar 8: 7.16, 7.17 [solutions]</li>
+          <li>Mar 20: 8.1, 8.2. See p. 279 for an explanation of Dantzig's rule. [solutions]</li>
+          <li>Mar 22: 8.3, 8.8 [solutions for 8.3]</li>
+          <li>Mar 25: 8.7</li>
+          <li>Mar 27: 8.11ab, 8.12a</li>
+          <li>Mar 29: 9.1, 9.2 [solutions]</li>
+          <li>Apr 1: 9.3, 9.4 [solutions]</li>
+          <li>Apr 10: Finish Example 2 in Lesson 32. [solutions]</li>
+          <li>Apr 12: In Lesson 33, verify that Player R's LP and Player C's LP form a primal-dual pair.</li>
+          <li>Apr 17: Consider the network given in Figure 2.5 of Rader on page 83.  Suppose the numbers next to the arcs are lengths.
+          Formulate an optimization model that finds the shortest path from Hillbilly to Beverly Hills.
+          [solutions]
+          <li>Apr 19: the summer rental problem [solutions]</li>
+        </ul>
+      </div>
+
+      <h3>Lesson notes</h3>
+      <div id="lesson">
+        <ul>
+          <li><a href="lessons/01.pdf">1. Introduction (Jan 8)</a></li>
+          <li><a href="lessons/02.pdf">2. An illustrative example (Jan 9)</a></li>
+          <li><a href="lessons/03.pdf">3. Sensitivity analysis, MathProg/GUSEK, classification of optimization models (Jan 11)</a></li>
+          <li><a href="lessons/04.pdf">4. Resource allocation models (Jan 14)</a></li>
+          <li><a href="lessons/05.pdf">5. Work scheduling models (Jan 16)</a> [<a href="lessons/05-notes.pdf">filled notes</a>]</li>
+          <li><a href="lessons/06.pdf">6. Blending models (Jan 18)</a></li>
+          <li><a href="lessons/07.pdf">7. Production process models (Jan 23)</a></li>
+          <li><a href="lessons/08.pdf">8. Production process models, cont. (Jan 25) [<a href="lessons/08-notes.pdf">additional notes</a>]</a></li>
+          <li><a href="lessons/09.pdf">9. Multiperiod models (Jan 28)</a></li>
+          <li><a href="lessons/10.pdf">10. Sets, summations, for statements (Jan 30)</a></li>
+          <li><a href="lessons/11.pdf">11. Resource allocation models, revisited (Feb 1)</a> [<a href="lessons/farmerjones.mod">farmerjones.mod</a>, <a href="lessons/farmerjones-original.dat">farmerjones-original.dat</a>]</li>
+          <li><a href="lessons/12.pdf">12. Blending models, revisited (Feb 4)</a> [<a href="lessons/12-notes.pdf">filled notes</a>, <a href="lessons/portfolio.mod">.mod file</a>, <a href="lessons/portfolio.dat">.dat file</a>]</li>
+          <li><a href="lessons/13.pdf">13. Work scheduling models, revisited (Feb 6)</a> [<a href="lessons/postal.mod">.mod file</a>, <a href="lessons/postal.dat">.dat file</a>]</li>
+          <li><a href="lessons/14.pdf">14. Production process models, revisited (Feb 8)</a></li>
+          <li><a href="lessons/15.pdf">15. Multiperiod models, revisited (Feb 11)</a> [<a href="lessons/15-notes.pdf">filled notes</a>]</li>
+          <li><a href="lessons/16.pdf">16. Introduction to algorithm design (Feb 20)</a></li>
+          <li><a href="lessons/17.pdf">17. Improving search: finding better solutions (Feb 22)</a></li>
+          <li><a href="lessons/18.pdf">18. Improving search: convexity and optimality (Feb 25)</a></li>
+          <li><a href="lessons/19.pdf">19. Improving search: review (Feb 27)</a> [<a href="lessons/19-solutions.pdf">solutions</a>]</li>
+          <li><a href="lessons/20.pdf">20. Geometry and algebra of corner points (Mar 1)</a></li>
+          <li><a href="lessons/21.pdf">21. Geometry and algebra of corner points, cont. (Mar 4)</a></li>
+          <li><a href="lessons/22.pdf">22. Linear programs in canonical form (Mar 6)</a></li>
+          <li><a href="lessons/23.pdf">23. Basic solutions in canonical form LPs (Mar 8)</a></li>
+          <li><a href="lessons/24+25.pdf">24+25. The simplex method (Mar 18, Mar 20)</a></li>
+          <li><a href="lessons/26.pdf">26. The simplex method &ndash; review (Mar 22)</a> [<a href="lessons/26-solutions.pdf">solutions</a>]</li>
+          <li><a href="lessons/27.pdf">27. Degeneracy, convergence, multiple optimal solutions (Mar 25)</li>
+          <li><a href="lessons/28.pdf">28. Finding an initial BFS (Mar 27)</a></li>
+          <li><a href="lessons/29.pdf">29. Bounds and the dual LP (Mar 29)</a></li>
+          <li><a href="lessons/30.pdf">30. Weak and strong duality (Apr 1)</a></li>
+          <li><a href="lessons/31.pdf">31. Duality, maximin objectives (Apr 8)</a></li>
+          <li><a href="lessons/32.pdf">32. Maximin and minimax objectives (Apr 10)</a></li>
+          <li><a href="lessons/33.pdf">33. LP duality and game theory (Apr 12)</a></li>
+          <li><a href="lessons/34.pdf">34. An economic interpretation of LP duality (Apr 15)</a></li>
+          <li><a href="lessons/35.pdf">35. Introduction to networks and the shortest path problem (Apr 17)</a></li>
+          <li><a href="lessons/36.pdf">36. The shortest path problem, cont. (Apr 19)</a></li>
+          <li><a href="lessons/37.pdf">37. The shortest path interdiction problem (Apr 22)</a></li>
+          <li><a href="lessons/38.pdf">38. Review (Apr 24, Apr 26)</a> [<a href="lessons/38.sol.pdf">solutions</a>]</li>
+        </ul>
+      </div>
+
+      <h3>Quizzes</h3>
+      <div id="quiz">
+        <p class="note">Note: Now that the semester is over, I have taken down the quiz solutions.</p>
+        <ul>
+          <li>1. Jan 16 [solutions]</li>
+          <li>2. Jan 23 [solutions]</li>
+          <li>3. Jan 30 [solutions]</li>
+          <li>4. Feb 6 [solutions]</li>
+          <li>5. Feb 20 - not really a quiz</li>
+          <li>6. Feb 27 - see Lesson 19</li>
+          <li>7. Mar 6 [solutions]</li>
+          <li>8. Mar 27 [solutions]</li>
+          <li>9. Apr 10 [solutions]</li>
+          <li>10. Apr 17 [solutions]</li>
+        </ul>
+      </div>
+
+      <h3>Exams</h3>
+      <div id="exam">
+        <p class="note">Note: Now that the semester is over, I have taken down the sample exams and solutions.</p>
+        <ul>
+          <li>Exam 1 (Feb 15)</li>
+          <ul>
+            <li><a href="exams/exam1_info.pdf">Information</a></li>
+            <li>Exam from last year [solutions] - Ignore problems 4, 5ii, 5iv</li>
+          </ul><p class="ann"></p>
+          <li>Exam 2 (Apr 5)</li>
+          <ul>
+            <li><a href="exams/exam2_info.pdf">Information</a></li>
+            <li>Exam from last year [solutions] - Problem 1 and the bonus problem are very challenging. Ignore problems 3a, 4a.</li>
+          </ul><p class="ann"></p>
+          <li>Final Exam (May 7)</li>
+          <ul>
+            <li><a href="exams/final_info.pdf">Information</a></li>
+          </ul><p class="ann"></p>
+        </ul>
+      </div>
+
+      <h3>Project</h3>
+      <div id="project">
+        <ul>
+          <li><a href="project/project.pdf">Information</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+  </body>
+</html>

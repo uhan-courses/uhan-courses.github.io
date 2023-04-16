@@ -1,0 +1,130 @@
+/* Reset margins and padding
+---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic formatting
+-------------------- */
+html {
+    min-height: 100%;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    font-family: Bitter, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 11pt;
+}
+
+h1 {
+    color: #000000;
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+
+h2 {
+    color: #000000;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 2.0em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    color: #000000;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  line-height: 1.4;
+}
+
+blockquote {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  margin-left: 3em; 
+}
+
+a {
+    color: #004276;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #004276;
+    border-bottom-style: dotted;
+    border-width: 1px;
+    border-color: #004276;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-left: 1.5em;
+    text-indent: -1.1em;
+}
+
+li {
+    margin-top: 0.5em;
+    line-height: 1.4;
+}
+
+.ann ul {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-left: 1em;
+    text-indent: -1em;
+    line-height: 1.4;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.ann li {
+    margin-bottom: 0.5em;
+}
+
+p.note {
+    color: red;
+    line-height: 1.4;
+    margin-left: 0em;
+    text-indent: 0em;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+/* Container for all blocks */
+#container {
+    width: 800px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Block */
+.block {
+    color: #000000;
+    font-size: 100%;    
+}
+

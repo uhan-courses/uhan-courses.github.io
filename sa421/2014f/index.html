@@ -1,0 +1,523 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SA421 - Simulation Modeling</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Lato:300,400,700' />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SA421 &mdash; Simulation Modeling</h1>
+      <h2>Fall 2014</h2>
+      <h4>Asst. Prof. Nelson Uhan</h4>
+
+      <div class="block" id="ann">
+        <h3>Announcements</h3>
+        <table id="ann">
+          <colgroup>
+            <col width="75">
+            <col width="525">
+          </colgroup>
+          <tr>
+            <td>1 Dec</td>
+            <td>Final exam time and place: Wednesday 10 December, 19:30 - 22:30.
+              Report to CH084 at 19:25. We will determine seating arrangements
+              then.</td>
+          </tr>
+          <tr>
+            <td>6 Nov</td>
+            <td><a href="roadmap.pdf">Here</a> is a roadmap for the rest of the semester.<br>
+              The final exam will take place on 10 December.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>Exam 2 will take place during the week of 27 October. 
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>30 Sep</td>
+            <td>Information for the course project has been posted. 
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>18 Sep</td>
+            <td>Exam 1 will take place 23 - 25 September. 
+              See below for details.</td>
+          </tr>
+           <tr>
+            <td>16 Sep</td>
+            <td>Quiz 3a, an optional take-home quiz, has been posted.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>21 Aug</td>
+            <td>Welcome!</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a> (last updated: 21 August)</li>
+          <li><a href="syllabus.pdf">Syllabus</a> (last updated: 20 August)</li>
+          <li><a href="vbox.html">Installing VirtualBox and the SA421 virtual machine</a></li>
+          <li><a href="ipynb-download.html">Downloading .ipynb files on the SA421 virtual machine</a></li>
+          <li><a href="https://script.google.com/a/macros/usna.edu/s/AKfycbxya4xmUYCRHyPiyfdiIP39s8g8TALT5_zoELJzTQ86GbteW-k/exec">Assignment Submission Form</a></li>
+          <li><a href="http://nbviewer.ipython.org">nbviewer &mdash; view IPython Notebooks</a></li>
+          <li><a href="gof.html">Using R's goodness-of-fit tests in iPython Notebook</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="doc">
+        <h3>Python documentation and guides</h3>
+        <ul>
+          <li><a href="http://simpy.sourceforge.net/old/SimPy_Manual/">SimPy 2.3 documentation</a></li>
+          <li><a href="http://www.scipy.org/docs.html">NumPy, SciPy, and Matplotlib documentation</a></li>
+          <li><a href="http://msor.victoria.ac.nz/foswiki/pub/Courses/OPRE354_2014T1/Python/LecturesOnSimPy.pdf">Lectures on SimPy (from Victoria University of Wellington)</a></li>
+          <li><a href="http://msor.victoria.ac.nz/foswiki/pub/Courses/OPRE354_2014T1/Python/bites_of_simpy.pdf">Bites of SimPy (from Victoria University of Wellington)</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="other">
+        <h3>Other useful information</h3>
+        <ul>
+          <li><a href="http://en.wikipedia.org/wiki/List_of_probability_distributions">List of probability distributions (from Wikipedia)</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="325">
+            <col width="100">
+            <col width="100">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>problem</strong></td>
+            <td><strong>solutions</strong></td>
+          </tr>
+          <tr>
+            <td>6 Nov</td>
+            <td>Finish the problem in Lesson 19. Compare your solution to the completed notes.</td>
+            <td></td>
+            <td></td>
+          </tr>          
+          <tr>
+            <td>4 Nov</td>
+            <td>Finish the problem in Lesson 18. Compare your solution to the completed notes.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>23 Oct</td>
+            <td>callcenter
+              <span style="color:#d00000">(solutions last updated: 23 Oct 12:00)</span></td>
+            <td><a href="homework/callcenter.ipynb">ipynb</a></td>
+            <td><a href="homework/callcenter.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>21 Oct</td>
+            <td>cronuts
+              <span style="color:#d00000">(solutions last updated: 28 Oct)</span></td>
+            <td><a href="homework/cronuts.ipynb">ipynb</a></td>
+            <td><a href="homework/cronuts.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>16 Oct</td>
+            <td>butcher5</td>
+            <td><a href="homework/butcher5.ipynb">ipynb</a></td>
+            <td><a href="homework/butcher5.sol.ipynb">ipynb</a></td>
+            </tr>
+          <tr>
+            <td>14 Oct</td>
+            <td>icecream</td>
+            <td><a href="homework/icecream.ipynb">ipynb</a></td>
+            <td><a href="homework/icecream.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>9 Oct</td>
+            <td>tube2</td>
+            <td><a href="homework/tube2.ipynb">ipynb</a></td>
+            <td><a href="homework/tube2.sol.ipynb">ipynb</a></td>
+          </tr>
+           <tr>
+            <td>7 Oct</td>
+            <td>tube</td>
+            <td><a href="homework/tube.ipynb">ipynb</a></td>
+            <td><a href="homework/tube.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>2 Oct</td>
+            <td>inverse &nbsp;<span style="color:#d00000">(solutions last updated: 6 Oct)</span></td>
+            <td><a href="homework/inverse.ipynb">ipynb</a></td>
+            <td><a href="homework/inverse.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>30 Sep</td>
+            <td>lcg</td>
+            <td><a href="homework/lcg.ipynb">ipynb</a></td>
+            <td><a href="homework/lcg.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>18 Sep</td>
+            <td>ks</td>
+            <td><a href="homework/ks.ipynb">ipynb</a></td>
+            <td><a href="homework/ks.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>16 Sep</td>
+            <td>chisq</td>
+            <td><a href="homework/chisq.ipynb">ipynb</a></td>
+            <td><a href="homework/chisq.sol.ipynb">ipynb</a></td>
+          </tr>
+           <tr>
+            <td>11 Sep</td>
+            <td>parking</td>
+            <td><a href="homework/parking.ipynb">ipynb</a></td>
+            <td><a href="homework/parking.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>9 Sep</td>
+            <td>butcher4</td>
+            <td><a href="homework/butcher4.ipynb">ipynb</a></td>
+            <td><a href="homework/butcher4.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>4 Sep</td>
+            <td>Finish the problem in Lesson 5.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2 Sep</td>
+            <td>butcher3 &nbsp;<span style="color:#d00000">(last updated: 3 Sep)</span></td>
+            <td><a href="homework/butcher3.ipynb">ipynb</a></td>
+            <td><a href="homework/butcher3.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>28 Aug</td>
+            <td>butcher2</td>
+            <td><a href="homework/butcher2.ipynb">ipynb</a></td>
+            <td><a href="homework/butcher2.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>26 Aug</td>
+            <td>python</td>
+            <td><a href="homework/python.ipynb">ipynb</a></td>
+            <td><a href="homework/python.sol.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>21 Aug</td>
+            <td>butcher</td>
+            <td><a href="homework/butcher.pdf">pdf</a></td>
+            <td><a href="homework/butcher.sol.pdf">pdf</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lessons</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="50">
+            <col width="350">
+            <col width="125">
+          </colgroup>
+          <tr>
+            <td>6 Nov</td>
+            <td>19</td>
+            <td>SimPy &mdash; steady state</td>
+            <td><a href="lessons/19.ipynb">ipynb</a><br>
+              <a href="lessons/19.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>4 Nov</td>
+            <td>18</td>
+            <td>SimPy &mdash; queueing networks</td>
+            <td><a href="lessons/18.ipynb">ipynb</a><br>
+              <a href="lessons/18.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>23 Oct</td>
+            <td>17</td>
+            <td>SimPy &mdash; priority queues, preemption</td>
+            <td><a href="lessons/17.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>21 Oct</td>
+            <td>16</td>
+            <td>SimPy &mdash; levels</td>
+            <td><a href="lessons/16.ipynb">ipynb</a><br>
+              <a href="lessons/16.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>16 Oct</td>
+            <td>15</td>
+            <td>SimPy &mdash; different arrival types, user-defined distributions</td>
+            <td><a href="lessons/15.ipynb">ipynb</a><br>
+              <a href="lessons/15.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>14 Oct</td>
+            <td>14</td>
+            <td>SimPy &mdash; balking and reneging</td>
+            <td><a href="lessons/14.ipynb">ipynb</a><br>
+              <a href="lessons/14.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>9 Oct</td>
+            <td>13</td>
+            <td>Variance reduction: antithetic variates</td>
+            <td><a href="lessons/13.ipynb">ipynb</a></td>
+          </tr>
+           <tr>
+            <td>7 Oct</td>
+            <td>12</td>
+            <td>Variance reduction: common random numbers</td>
+            <td><a href="lessons/12.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>2 Oct</td>
+            <td>11</td>
+            <td>Random variate generation</td>
+            <td><a href="lessons/11.pdf">pdf</a><br>
+              <a href="lessons/11.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>30 Sep</td>
+            <td>10</td>
+            <td>Random number generation</td>
+            <td><a href="lessons/10.pdf">pdf</a><br>
+              <a href="lessons/10.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>23 Sep</td>
+            <td></td>
+            <td>Review</td>
+            <td><a href="lessons/process.pdf">process.pdf</a><br>
+              <a href="lessons/wtf.ipynb">wtf.ipynb</a></td>
+          </tr>
+          <tr>
+            <td>18 Sep</td>
+            <td>9</td>
+            <td>Input data analysis - continuous distributions</td>
+            <td><a href="lessons/09.pdf">pdf</a><br>
+              <a href="lessons/09.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>16 Sep</td>
+            <td>8</td>
+            <td>Input data analysis - discrete distributions</td>
+            <td><a href="lessons/08.pdf">pdf</a><br>
+              <a href="lessons/08.ipynb">ipynb</a><br>
+              <a href="lessons/08.completed.ipynb">completed ipynb</a></td>
+          </tr>
+           <tr>
+            <td>11 Sep</td>
+            <td>7</td>
+            <td>Comparing alternate systems <span style="color:#d00000">(last updated: 12 Sep)</span></td>
+            <td><a href="lessons/07.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>9 Sep</td>
+            <td>6</td>
+            <td>Replicating simulations: sample mean and variance, confidence intervals</td>
+            <td><a href="lessons/06.pdf">pdf</a><br>
+              <a href="lessons/06.ipynb">ipynb</a><br>
+              <a href="lessons/06.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>4 Sep</td>
+            <td>5</td>
+            <td>Practice with SimPy</td>
+            <td><a href="lessons/05.ipynb">ipynb</a><br>
+              <a href="lessons/05.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>2 Sep</td>
+            <td>4</td>
+            <td>SimPy &mdash; Monitors</td>
+            <td><a href="lessons/04.ipynb">ipynb</a><br>
+              <a href="lessons/04.completed.ipynb">completed ipynb</a></td>
+          </tr>
+          <tr>
+            <td>28 Aug</td>
+            <td>3</td>
+            <td>Introduction to SimPy</td>
+            <td><a href="lessons/03.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>26 Aug</td>
+            <td>2</td>
+            <td>Introduction to Python and IPython Notebook</td>
+            <td><a href="lessons/02.ipynb">ipynb</a></td>
+          </tr>
+          <tr>
+            <td>21 Aug</td>
+            <td>1</td>
+            <td>Introduction to simulation</td>
+            <td><a href="lessons/01.pdf">pdf</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+        <p style="padding-bottom:1ex; color:#d00000;">Note: Now that the semester is over, I have taken down the quizzes and solutions.</p>
+        <table>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="325">
+            <col width="100">
+            <col width="100">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>quiz</strong></td>
+            <td><strong>solutions</strong></td>
+          </tr>
+          <tr>
+            <td>23 Oct</td>
+            <td>Quiz 8</td>
+            <td>pdf</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>16 Oct</td>
+            <td>Quiz 7</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+          <tr>
+            <td>9 Oct</td>
+            <td>Quiz 6</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+          <tr>
+            <td>2 Oct</td>
+            <td>Quiz 5 (not really a quiz)</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>18 Sep</td>
+            <td>Quiz 4</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+           <tr>
+            <td>16 Sep</td>
+            <td>Quiz 3a</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+          <tr>
+            <td>11 Sep</td>
+            <td>Quiz 3</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+          <tr>
+            <td>4 Sep</td>
+            <td>Quiz 2</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+          <tr>
+            <td>28 Aug</td>
+            <td>Quiz 1</td>
+            <td>pdf, ipynb</td>
+            <td>ipynb</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+        <p style="padding-bottom:1ex; color:#d00000;">Note: Now that the semester is over, I have taken down the exams and solutions.</p> 
+        <ul>
+          <li>Exam 1 (23 - 25 September)
+            <ul>
+              <li><a href="exams/exam1_info.pdf">Information</a></li>
+              <li>.ipynb files
+                <ul>
+                  <li>exam1p2.ipynb</li>
+                  <li>exam1p3.ipynb</li>
+                  <li>exam1p4.ipynb</li>
+                </ul>
+              </li>
+              <li>Solutions
+                <ul>
+                  <li>Exam problems and solutions to Problem 1</li>
+                  <li>Solutions to Problem 2</li>
+                  <li>Solutions to Problem 3</li>
+                  <li>Solutions to Problem 4</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Exam 2 (week of 27 October)
+            <ul>
+              <li><a href="exams/exam2_info.pdf">Information</a></li>
+              <li>.ipynb files
+                <ul>
+                  <li>exam2p1.ipynb</li>
+                  <li>exam2p2.ipynb</li>
+                  <li>exam2p3.ipynb</li>
+                </ul>
+              </li>
+              <li>Solutions
+                <ul>
+                  <li>Exam problems and solution to Problem 1a</li>
+                  <li>Solutions to Problem 1bc</li>
+                  <li>Solutions to Problem 2</li>
+                  <li>Solutions to Problem 3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Final Exam (10 December)
+            <ul>
+              <li><a href="exams/final_info.pdf">Information</a></li>
+              <li>.ipynb files
+                <ul>
+                  <li>finalexamp1.ipynb</li>
+                  <li>finalexamp2.ipynb</li>
+                  <li>finalexamp3.ipynb</li>
+                  <li>finalexamp4.ipynb</li>
+                  <li>finalexamp5.ipynb</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block" id="project">
+        <h3>Project</h3>
+        <ul>
+          <li><a href="project.pdf">Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

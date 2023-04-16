@@ -1,0 +1,32 @@
+# Input parameters for the new Farmer Jones problem in Lesson 11
+
+# Set of cake types
+set K := Chocolate Vanilla RedVelvet;
+
+# Set of ingredients
+set I := PrepTime BakingTime Eggs Flour;
+
+# p[k] = profit for cake type k
+param p :=
+  Chocolate  4
+  Vanilla    5
+  RedVelvet  5;
+
+# b[i] = amount of ingredient i available
+param b :=
+  PrepTime    240
+  BakingTime  280
+  Eggs        50
+  Flour       40;
+
+# a[i,k] = amount of ingredient i used in 1 type k cake
+# rows correspond to i, columns correspond to k
+param a:
+            Chocolate   Vanilla  RedVelvet :=
+PrepTime    30          20       50
+BakingTime  25          40       35
+Eggs        3           2        4
+Flour       4           4        5;
+
+end;
+

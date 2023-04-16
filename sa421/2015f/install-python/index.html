@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>Installing Python - SA421 - Simulation Modeling</title>
+
+    <!-- CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Installing Python, Jupyter, and SimPy</h1>
+      <h2>SA421 Fall 2015</h2>
+
+      <p style="margin-top:1.5em;">Last updated: &nbsp;11 August 2015</p>
+
+      <h3>Overview</h3>
+      <div class="block">
+        <p>For this course, we will use <a href="http://winpython.github.io">WinPython</a>, an easy-to-use Python distribution for Windows. 
+        WinPython comes with <a href="http://www.jupyter.org">Jupyter</a> and a collection of useful scientific computing packages such as <a href="http://www.numpy.org">NumPy</a>, <a href="http://www.scipy.org">SciPy</a> and <a href="http://matplotlib.org">Matplotlib</a>. 
+        We will also use <a href="http://simpy.sourceforge.net/old/">SimPy</a>, a discrete event simulation package for Python.</p>
+      </div>
+
+      <h3>Instructions</h3>
+      <div class="block">
+        <p style="margin-top:1em;">Here are some instructions on how to install WinPython and SimPy.</p>        
+        <ol style="margin-top:1em;">
+          <li style="margin-bottom:1em;">
+            Go to the WinPython webpage <a href="http://winpython.github.io">here</a> to download the 32-bit version of WinPython 3.4.3.5 &mdash; see the pictures below.
+            <img src="01-winpython-webpage.png" style="margin-top:1em;"></img>
+            <img src="02-winpython-webpage.png" style="margin-top:1em;"></img>
+          </li>
+          <li style="margin-bottom:1em;">
+            Install WinPython by launching the .exe file you downloaded in the previous step.
+            The installer will ask you where to put the WinPython folder.
+            As you can see in the picture below, I just put it on my Desktop so that it's easy to find. 
+            <img src="03-winpython-desktop.png" style="margin-top:1em;"></img>
+          </li>
+          <li style="margin-bottom:1em;">
+            Once the installation is complete, open the WinPython folder and launch 
+            <strong>WinPython Command Prompt</strong>.
+            <img src="04-winpython-command.png" style="margin-top:1em;"></img>
+          </li>
+          <li style="margin-bottom:1em;">
+            At the command prompt, type:
+            <pre style="margin:1em;">pip install simpy==2.3.1</pre>
+            and press Enter. 
+            The command prompt window should look like this:
+            <img src="05-pip.png" style="margin-top:1em; margin-bottom:1em;"></img>
+            Close the command prompt.
+          </li>
+          <li style="margin-bottom:1em;">
+            To launch Jupyter, open <strong>IPython Notebook</strong> in the WinPython folder. 
+            <img src="06-launch-ipynb.png" style="margin-top:1em; margin-bottom:1em;"></img>
+            An ipython3.exe window should appear &mdash; just leave this open while you use Jupyter. In addition, your default browser should open with the Jupyter file browser.
+            See the picture below.
+            <br><br>
+            If you accidentally close your browser, you can get back to the Jupyter file browser at http://localhost:8888/, as long as the ipython3.exe window is also open. 
+            <img src="07-ipynb.png" style="margin-top:1em;"></img>
+          </li>
+        </ol>
+      </div>
+   </div>
+  </body>
+</html>

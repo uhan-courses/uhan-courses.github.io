@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SM223 - Calculus III with Optimization</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&amp;subset=all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&amp;display=swap" rel="stylesheet">
+    <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/skeleton.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/toggle.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <h1 id="course-title">Calculus III with Optimization</h1>
+        <p id="course-info">SM223 &nbsp;&#11037;&nbsp; Fall 2020 &nbsp;&#11037;&nbsp; Sections 5021, 5201, 6021, 6201<br>Assoc. Prof. Nelson Uhan</p>
+      </section>
+      <section>
+        <h2>Announcements</h2>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+          </colgroup>
+          <tr class="highlight">
+            <td>12/15</td>
+            <td><p>The semester is over!</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>12/4</td>
+            <td><ul>
+<li>Solutions to quizzes and exams have been posted. See below.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>12/1</td>
+            <td><p><strong>Final Exam</strong></p>
+<ul>
+<li>When: Tuesday 12/8, 7:55 - 10:55</li>
+<li>Where:<ul>
+<li>Section 5021: CH220, Section 5201: CH225</li>
+<li>Section 6021: CH223, Section 6201: CH222</li>
+</ul>
+</li>
+<li>What: Everything covered this semester<ul>
+<li>15 multiple choice questions</li>
+<li>5 long answer questions</li>
+<li>You may use your plebe-issue TI-36X Pro calculator</li>
+<li>You will be given a <a href="info/formulalist_final.pdf">list of formulas</a></li>
+</ul>
+</li>
+<li>Past Final Exams: Look for SM223 on <a href="https://www.usna.edu/MathDept/resources/index.php">this page</a></li>
+<li>EI: Email me and we can set up a time to meet</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>11/24</td>
+            <td><p>Plan for end of semester:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>M</td>
+                  <td>11/30</td>
+                  <td><p>Review Quiz 1 (covers Lessons 1-10)</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>12/1</td>
+                  <td><p>Review Quiz 2 (covers Lessons 11-21)</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>12/2</td>
+                  <td><p>Review Quiz 3 (covers Lessons 22-27)</p>
+<p>Wrap up</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>12/8</td>
+                  <td><p>Final Exam @ 7:55</p></td>
+                </tr>
+              </table><ul>
+<li>Review Quizzes:<ul>
+<li>15 minutes, 5 multiple choice questions, closed book</li>
+<li>We will go over the questions you had most difficulty with after the quiz</li>
+<li>Review quizzes count as <strong>extra credit</strong>: each review quiz is worth 5% of a midterm exam</li>
+<li>No resubmissions for review quizzes</li>
+</ul>
+</li>
+<li>Final Exam: details coming soon</li>
+<li>Resubmissions:<ul>
+<li>You may resubmit <strong>2 quizzes/exams</strong> for the week of November 30, but...</li>
+<li><strong>The final deadline to resubmit a quiz/exam is Thursday 12/3 @ 23:59</strong></li>
+<li>I will post solutions to all quizzes and exams on Friday 12/4, so you can have them to study for the final exam</li>
+</ul>
+</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>11/20</td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>M</td>
+                  <td>11/23</td>
+                  <td><p>Finish Lesson 27</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>11/24</td>
+                  <td><p>Review</p>
+<p>Exam EI, 20:15 - 21:15 on Google Meet</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>11/25</td>
+                  <td><p>Exam 4</p></td>
+                </tr>
+              </table><ul>
+<li>Exam 4 will take place on Wednesday 11/25<ul>
+<li>Covers Lessons 22-27</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+<li>Attendance during the entire class period is required</li>
+</ul>
+</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>11/16</td>
+            <td><ul>
+<li>Quiz 7 will take place on Wednesday 11/18<ul>
+<li>Covers Lessons 22-24</li>
+<li>You will be given 20 minutes to work on the quiz in class: ideally,<ul>
+<li>15 minutes on the problems</li>
+<li>5 minutes for scanning and submitting</li>
+</ul>
+</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+</ul>
+</li>
+<li>Exam 4 will take place on Wednesday 11/25<ul>
+<li>Covers Lessons 22-27</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+<li>Attendance during the entire class period is required</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>11/9</td>
+            <td><ul>
+<li>No quiz this week!</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>11/6</td>
+            <td><ul>
+<li>Feedback for Exam 3 has been posted below</li>
+<li>This is the last week for resubmissions to count for your 12-week marking period grade<ul>
+<li>This week's resubmissions are due on Sunday at 23:59</li>
+</ul>
+</li>
+<li>Since the window for resubmitting Exam 3 for this marking period is tight, Exam 3 will be included in your 12-week marking period grade only if it improves your grade</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>10/30</td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>M</td>
+                  <td>11/2</td>
+                  <td><p>Finish Lesson 22, start Lesson 23</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>11/3</td>
+                  <td><p>Review</p>
+<p>Exam EI, 19:00 - 20:00 on Google Meet</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>11/4</td>
+                  <td><p>Exam 3</p></td>
+                </tr>
+                <tr class="white">
+                  <td>F</td>
+                  <td>11/6</td>
+                  <td><p>Continue Lesson 23</p></td>
+                </tr>
+              </table><ul>
+<li>Exam 3 will take place on Wednesday 11/4<ul>
+<li>Covers Lessons 14-21</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+<li>Attendance during the entire class period is required</li>
+</ul>
+</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>10/26</td>
+            <td><ul>
+<li>Quiz 6 will take place on Wednesday 10/28<ul>
+<li>Covers Lessons 16-19</li>
+<li>You will be given 20 minutes to work on the quiz in class: ideally,<ul>
+<li>15 minutes on the problems</li>
+<li>5 minutes for scanning and submitting</li>
+</ul>
+</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+</ul>
+</li>
+<li>Exam 3 will take place on Wednesday 11/4<ul>
+<li>Covers Lessons 14-21</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Due the same day at 23:59 Eastern Time, but you will receive a 5% bonus if you submit by the end of the class period</li>
+<li>Attendance during the entire class period is required</li>
+</ul>
+</li>
+<li>Let's build comfort with timed assessments as the final exam gets closer<ul>
+<li>We'll get stricter about timing moving forward</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>10/19</td>
+            <td><ul>
+<li>Quiz 5 will be posted on Wednesday 10/21<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>Covers Lessons 14 and 15</li>
+<li>You will be given some time in class to work on the quiz</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>10/13</td>
+            <td><ul>
+<li>No quiz this week!</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/30</td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>M</td>
+                  <td>10/5</td>
+                  <td><p>Start Lesson 15</p></td>
+                </tr>
+                <tr class="white">
+                  <td>T</td>
+                  <td>10/6</td>
+                  <td><p>Review</p>
+<p>Exam EI, 20:00 - 21:00 on Google Meet</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>10/7</td>
+                  <td><p>Exam 2</p></td>
+                </tr>
+                <tr class="white">
+                  <td>F</td>
+                  <td>10/9</td>
+                  <td><p>Continue Lesson 15</p></td>
+                </tr>
+              </table><ul>
+<li>Exam 2 will be posted on Wednesday 10/7<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Attendance during the entire class period is required</li>
+<li>Covers Lessons 7-13</li>
+</ul>
+</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/28</td>
+            <td><ul>
+<li>Quiz 4 will be posted on Wednesday 9/30<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>Covers Lessons 9-12</li>
+<li>You will be given some time in class to work on the quiz</li>
+</ul>
+</li>
+<li>Exam 2 will take place next week, on Wednesday 10/7<ul>
+<li>Details coming later this week</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/21</td>
+            <td><ul>
+<li>No quiz this week!</li>
+<li>This is the last week for resubmissions to count for your 6-week marking period grade</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/18</td>
+            <td><ul>
+<li>Feedback for Quiz 3 has been posted</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/14</td>
+            <td><ul>
+<li>Quiz 3 will be posted on Wednesday 9/16<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>Covers Lessons 7 and 8</li>
+<li>You will be given some time in class to work on the quiz</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/14</td>
+            <td><ul>
+<li>Feedback for Exam 1 has been posted</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/4</td>
+            <td><p>Plan for next week:</p>
+              <table class="white">
+                <colgroup>
+                  <col width="50">
+                  <col width="100">
+                  <col>
+                </colgroup>
+                <tr class="white">
+                  <td>T</td>
+                  <td>9/8</td>
+                  <td><p>Start Lesson 7</p></td>
+                </tr>
+                <tr class="white">
+                  <td>W</td>
+                  <td>9/9</td>
+                  <td><p>Review</p></td>
+                </tr>
+                <tr class="white">
+                  <td>R</td>
+                  <td>9/10</td>
+                  <td><p>Exam EI, 19:30 - 20:30 on Google Meet</p></td>
+                </tr>
+                <tr class="white">
+                  <td>F</td>
+                  <td>9/11</td>
+                  <td><p>Exam 1</p></td>
+                </tr>
+              </table><ul>
+<li>Exam 1 will be posted on Friday 9/11<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>You will be given the entire class period to work on the exam</li>
+<li>Attendance during the entire class period is required</li>
+<li>Covers Lessons 1-6</li>
+</ul>
+</li>
+</ul>
+            </td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/4</td>
+            <td><ul>
+<li>Feedback for Quiz 2 has been posted</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>9/1</td>
+            <td><ul>
+<li>Quiz 2 will be posted on Wednesday 9/2<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>Covers Lesson 3 (Section 5 - Projections), Lesson 4, Lesson 5 (Section 2 - Equations of lines in 3D)</li>
+<li>You will be given some time in class to work on the quiz</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>8/28</td>
+            <td><ul>
+<li>Feedback for Quiz 1 has been posted</li>
+<li>The <a href="https://script.google.com/a/usna.edu/macros/s/AKfycbxWvh-Or8YNp300fOJjhsABgJq9xGJ6Un6lbJC9UP55XKDcE2AZ/exec">SM223 Assignment Submission Form</a> has been updated<ul>
+<li>The form should work properly in all browsers now</li>
+</ul>
+</li>
+<li>Resubmission instructions: Review the <a href="info/grading-20200824.pdf">grading rubric and resubmission policy</a> and <a href="info/resubmission-example.pdf">resubmission example</a></li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>8/25</td>
+            <td><ul>
+<li>Quiz 1 will be posted on Wednesday 8/26<ul>
+<li>Due the same day at 23:59 Eastern Time</li>
+<li>Covers Lessons 1-3</li>
+<li>You will be given some time in class to work on the quiz</li>
+</ul>
+</li>
+<li>A practice quiz has been posted so that you can familiarize yourself with scanning and submitting your work</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td>8/19</td>
+            <td><p>Welcome!</p></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderAnnouncements();">
+            <span id="toggle-announcements">Show older announcements</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>Schedule</h2>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col width="430">
+            <col width="430">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="1">Class</th>
+            <th colspan="1">Homework</th>
+          </tr>
+          <tr class="highlight">
+            <td><p>12/2</p></td>
+            <td><ul>
+<li>Review Quiz 3</li>
+<li>Student Opinion Forms</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><p>12/1</p></td>
+            <td><ul>
+<li>Review Quiz 2</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><p>11/30</p></td>
+            <td><ul>
+<li>Review Quiz 1</li>
+</ul></td>
+            <td></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/25</p></td>
+            <td><ul>
+<li>Exam 4</li>
+</ul></td>
+            <td><ul>
+<li>Exam 4, due Wednesday 11/25 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/24</p></td>
+            <td><ul>
+<li>Review for Exam 4</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 4</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/23</p></td>
+            <td><ul>
+<li>Finish Lesson 27</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.6 Part 2, due Tuesday 11/24 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/20</p></td>
+            <td><ul>
+<li>Continue Lesson 27</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.6 Part 1, due Monday 11/23 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/18</p></td>
+            <td><ul>
+<li>Start Lesson 27</li>
+<li>Quiz 7</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 7 due Wednesday 11/18 at 23:59</li>
+<li>WebAssign 15.4 Part 2, due Friday 11/20 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/17</p></td>
+            <td><ul>
+<li>Lesson 26</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.4 Part 1, due Wednesday 11/18 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/16</p></td>
+            <td><ul>
+<li>Lesson 25</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.3 Part 2, due Tuesday 11/17 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/13</p></td>
+            <td><ul>
+<li>Finish Lesson 24</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.3 Part 1, due Monday 11/16 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/10</p></td>
+            <td><ul>
+<li>Start Lesson 24</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.2 Part 2, due Friday 11/13 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/9</p></td>
+            <td><ul>
+<li>Finish Lesson 23</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.2 Part 1, due Tuesday 11/10 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/6</p></td>
+            <td><ul>
+<li>Continue Lesson 23</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.1 Part 2, due Monday 11/9 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/4</p></td>
+            <td><ul>
+<li>Exam 3</li>
+</ul></td>
+            <td><ul>
+<li>Exam 3, due Wednesday 11/4 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/3</p></td>
+            <td><ul>
+<li>Review for Exam 3</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 3</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>11/2</p></td>
+            <td><ul>
+<li>Finish Lesson 22</li>
+<li>Start Lesson 23</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 15.1 Part 1, due Tuesday 11/3 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/30</p></td>
+            <td><ul>
+<li>Continue Lesson 22</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.8 Part 3, due Monday 11/2 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/28</p></td>
+            <td><ul>
+<li>Start Lesson 22</li>
+<li>Quiz 6</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 6, due Wednesday 10/28 at 23:59</li>
+<li>WebAssign 14.8 Part 2, due Friday 10/30 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/27</p></td>
+            <td><ul>
+<li>Finish Lesson 21</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.8 Part 1, due Wednesday 10/28 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/26</p></td>
+            <td><ul>
+<li>Continue Lesson 21</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.7 Part 2, due Tuesday 10/27 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/23</p></td>
+            <td><ul>
+<li>Finish Lesson 20</li>
+<li>Start Lesson 21</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.7 Part 1, due Monday 10/26 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/21</p></td>
+            <td><ul>
+<li>Start Lesson 20</li>
+<li>Quiz 5</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 5, due Wednesday 10/21 at 23:59</li>
+<li>WebAssign 14.6 Part 3, due Friday 10/23 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/20</p></td>
+            <td><ul>
+<li>Lesson 19</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.6 Part 2, due Wednesday 10/21 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/19</p></td>
+            <td><ul>
+<li>Lesson 18</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.6 Part 1, due Tuesday 10/20 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/16</p></td>
+            <td><ul>
+<li>Lesson 17</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.5 Part 3, due Monday 10/19 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/14</p></td>
+            <td><ul>
+<li>Lesson 16</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.5 Part 2, due Friday 10/16 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/13</p></td>
+            <td><ul>
+<li>Finish Lesson 15</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.5 Part 1, due Wednesday 10/14 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/9</p></td>
+            <td><ul>
+<li>Continue Lesson 15</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.4 Part 2, due Tuesday 10/13 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/7</p></td>
+            <td><ul>
+<li>Exam 2</li>
+</ul></td>
+            <td><ul>
+<li>Exam 2, due Wednesday 10/7 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/6</p></td>
+            <td><ul>
+<li>Review for Exam 2</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 2</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/5</p></td>
+            <td><ul>
+<li>Finish Lesson 14</li>
+<li>Start Lesson 15</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.4 Part 1, due Tuesday 10/6</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>10/2</p></td>
+            <td><ul>
+<li>Start Lesson 14</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.3 Part 3, due Monday 10/5</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/30</p></td>
+            <td><ul>
+<li>Finish Lesson 13</li>
+<li>Quiz 4</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 4, due Wednesday 9/30 at 23:59</li>
+<li>WebAssign 14.3 Part 2, due Friday 10/2 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/29</p></td>
+            <td><ul>
+<li>Continue Lesson 13</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.3 Part 1, due Wednesday 9/30 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/28</p></td>
+            <td><ul>
+<li>Continue Lesson 13</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.1 Part 3, due Tuesday 9/29 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/25</p></td>
+            <td><ul>
+<li>Start Lesson 13</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.1 Part 2, due Monday 9/28 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/23</p></td>
+            <td><ul>
+<li>Lesson 12</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 14.1 Part 1, due Friday 9/25 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/22</p></td>
+            <td><ul>
+<li>Lesson 11</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 13.4 Part 2, due Wednesday 9/23 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/21</p></td>
+            <td><ul>
+<li>Finish Lesson 10</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 13.4 Part 1, due Tuesday 9/22 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/18</p></td>
+            <td><ul>
+<li>Finish Lesson 9</li>
+<li>Start Lesson 10</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 13.3, due Monday 9/21 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/16</p></td>
+            <td><ul>
+<li>Start Lesson 9</li>
+<li>Quiz 3</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 3, due Wednesday 9/16 at 23:59</li>
+<li>WebAssign 13.2, due Friday 9/18 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/15</p></td>
+            <td><ul>
+<li>Finish Lesson 8</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 13.1 Part 2, due Wednesday 9/16 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/14</p></td>
+            <td><ul>
+<li>Finish Lesson 7</li>
+<li>Start Lesson 8</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 13.1 Part 1, due Tuesday 9/15 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/11</p></td>
+            <td><ul>
+<li>Exam 1</li>
+</ul></td>
+            <td><ul>
+<li>Exam 1, due Friday 9/11 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/9</p></td>
+            <td><ul>
+<li>Review for Exam 1</li>
+</ul></td>
+            <td><ul>
+<li>Study for Exam 1</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/8</p></td>
+            <td><ul>
+<li>Start Lesson 7</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.6 Part 2, due Wednesday 9/9 at 12:00</li>
+<li>Prepare questions for next day's review</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/4</p></td>
+            <td><ul>
+<li>Finish Lesson 6</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.6 Part 1, due Tuesday 9/8 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/2</p></td>
+            <td><ul>
+<li>Start Lesson 6</li>
+<li>Quiz 2</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 2, due Wednesday 9/2 at 23:59</li>
+<li>WebAssign 12.5 Part 3, due Friday 9/4 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>9/1</p></td>
+            <td><ul>
+<li>Finish Lesson 5</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.5 Part 2, due Wednesday 9/2 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/31</p></td>
+            <td><ul>
+<li>Continue Lesson 5</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.5 Part 1, due Tuesday 9/1 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/28</p></td>
+            <td><ul>
+<li>Finish Lesson 4</li>
+<li>Start Lesson 5</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.4 Part 2, due Monday 8/31 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/26</p></td>
+            <td><ul>
+<li>Start Lesson 4</li>
+<li>Quiz 1</li>
+</ul></td>
+            <td><ul>
+<li>Quiz 1, due Wednesday 8/26 at 23:59</li>
+<li>WebAssign 12.4 Part 1, due Friday 8/28 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/25</p></td>
+            <td><ul>
+<li>Finish Lesson 3</li>
+<li>Quiz logistics</li>
+<li>Grading rubric and resubmission policy</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.3 Part 2, due Wednesday 8/26 at 12:00</li>
+<li>Practice quiz, due on Tuesday 8/25 at 23:59</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/24</p></td>
+            <td><ul>
+<li>Start Lesson 3</li>
+</ul></td>
+            <td><ul>
+<li>WebAssign 12.3 Part 1, due Tuesday 8/25 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/21</p></td>
+            <td><ul>
+<li>Finish Lesson 1</li>
+<li>Lesson 2</li>
+</ul></td>
+            <td><ul>
+<li>Watch video on Example 6 in Lesson 2</li>
+<li>WebAssign 12.2, due Monday 8/24 at 12:00</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>8/19</p></td>
+            <td><ul>
+<li>Course logistics</li>
+<li>Lesson 1</li>
+</ul></td>
+            <td><ul>
+<li>Complete the student questionnaire (sent by email)</li>
+<li>WebAssign 12.1, due Friday 8/21 at 12:00</li>
+</ul></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderSchedules();">
+            <span id="toggle-schedule">Show past days</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>General Information</h2>
+        <ul>
+          <li>
+            <a href="info/policy-20200818.pdf">Course policy statement</a>
+          </li>
+          <li>
+            <a href="info/syllabus.pdf">Syllabus</a>
+          </li>
+          <li>
+            <a href="info/grading-20200824.pdf">Grading rubric and resubmission policy</a>
+          </li>
+          <li>
+            <a href="info/resubmission-example.pdf">Resubmission example</a>
+          </li>
+          <li>
+            <a href="info/submitting-work-electronically-20200824.pdf">Submitting handwritten work electronically</a>
+          </li>
+          <li>
+            <a href="">SM223 Assignment Submission Form</a>
+          </li>
+          <li>
+            <a href="info/formulalist_final.pdf">List of formulas for Final Exam (current as of 12/1/2020)</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>WebAssign</h2>
+        <ul>
+          <li>
+            <a href="https://www.usna.edu/blackboard">Blackboard - sign in to access WebAssign</a>
+          </li>
+          <li>
+            <a href="info/webassign-registration-instructions.pdf">WebAssign student registration instructions</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Lessons</h2><ul>
+<li>Now that the semester is over, I have removed the completed notes.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col width="30">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Dates</th>
+            <th colspan="2">Lesson</th>
+            <th colspan="1"></th>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/23</li>
+                <li class="vcompact">11/20</li>
+                <li class="vcompact">11/18</li>
+              </ul>
+            </td>
+            <td>27</td>
+            <td>Triple Integrals</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/27 Triple Integrals.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/17</li>
+              </ul>
+            </td>
+            <td>26</td>
+            <td>Applications of Integration &mdash; Probability</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/26 Applications of Integration - Probability.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/16</li>
+              </ul>
+            </td>
+            <td>25</td>
+            <td>Applications of Integration &mdash; Center of Mass</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/25 Applications of Integration - Center of Mass.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/13</li>
+                <li class="vcompact">11/10</li>
+              </ul>
+            </td>
+            <td>24</td>
+            <td>Double Integrals in Polar Coordinates</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/24 Double Integrals in Polar Coordinates.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/9</li>
+                <li class="vcompact">11/6</li>
+                <li class="vcompact">11/2</li>
+              </ul>
+            </td>
+            <td>23</td>
+            <td>Double Integrals over General Regions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/23 Double Integrals over General Regions.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/drive/folders/1qFj-2d2EAlpetkRSFSqiXhLTLxMX0_21?usp=sharing">Videos for Examples 5-8</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">11/2</li>
+                <li class="vcompact">10/30</li>
+                <li class="vcompact">10/28</li>
+              </ul>
+            </td>
+            <td>22</td>
+            <td>Double Integrals over Rectangles</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/22 Double Integrals over Rectangles.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/27</li>
+                <li class="vcompact">10/26</li>
+                <li class="vcompact">10/23</li>
+              </ul>
+            </td>
+            <td>21</td>
+            <td>Lagrange Multipliers</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/21 Lagrange Multipliers.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/23</li>
+                <li class="vcompact">10/21</li>
+              </ul>
+            </td>
+            <td>20</td>
+            <td>Absolute Minima and Maxima</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/20 Absolute Minima and Maxima.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/20</li>
+              </ul>
+            </td>
+            <td>19</td>
+            <td>Local Minima and Maxima</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/19 Local Minima and Maxima.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/19</li>
+              </ul>
+            </td>
+            <td>18</td>
+            <td>Tangent Planes and Normal Lines</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/18 Tangent Planes and Normal Lines.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/16</li>
+              </ul>
+            </td>
+            <td>17</td>
+            <td>Maximizing the Directional Derivatives</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/17 Maximizing the Directional Derivative.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/16</li>
+                <li class="vcompact">10/14</li>
+              </ul>
+            </td>
+            <td>16</td>
+            <td>The Gradient Vector and Directional Derivatives</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/16 The Gradient and Directional Derivatives.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/13</li>
+                <li class="vcompact">10/9</li>
+                <li class="vcompact">10/5</li>
+              </ul>
+            </td>
+            <td>15</td>
+            <td>The Chain Rule</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/15 The Chain Rule.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">10/2</li>
+              </ul>
+            </td>
+            <td>14</td>
+            <td>Tangent Planes and Linear Approximation</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/14 Tangent Planes and Linear Approximation.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/30</li>
+                <li class="vcompact">9/29</li>
+                <li class="vcompact">9/28</li>
+                <li class="vcompact">9/25</li>
+              </ul>
+            </td>
+            <td>13</td>
+            <td>Partial Derivatives</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/13 Partial Derivatives.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/23</li>
+              </ul>
+            </td>
+            <td>12</td>
+            <td>Level Curves</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/12 Level Curves.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/22</li>
+              </ul>
+            </td>
+            <td>11</td>
+            <td>Multivariable Functions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/11 Multivariable Functions.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/21</li>
+                <li class="vcompact">9/18</li>
+              </ul>
+            </td>
+            <td>10</td>
+            <td>Projectile Motion</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/10 Projectile Motion.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/16</li>
+              </ul>
+            </td>
+            <td>9</td>
+            <td>Velocity and Acceleration</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/09 Velocity and Acceleration.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/15</li>
+                <li class="vcompact">9/14</li>
+              </ul>
+            </td>
+            <td>8</td>
+            <td>Derivatives and Integrals of Vector Functions</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/08 Derivatives and Integrals of Vector Functions.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/14</li>
+                <li class="vcompact">9/8</li>
+              </ul>
+            </td>
+            <td>7</td>
+            <td>Vector Functions and Space Curves</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/07 Vector Functions and Space Curves.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/4</li>
+                <li class="vcompact">9/2</li>
+              </ul>
+            </td>
+            <td>6</td>
+            <td>Cylinders and Quadric Surfaces</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/06 Cylinders and Quadric Surfaces.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">9/1</li>
+                <li class="vcompact">8/31</li>
+                <li class="vcompact">8/28</li>
+              </ul>
+            </td>
+            <td>5</td>
+            <td>Equations of Lines and Planes in 3D</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/05 Equations of Lines and Planes in 3D.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/file/d/1bkrCTk754l6_eWygnsJSOlVkNOI9OHaK/view?usp=sharing">Video on Example 5</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">8/28</li>
+                <li class="vcompact">8/26</li>
+              </ul>
+            </td>
+            <td>4</td>
+            <td>The Cross Product</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/04 The Cross Product.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">8/25</li>
+                <li class="vcompact">8/24</li>
+              </ul>
+            </td>
+            <td>3</td>
+            <td>The Dot Product</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/03 The Dot Product.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">8/21</li>
+              </ul>
+            </td>
+            <td>2</td>
+            <td>Vectors</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/02 Vectors.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="https://drive.google.com/file/d/1QMXebJioAAi_MsErQ6gOOcUP63P4k07R/view?usp=sharing">Video on Example 6</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">8/19</li>
+              </ul>
+            </td>
+            <td>1</td>
+            <td>Three Dimensional Space</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="lessons/01 Three Dimensional Space.pdf">Notes</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Completed notes</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Quizzes</h2><ul>
+<li>Now that the semester is over, I have removed the quizzes and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="2">Quiz</th>
+          </tr>
+          <tr>
+            <td>12/2</td>
+            <td>Review Quiz 3</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>12/1</td>
+            <td>Review Quiz 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>11/30</td>
+            <td>Review Quiz 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Solutions</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>11/18</td>
+            <td>Quiz 7</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>10/28</td>
+            <td>Quiz 6</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>10/21</td>
+            <td>Quiz 5</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>9/30</td>
+            <td>Quiz 4</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>9/16</td>
+            <td>Quiz 3</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>9/2</td>
+            <td>Quiz 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>8/26</td>
+            <td>Quiz 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>8/25</td>
+            <td>Practice Quiz</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Quiz</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Exams</h2><ul>
+<li>Now that the semester is over, I have removed the exams and their solutions.</li>
+</ul>
+        <table>
+          <colgroup>
+            <col width="100">
+            <col>
+            <col width="320">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="2">Exam</th>
+          </tr>
+          <tr>
+            <td>11/25</td>
+            <td>Exam 4</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>11/4</td>
+            <td>Exam 3</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>10/7</td>
+            <td>Exam 2</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>9/11</td>
+            <td>Exam 1</td>
+            <td>
+              <ul class="vcompact">
+                <li class="vcompact">
+                  <a href="">Exam</a>
+                </li>
+                <li class="vcompact">
+                  <a href="">Feedback</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>

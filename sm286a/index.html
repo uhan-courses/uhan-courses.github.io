@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html> 
+  <head>
+    <title>SM286A - Mathematics for Economics</title>
+
+    <!-- CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/mobile.css" />  -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <!-- Mobile -->
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" /> -->
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>SM286A &mdash; Mathematics for Economics</h1>
+      <h2>Fall 2015</h2>
+      <h2>Sections 1041 and 3042</h2>
+      <h2>Asst. Prof. Nelson Uhan</h2>
+
+      <div class="block">
+        <h3>Announcements</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="725">
+          </colgroup>
+          <tr>
+            <td>7 Dec</td>
+            <td>The final exam will take place on <strong>Wednesday 16 December at 7:55</strong>.
+              See below for details.</td>
+          </tr>              
+          <tr>
+            <td>24 Nov</td>
+            <td>Exam 3 will take place on <strong>Thursday 3 December</strong>.
+              See below for details.</td>
+          </tr>          
+          <tr>
+            <td>22 Oct</td>
+            <td>Exam 2 will take place on <strong>Thursday 29 October</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>1 Oct</td>
+            <td>Your second chance for Exam 1 is due at the beginning of class on <strong>Tuesday 6 October</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>Exam 1 will take place on <strong>Tuesday 29 September</strong>.
+              See below for details.</td>
+          </tr>
+          <tr>
+            <td>21 Aug</td>
+            <td>Welcome!</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="info">
+        <h3>General information</h3>
+        <ul>
+          <li><a href="policy.pdf">Course policy statement</a></li>
+          <li><a href="syllabus.pdf">Syllabus (course-wide)</a></li>
+        </ul>
+      </div>
+
+      <div class="block" id="hw">
+        <h3>Homework</h3>
+        <p style="color:#d00000;">Now that the semester is over, I have removed the homework solutions.</p>
+        <p style="color:#d00000;">Solutions are available here on Google Drive.</p>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="725">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19 Nov</td>
+            <td>
+              12.2: 3. In addition, classify the critical points as local minima or local maxima.
+            </td>
+          </tr>
+          <tr>
+            <td>17 Nov</td>
+            <td>
+              12.2: 1, 2; 12.3: 1<br>
+              Note that in the textbook, a <em>stationary value</em> is the value of a critical point.   
+            </td>
+          </tr>
+          <tr>
+            <td>12 Nov</td>
+            <td>
+              11.6: 2. <em>Hint.</em> Solve for <em>P<sub>1</sub></em> and <em>P<sub>2</sub></em> in terms of <em>Q<sub>1</sub></em> and <em>Q<sub>2</sub></em> first. 
+              Then use <em>P<sub>1</sub></em> and <em>P<sub>2</sub></em> to write profit as a function of <em>Q<sub>1</sub></em> and <em>Q<sub>2</sub></em>. 
+            </td>
+          </tr>
+          <tr>
+            <td>10 Nov</td>
+            <td>
+              Finish Examples 2-4 from Lesson 22.
+            </td>
+          </tr>
+          <tr>
+            <td>5 Nov</td>
+            <td>
+              11.4: 1-4, 5a
+            </td>
+          </tr>
+          <tr>
+            <td>3 Nov</td>
+            <td>
+              11.2: 1, 2<br>
+              Note that the textbook refers to local optima as <em>relative extrema.</em>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>17.4: 2, 3</td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>17.2: 1-4; 17.3: 1ab, 2a, 3a</td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td><a href="homework/solow.pdf">solow</a>: 1</td>
+          </tr>
+          <tr>
+            <td>13 Oct</td>
+            <td>15.5: 1-3; 15.6: 1ac, 2, 3</td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>15.4: 1ab, 2</td>
+          </tr>
+          <tr>
+            <td>6 Oct</td>
+            <td>15.2: 1, 3, 4; 15.3: 1-4</td>
+          </tr>
+          <tr>
+            <td>1 Oct</td>
+            <td>15.1: 1ac, 2ac, 3a, 4a</td>
+          </tr>
+          <tr>
+            <td>24 Sep</td>
+            <td>5.7: 1-4</td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>5.5: 1ab, 2ab; 5.6: 1b</td>
+          </tr>          
+          <tr>
+            <td>17 Sep</td>
+            <td>5.2: 1ace, 4a; 5.3: 1, 3, 4ab</td>
+          </tr>
+          <tr>
+            <td>15 Sep</td>
+            <td>5.1: 5ac, 5.4: 2ac, 4ac, 6a, 7</td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td><a href="rref.pdf">RREF handout</a>: 1-4</td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>4.6: 1, 2, 4; 5.1: 3, 4; <a href="homework/lindep.pdf">lindep</a>: 1-3</td>
+          </tr>
+          <tr>
+            <td>1 Sep</td>
+            <td>4.3: 1acd; 4.4: 1a, 3, 5a; 4.5: 1, 2, 3ab </td>
+          </tr>
+          <tr>
+            <td>27 Aug</td>
+            <td>4.1: 1, 4.2: 1-5, 6be</td>
+          </tr>
+          <tr>
+            <td>25 Aug</td>
+            <td>3.2: 1-5; 3.3: 2, 6</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="lesson">
+        <h3>Lessons</h3>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="50">
+            <col width="425">
+            <col width="250">
+          </colgroup>
+          <tr>
+            <td>8 Dec</td>
+            <td>27</td>
+            <td>
+              Review
+            </td>
+            <td>
+              <a href="lessons/27.pdf">pdf</a><br>
+              <a href="lessons/27.solutions.pdf">Solutions</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>24 Nov</td>
+            <td>26</td>
+            <td>
+              Applications of optimization with equality constraints
+            </td>
+            <td>
+              <a href="lessons/26.pdf">pdf</a><br>
+              <a href="lessons/26.solutions.pdf">Solutions to examples</a>
+            </td>
+          </tr>
+          <tr>
+            <td>19 Nov</td>
+            <td>25</td>
+            <td>
+              Optimization with equality constraints, cont.
+            </td>
+            <td>
+              <a href="lessons/25.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>17 Nov</td>
+            <td>24</td>
+            <td>
+              Optimization with equality constraints
+            </td>
+            <td>
+              <a href="lessons/24.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>12 Nov</td>
+            <td>23</td>
+            <td>
+              Profit maximization
+            </td>
+            <td>
+              <a href="lessons/23.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>10 Nov</td>
+            <td>22</td>
+            <td>
+              Absolute optima, convexity and concavity 
+            </td>
+            <td>
+              <a href="lessons/22.pdf">pdf</a><br>
+              <a href="lessons/22.examples.pdf">Solutions to Examples 2-4</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>5 Nov</td>
+            <td>21</td>
+            <td>
+              Optimization of functions of <em>n</em> variables
+            </td>
+            <td>
+              <a href="lessons/21.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Nov</td>
+            <td>20</td>
+            <td>
+              Review: optimization of functions with 1 or 2 variables, determinants
+            </td>
+            <td>
+              <a href="lessons/20.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>19</td>
+            <td>
+              The cobweb model
+            </td>
+            <td>
+              <a href="lessons/19.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>18</td>
+            <td>
+              Dynamic stability
+            </td>
+            <td>
+              <a href="lessons/18.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>20 Oct</td>
+            <td>17</td>
+            <td>
+              Discrete time and difference equations
+            </td>
+            <td>
+              <a href="lessons/17.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td>16</td>
+            <td>
+              The Solow growth model
+            </td>
+            <td>
+              <a href="lessons/16.pdf">pdf</a><br>
+              <a href="lessons/16.example2.pdf">Solutions to Example 2</a>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Oct</td>
+            <td>15</td>
+            <td>
+              Qualitative analysis of differential equations
+            </td>
+            <td>
+              <a href="lessons/15.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>13 Oct</td>
+            <td>14</td>
+            <td>
+              Nonlinear differential equations of the first order and first degree
+            </td>
+            <td>
+              <a href="lessons/14.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>13</td>
+            <td>
+              Exact differential equations 
+            </td>
+            <td>
+              <a href="lessons/13.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Oct</td>
+            <td>12</td>
+            <td>
+              Variable coefficients
+            </td>
+            <td>
+              <a href="lessons/12.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>6 Oct</td>
+            <td>11</td>
+            <td>
+              Dynamics of market price
+            </td>
+            <td>
+              <a href="lessons/11.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>1 Oct</td>
+            <td>10</td>
+            <td>
+              First-order linear differential equations with constant coefficients
+            </td>
+            <td>
+              <a href="lessons/10.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>24 Sep</td>
+            <td>9</td>
+            <td>
+              Leontief input-output models 
+            </td>
+            <td>
+              <a href="lessons/09.pdf">pdf</a><br>
+              <a href="lessons/09.page6.pdf">Completed page 6</a>
+            </td>
+          </tr>
+          <tr>
+            <td>22 Sep</td>
+            <td>8</td>
+            <td>
+              Cramer's rule, applications to economic models
+            </td>
+            <td>
+              <a href="lessons/08.pdf">pdf</a><br>
+              <a href="lessons/08.example1.pdf">Solution to Example 1</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17 Sep</td>
+            <td>7</td>
+            <td>
+              The determinant
+            </td>
+            <td>
+              <a href="lessons/07.pdf">pdf</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>15 Sep</td>
+            <td>6</td>
+            <td>
+              Reduced row echelon form, cont.
+            </td>
+            <td>
+              <a href="lessons/06.pdf">pdf</a><br>
+              <a href="lessons/06.examples6and7.pdf">Solutions to Examples 6 and 7</a>
+            </td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td>5</td>
+            <td>
+              Reduced row echelon form<br>
+              <span style="padding-left:1em"><a href="rref.pdf">RREF handout</a></span>
+            </td>
+            <td>
+              <a href="lessons/05.pdf">pdf</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>4</td>
+            <td>Transposes and inverses</td>
+            <td><a href="lessons/04.pdf">pdf</a></td>
+          </tr>
+          <tr>
+            <td>1 Sep</td>
+            <td>3</td>
+            <td>Useful and interesting properties of matrix algebra</td>
+            <td><a href="lessons/03.pdf">pdf</a></td>
+          </tr>
+          <tr>
+            <td>27 Aug</td>
+            <td>2</td>
+            <td>Introduction to matrices and vectors</td>
+            <td><a href="lessons/02.pdf">pdf</a></td>
+          </tr>
+          <tr>
+            <td>25 Aug</td>
+            <td>1</td>
+            <td>Introduction</td>
+            <td><a href="lessons/01.pdf">pdf</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="quiz">
+        <h3>Quizzes</h3>
+        <p style="color:#d00000;">Now that the semester is over, I have removed the quiz solutions.</p>
+        <table>
+          <colgroup>
+            <col width="75">
+            <col width="475">
+            <col width="250">
+          </colgroup>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>solutions</strong></td>
+          </tr>
+          <tr>
+            <td>19 Nov</td>
+            <td>Quiz 11</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>12 Nov</td>
+            <td>Quiz 10</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>22 Oct</td>
+            <td>Quiz 9</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>15 Oct</td>
+            <td>Quiz 8</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>8 Oct</td>
+            <td>Quiz 7</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>1 Oct</td>
+            <td>(not really a) Quiz 6</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>24 Sep</td>
+            <td>Quiz 5</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>17 Sep</td>
+            <td>Quiz 4</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>10 Sep</td>
+            <td>Quiz 3</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>3 Sep</td>
+            <td>Quiz 2</td>
+            <td>pdf</td>
+          </tr>
+          <tr>
+            <td>27 Aug</td>
+            <td>Quiz 1</td>
+            <td>pdf</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block" id="exam">
+        <h3>Exams</h3>
+        <p style="color:#d00000;">Now that the semester is over, I have removed the exam solutions.</p>
+
+        <h4>Exam 1 (29 September)</h4>
+        <ul>
+          <li><a href="exams/exam1_info.pdf">Information</a></li>
+          <li><a href="exams/exam1_problems.pdf">Problems</a></li>
+          <li><a href="exams/exam1_second.pdf">Second chance</a></li>
+          <li>Solutions</li>
+        </ul>
+
+        <h4>Exam 2 (29 October)</h4>
+        <ul>
+          <li><a href="exams/exam2_info.pdf">Information and practice problems</a></li>
+          <li><a href="exams/exam2_practice_sol.pdf">Solutions to practice problems</a></li>
+          <li><a href="exams/exam2_problems.pdf">Problems</a></li>
+          <li><a href="exams/exam2_second.pdf">Second chance</a></li>
+          <li>Solutions</li>
+        </ul>
+
+        <h4>Exam 3 (3 December)</h4>
+        <ul>
+          <li><a href="exams/exam3_info.pdf">Information and practice problems</a></li>
+          <li><a href="exams/exam3_practice_sol.pdf">Solutions to practice problems</a></li>
+          <li><a href="exams/exam3_problems.pdf">Problems</a></li>
+          <li><a href="exams/exam3_second.pdf">Second chance</a></li>
+          <li>Solutions</li>
+        </ul>
+
+        <h4>Final Exam (16 December)</h4>
+        <ul>
+          <li><a href="exams/final_info.pdf">Information</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

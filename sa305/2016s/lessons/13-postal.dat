@@ -1,0 +1,29 @@
+# Input parameters for postal employee problem in Lesson 13
+
+# Days of the week
+set days := Mon Tue Wed Thu Fri Sat Sun;
+
+# Shifts
+set shifts := 1 2 3 4 5 6 7;
+
+# Days worked in each shift
+set shift_days[1] := Mon Tue Wed Thu Fri;
+set shift_days[2] := Tue Wed Thu Fri Sat;
+set shift_days[3] := Wed Thu Fri Sat Sun;
+set shift_days[4] := Thu Fri Sat Sun Mon;
+set shift_days[5] := Fri Sat Sun Mon Tue;
+set shift_days[6] := Sat Sun Mon Tue Wed;
+set shift_days[7] := Sun Mon Tue Wed Thu;
+
+# Number of employees needed for each day
+param required :=
+  Mon   7
+  Tue   8
+  Wed   7
+  Thu   6
+  Fri   6
+  Sat   4
+  Sun   5;
+
+end;
+
