@@ -63,6 +63,12 @@ ol ul {
   padding-top: 0;
 }
 
+ul ol {
+  font-size: 1.6rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 blockquote {
   margin-top: 0;
   margin-bottom: 0;
