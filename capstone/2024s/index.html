@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SA475B - Operations Research for the Military, Business, and Society</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&amp;subset=all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600&amp;display=swap" rel="stylesheet">
+    <link href="css/normalize.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/skeleton.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/toggle.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="header">
+        <h1 id="course-title">Operations Research for the Military, Business, and Society</h1>
+        <p id="course-info">SA475B &nbsp;&#11037;&nbsp; Spring 2024<br>Prof. Nelson Uhan</p>
+      </section>
+      <section>
+        <h2>Announcements</h2>
+        <table>
+          <colgroup>
+            <col width="120">
+            <col>
+          </colgroup>
+          <tr class="highlight">
+            <td><p>4/23</p></td>
+            <td><p>Your final report is due on <strong>Wednesday 5/1 at 23:59</strong>.
+You may have an automatic extension until <strong>Monday 5/6 at 23:59</strong>.</p>
+<p>Please <strong>share a Google Drive folder with me</strong> containing:</p>
+<ul>
+<li>PDF of your final report</li>
+<li>PDF of your presentation slides</li>
+<li>All source code files (e.g., Jupyter notebooks) and data files (e.g., Excel workbooks, Google Sheets, CSV files) you created or used for your project</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/15</p></td>
+            <td><p>Drafts of (1) your project report – <em>all sections</em> – and (2) your presentation slides are due on <strong>Thursday 4/25 at the beginning of your biweekly meeting.</strong></p>
+<ul>
+<li>For the project report, use the template under <em>Resources</em> below.</li>
+<li>One member of each team should email me their drafts as PDF files.</li>
+</ul>
+<p>Your final presentations will take place on Capstone Day, Wednesday 5/1.</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>4/8</p></td>
+            <td><ul>
+<li>On Thursday 4/11, each team will meet with me to discuss their 12-week marking period feedback.</li>
+<li>Your biweekly meetings originally scheduled for Thursday 4/11 will take place on Tuesday 4/16.</li>
+<li>Your last biweekly meeting for the semester will take place on Thursday 4/25.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>3/18</p>
+<p>(updated 3/21)</p></td>
+            <td><p>A draft of your project report is due on <strong>Thursday 3/28 at the beginning of your biweekly meeting.</strong></p>
+<ul>
+<li>
+<p>Your document should contain the following sections:</p>
+<ol>
+<li>Abstract</li>
+<li>Introduction</li>
+<li>Data</li>
+<li>Model</li>
+<li>Experiment setup &ndash; <strong>in outline form</strong></li>
+<li>Results &ndash; <strong>in outline form</strong></li>
+<li>References</li>
+</ol>
+</li>
+<li>
+<p>Use the project report template under <em>Resources</em> below.</p>
+</li>
+<li>One member of each team should email me their draft as a PDF file.</li>
+</ul>
+<p>Your 12-week presentations will take place in class on <strong>Tuesday 4/2 and Thursday 4/4</strong>.</p>
+<ul>
+<li>15 minutes per team.</li>
+<li>
+<p>Your presentation should cover:</p>
+<ol>
+<li>Introduction</li>
+<li>Data</li>
+<li>Model</li>
+<li>Experiment setup and results - preliminary</li>
+</ol>
+</li>
+<li>
+<p>Refer to <em>Presenting about OR - 10 tips for OR talks</em> below for some guidance on crafting your presentation.</p>
+</li>
+<li>All sections scheduled for the same period will meet together.<ul>
+<li>4 teams will present on Tuesday (2 from this section, 2 from the other section).</li>
+<li>4 teams will present on Thursday.</li>
+</ul>
+</li>
+<li>You will give your colleagues written feedback on their presentations.</li>
+<li>Email me your slides by 23:59 on the evening before your presentation.<ul>
+<li>This way, I can preload the slides onto the classroom computer so that we can use the class time more efficiently.</li>
+</ul>
+</li>
+<li>Include page (slide) numbers on your slides.<ul>
+<li>This way, your colleagues and I can easily provide feedback on your presentations.</li>
+</ul>
+</li>
+</ul>
+<p>This report draft and presentation will form the basis of your 12-week marking period grade.</p></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/27</p></td>
+            <td><p>An outline of your model section and a working preliminary model is due on <strong>Thursday 3/7 at the beginning of your biweekly meeting.</strong></p>
+<ul>
+<li>One member of each team should email me their outline as a PDF file.</li>
+<li>Double-space your document.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/20</p></td>
+            <td><p>A draft of your data section, along with your revised six-sentence abstract and introduction, is due on <strong>Tuesday 2/27 at the end of class.</strong></p>
+<ul>
+<li>One member of each team should email me their draft as a PDF file.</li>
+<li>Double-space your document.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>2/5<br>
+(updated 2/9)</p></td>
+            <td><p>Your 6-week presentations will take place next week in class on <strong>Tuesday 2/13 and Thursday 2/15</strong>.</p>
+<ul>
+<li>10 minutes per team.</li>
+<li>Your presentation should cover:<ul>
+<li>Introduction - background and motivation, problem description</li>
+<li>Data - sources, preliminary data analysis</li>
+</ul>
+</li>
+<li>All sections scheduled for the same period will meet together.<ul>
+<li>4 teams will present on Tuesday (2 from this section, 2 from the other section).</li>
+<li>4 teams will present on Thursday.</li>
+</ul>
+</li>
+<li>You will give your colleagues feedback on their presentations.</li>
+<li>Email me your slides by 23:59 on the evening before your presentation.<ul>
+<li>This way, I can preload the slides onto the classroom computer so that we can use the class time more efficiently.</li>
+</ul>
+</li>
+<li>Include page (slide) numbers on your slides.<ul>
+<li>This way, your colleagues and I can easily provide feedback on your presentations (e.g., "On slide 7, you had a typo in the 2nd bullet...")</li>
+</ul>
+</li>
+<li>This presentation, along with the draft of your 6SA and introduction and outline of your data section (see below), will serve as the basis of your 6-week marking period grade.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/29<br>
+(updated 2/5)</p></td>
+            <td><p>A draft of your project's six-sentence abstract and introduction, as well as an outline of your data section, is due on <strong>Thursday 2/8 at the beginning of your biweekly meeting</strong>.</p>
+<ul>
+<li>One member of each team should email me their draft and outline as a PDF file.</li>
+<li>Double-space your document.</li>
+<li>This draft and outline, as well as your 6-week presentation (see above), will serve as the basis of your 6-week marking period grade.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/29</p></td>
+            <td><p><strong>General notes on feedback</strong></p>
+<ul>
+<li><em>If you have questions, ask me!</em></li>
+<li>Your scores on the grading rubric are meant to represent the <strong>current</strong> status of your project.</li>
+<li>Scores can go up and down, especially for the standards on the written report and presentation.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/22</p></td>
+            <td><p>A draft of (1) your project's six-sentence abstract and (2) an outline of your introduction section is due on <strong>Thursday 1/25 at the beginning of your biweekly meeting</strong>.</p>
+<ul>
+<li>One member of each team should email me their draft abstract and introduction outline as a PDF file.<ul>
+<li>In Google Docs: File &rarr; Download &rarr; PDF Document (.pdf)</li>
+</ul>
+</li>
+<li>Please double-space your document.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/22</p></td>
+            <td><p><strong>Preparing for your biweekly meeting</strong></p>
+<ul>
+<li>Open the <em>Biweekly Meeting Agenda and Contract Template</em> linked under <em>Logistics</em> below and make a copy to somewhere on your Google Drive.<ul>
+<li>In Google Docs: File &rarr; Make a copy</li>
+</ul>
+</li>
+<li>Complete the highlighted parts of the template:<ul>
+<li>Team name and meeting date</li>
+<li><strong>Agenda items</strong></li>
+<li>Tasks from previous biweekly contract</li>
+</ul>
+</li>
+<li>Share your completed document with me on Google Docs <strong>before your scheduled biweekly meeting</strong>. Please make sure I have permission to edit the document.</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/16</p></td>
+            <td><p>The first draft of your project's six-sentence abstract is due on <strong>Thursday 1/18 at the beginning of class</strong>.</p>
+<ul>
+<li>Print and bring 10 copies of your six-sentence abstract, double-spaced.</li>
+<li>In class on Thursday, your peers will review your abstracts and give you feedback.</li>
+<li>At this point in the semester, you will need to make up some details.<ul>
+<li>That's OK for now &mdash; think of this as a "vision statement".</li>
+<li>Imagine what your results might look like, and make up some plausible numbers and conclusions.</li>
+</ul>
+</li>
+</ul></td>
+          </tr>
+          <tr class="old-announcement">
+            <td><p>1/16</p></td>
+            <td><p>Welcome!</p></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderAnnouncements();">
+            <span id="toggle-announcements">Show older announcements</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>Schedule</h2>
+        <table>
+          <colgroup>
+            <col width="120">
+            <col width="840">
+          </colgroup>
+          <tr>
+            <th colspan="1">Date</th>
+            <th colspan="1">Activities</th>
+          </tr>
+          <tr>
+            <td><p>5/1</p></td>
+            <td><ul>
+<li>Capstone Day presentations</li>
+</ul></td>
+          </tr>
+          <tr class="highlight">
+            <td><p>4/30</p></td>
+            <td><ul>
+<li>Wrap-up</li>
+<li>Student opinion forms</li>
+<li>Project participation assessment</li>
+</ul></td>
+          </tr>
+          <tr>
+            <td><p>4/25</p></td>
+            <td><ul>
+<li>Final biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/23</p></td>
+            <td><ul>
+<li>Finalize report and presentation</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/18</p></td>
+            <td><ul>
+<li>Writing about OR &mdash; the conclusion section</li>
+<li>Finalize report and presentation</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/16</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/11</p></td>
+            <td><ul>
+<li>Meetings to discuss 12-week marking period feedback</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/9</p></td>
+            <td><ul>
+<li>Continue refining models and generating results</li>
+<li>Revise report and presentation</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/4</p></td>
+            <td><ul>
+<li>12-week presentations</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>4/2</p></td>
+            <td><ul>
+<li>12-week presentations</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/28</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/26</p></td>
+            <td><ul>
+<li>Continue refining models and generating results</li>
+<li>Work on report draft and presentation</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/21</p></td>
+            <td><ul>
+<li>Continue refining models and generating results</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/19</p></td>
+            <td><ul>
+<li>Writing about OR &mdash; the experiment setup and results sections</li>
+<li>Start refining models and generating results</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/7</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>3/5</p></td>
+            <td><ul>
+<li><em>Short fuse.</em> Title and abstract for Capstone Day program</li>
+<li>Finalize data collection and analysis</li>
+<li>Finalize preliminary models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/29</p></td>
+            <td><ul>
+<li>Finalize data collection and analysis</li>
+<li>Continue building models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/27</p></td>
+            <td><ul>
+<li>Writing about OR &mdash; the model section</li>
+<li>Finalize data collection and analysis</li>
+<li>Continue building models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/22</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/20</p></td>
+            <td><ul>
+<li>Continue collecting data, analyzing data, building preliminary models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/15</p></td>
+            <td><ul>
+<li>6-week presentations</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/13</p></td>
+            <td><ul>
+<li>6-week presentations</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/8</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/6</p></td>
+            <td><ul>
+<li>Presenting about operations research</li>
+<li>Continue revising 6SA, writing introduction</li>
+<li>Continue collecting data, analyzing data, building preliminary models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>2/1</p></td>
+            <td><ul>
+<li>Continue revising 6SA, writing introduction</li>
+<li>Continue collecting data, analyzing data, building preliminary models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/30</p></td>
+            <td><ul>
+<li>Writing about OR &mdash; the data section</li>
+<li>Revise 6SA, start writing introduction</li>
+<li>Start collecting data, analyzing data, building preliminary models</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/25</p></td>
+            <td><ul>
+<li>Biweekly meetings</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/23</p></td>
+            <td><ul>
+<li>Preparing for your biweekly meeting</li>
+<li>Writing about OR &mdash; the introduction</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/18</p></td>
+            <td><ul>
+<li>Peer reviews of project six-sentence abstracts</li>
+<li>Start studying problem setting and data sources</li>
+</ul></td>
+          </tr>
+          <tr class="old-schedule">
+            <td><p>1/16</p></td>
+            <td><ul>
+<li>Project team assignments</li>
+<li>Course policy</li>
+<li>Writing about OR &mdash; the six-sentence abstract</li>
+</ul></td>
+          </tr>
+        </table>
+        <p style="text-align:right;">
+          <a href="javascript:;" onmousedown="toggleOlderSchedules();">
+            <span id="toggle-schedule">Show past days</span>
+          </a>
+        </p>
+      </section>
+      <section>
+        <h2>Course Logistics</h2>
+        <ul>
+          <li>
+            <a href="logistics/policy-20240113.pdf">Course policy statement (last updated: January 13, 2024)</a>
+          </li>
+          <li>
+            <a href="logistics/SA475 Spring 2024 Schedule.pdf">Schedule (course-wide)</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/1weES2uVpwcBmrrhJZyDpRwNvawJU14wyUa57Dcsm3kw/edit?usp=sharing">Biweekly meeting agenda and contract template</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li>
+            <a href="resources/editing-marks-20180130.pdf">Editing marks</a>
+          </li>
+          <li>
+            <a href="resources/usn-style-guide-17-4.pdf">U.S. Navy Style Guide (2017)</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Six-Sentence Abstract.pdf">Writing about operations research &mdash; the six-sentence abstract</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Introduction.pdf">Writing about operations research &mdash; the introduction</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Data Section.pdf">Writing about operations research &mdash; the data section</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Model Section.pdf">Writing about operations research &mdash; the model section</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Experiment Setup and Results Sections.pdf">Writing about operations research &mdash; the experiment setup and results sections</a>
+          </li>
+          <li>
+            <a href="resources/Writing - The Conclusion Section.pdf">Writing about operations research &mdash; the conclusion section</a>
+          </li>
+          <li>
+            <a href="resources/Presenting - 10 Tips for OR Talks - Handout.pdf">Presenting about operations research &mdash; 10 tips for OR talks</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/1xVHgD8srF9BB76IjeuqXXENXIqlgiNm503D4cG6zpKs/edit?usp=sharing">Report template</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/14JnJv0cYp3ac1sR_Nf83S2KSkglWrViQlnfc7Bhi_uA/edit?usp=sharing">A really basic guide to writing math with Google Docs</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
